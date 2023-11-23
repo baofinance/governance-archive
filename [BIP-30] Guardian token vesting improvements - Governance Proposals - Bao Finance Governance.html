@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[BIP-30] Guardian token vesting improvements - Governance Proposals - Bao Finance Governance</title>
+    <meta name="description" content="In the annual roadmap, it has been proposed that the development wallet vested tokens to be divided equally to reward properly the guardians who brought the protocol up to this point. 
+Originally, this section was writte&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta3-dev - https://github.com/discourse/discourse version d5e4b85e8229ffd75ee6b090b054ac936f7a65f5">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/bip-30-guardian-token-vesting-improvements/1213/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_1ccb5355bd053ebf52ea390fa63828c56d5cb1e3.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_fcb5a0e5d2051a8ee748d150c77d59c5d1a0a2f9.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[BIP-30] Guardian token vesting improvements&#39;" href="https://gov.bao.finance/t/bip-30-guardian-token-vesting-improvements/1213.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/bip-30-guardian-token-vesting-improvements/1213/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/bip-30-guardian-token-vesting-improvements/1213/print" />
+<meta property="og:title" content="[BIP-30] Guardian token vesting improvements" />
+<meta name="twitter:title" content="[BIP-30] Guardian token vesting improvements" />
+<meta property="og:description" content="In the annual roadmap, it has been proposed that the development wallet vested tokens to be divided equally to reward properly the guardians who brought the protocol up to this point.  Originally, this section was written for a few reasons:   Making things right for vested Bao voted for Chickn and Vital that weren’t given at all (also no specific amount was determined) Giving some share of the tokens dedicated for the development of the projects (It was the dev wallet share of the MasterFarmer c..." />
+<meta name="twitter:description" content="In the annual roadmap, it has been proposed that the development wallet vested tokens to be divided equally to reward properly the guardians who brought the protocol up to this point.  Originally, this section was written for a few reasons:   Making things right for vested Bao voted for Chickn and Vital that weren’t given at all (also no specific amount was determined) Giving some share of the tokens dedicated for the development of the projects (It was the dev wallet share of the MasterFarmer c..." />
+<meta property="og:article:section" content="Governance Proposals" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="article:published_time" content="2023-01-15T18:41:11+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/bip-30-guardian-token-vesting-improvements/1213">[BIP-30] Guardian token vesting improvements</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://gov.bao.finance/c/governance-proposals/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Governance Proposals</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[BIP-30] Guardian token vesting improvements'>
+        <meta itemprop='articleSection' content='Governance Proposals'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-30-guardian-token-vesting-improvements/1213">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-15T18:41:11Z' class='post-time'>
+                    January 15, 2023,  6:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-15T18:41:11Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p>In the annual roadmap, it has been proposed that the development wallet vested tokens to be divided equally to reward properly the guardians who brought the protocol up to this point.</p>
+<p>Originally, this section was written for a few reasons:</p>
+<ol>
+<li>Making things right for vested Bao voted for Chickn and Vital that weren’t given at all (also no specific amount was determined)</li>
+<li>Giving some share of the tokens dedicated for the development of the projects (It was the dev wallet share of the MasterFarmer contract) to those who brought this project here</li>
+<li>It’s really hard to attract and retain talents in this space. It was hard during the bull market, and it’s harder today as many talents flew from Web3. Top talents are still priced out, we can’t afford them and they usually work for major protocols. Giving those kinds of incentives helps also compensate for the salaries we offer.</li>
+</ol>
+<p>Some community members challenged this point for good reasons.</p>
+<p>Key challenges;</p>
+<ul>
+<li>Same amount of tokens for original members, newer active members or ancient contributors, which doesn’t reflect time and effort given to the DAO</li>
+<li>No incentives to stay and contribute longer for the DAO</li>
+<li>No tokens left for new guardians</li>
+<li>No specific model or template of vested tokens for new guardians</li>
+<li>High impact of vested token at the beginning of the new distribution phase</li>
+</ul>
+<p>As such, with the BAO held by the dev wallet in distribution phase <span class="hashtag">#1</span>, we estimate a guardian share of 4.75M of BAOV2. The Dev wallet had 6% of that phase emission, and we propose to give ⅙ of those tokens for every 6 months of seniority as a guardian.</p>
+<p>Guardians were introduced in the second year of Bao. For those who were contributors before that time, the contribution date will be used instead of the guardian acceptance date.</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Ratio</th>
+<th>Amount of BaoV2</th>
+<th>Seniority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1%</td>
+<td>791,666</td>
+<td>0 - 6 months</td>
+</tr>
+<tr>
+<td>1%</td>
+<td>791,666</td>
+<td>6 - 12 months</td>
+</tr>
+<tr>
+<td>1%</td>
+<td>791,667</td>
+<td>12 - 18 months</td>
+</tr>
+<tr>
+<td>1%</td>
+<td>791,666</td>
+<td>18 - 24 months</td>
+</tr>
+<tr>
+<td>1%</td>
+<td>791,666</td>
+<td>24 - 30 months</td>
+</tr>
+<tr>
+<td>1%</td>
+<td>791,667</td>
+<td>30- 36 months</td>
+</tr>
+<tr>
+<td>1%</td>
+<td>791,667</td>
+<td>Every other 6 months</td>
+</tr>
+</tbody>
+</table>
+</div><p>This table will also be the reference for future guardians to preserve equality and equity among them.</p>
+<p>With this calculation in hand, the amount of BAO distributed to guardians would be as followed:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Guardian</th>
+<th>Guardian since (approx)</th>
+<th>End Date</th>
+<th>Number of tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chickn</td>
+<td>2021/01/01</td>
+<td>-</td>
+<td>3,166,667</td>
+</tr>
+<tr>
+<td>Vital</td>
+<td>2021/03/01</td>
+<td>-</td>
+<td>3,166,667</td>
+</tr>
+<tr>
+<td>Baowolf</td>
+<td>2021/02/01</td>
+<td>-</td>
+<td>3,166,667</td>
+</tr>
+<tr>
+<td>Fabiaz</td>
+<td>2021/03/01</td>
+<td>-</td>
+<td>3,166,667</td>
+</tr>
+<tr>
+<td>Fresh Pizza</td>
+<td>2021/09/09</td>
+<td>2022/09/30</td>
+<td>1,583,333</td>
+</tr>
+<tr>
+<td>Vex</td>
+<td>2021/08/01</td>
+<td>2022/08/01</td>
+<td>1,583,333</td>
+</tr>
+<tr>
+<td>Nox</td>
+<td>2022/06/01</td>
+<td>-</td>
+<td>1,583,333</td>
+</tr>
+<tr>
+<td>Jester</td>
+<td>2022/06/01</td>
+<td>-</td>
+<td>1,583,333</td>
+</tr>
+</tbody>
+</table>
+</div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-30-guardian-token-vesting-improvements/1213">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-02-08T02:54:44Z' class='post-time'>
+                    February 8, 2023,  2:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-02-08T02:54:44Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          <link rel="preload" href="https://global.discourse-cdn.com/standard10/assets/print-page-56cf61969efa7e4e490b3b2dff49ea19a32c7996a53b6060d3e9c479ad0d0e47.br.js" as="script">
+<script defer src="https://global.discourse-cdn.com/standard10/assets/print-page-56cf61969efa7e4e490b3b2dff49ea19a32c7996a53b6060d3e9c479ad0d0e47.br.js"></script>
+
+
+</html>

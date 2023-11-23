@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[BIP-13] Bao Baskets modifications - Governance Proposals - Bao Finance Governance</title>
+    <meta name="description" content="Abstract
+This proposal is to redefine the composition and strategy of the Bao Basket, bSTBL, after the initial vote of BIP-10 ([BIP-10] Approve Soft Synths (Bao Baskets) on main net - #5) and remove bDEFI as a starting &amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta3-dev - https://github.com/discourse/discourse version d5e4b85e8229ffd75ee6b090b054ac936f7a65f5">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_1ccb5355bd053ebf52ea390fa63828c56d5cb1e3.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_fcb5a0e5d2051a8ee748d150c77d59c5d1a0a2f9.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[BIP-13] Bao Baskets modifications&#39;" href="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132/print" />
+<meta property="og:title" content="[BIP-13] Bao Baskets modifications" />
+<meta name="twitter:title" content="[BIP-13] Bao Baskets modifications" />
+<meta property="og:description" content="Abstract This proposal is to redefine the composition and strategy of the Bao Basket, bSTBL, after the initial vote of BIP-10 ([BIP-10] Approve Soft Synths (Bao Baskets) on main net - #5) and remove bDEFI as a starting basket on launch.   Background Recent events in the crypto market surrounding stablecoins has lead us to re-evaluate the criteria used for bSTBL and ensure only the safest stablecoins are included.  During the implementation of Baskets on main net a number of issues arose with bD..." />
+<meta name="twitter:description" content="Abstract This proposal is to redefine the composition and strategy of the Bao Basket, bSTBL, after the initial vote of BIP-10 ([BIP-10] Approve Soft Synths (Bao Baskets) on main net - #5) and remove bDEFI as a starting basket on launch.   Background Recent events in the crypto market surrounding stablecoins has lead us to re-evaluate the criteria used for bSTBL and ensure only the safest stablecoins are included.  During the implementation of Baskets on main net a number of issues arose with bD..." />
+<meta property="og:article:section" content="Governance Proposals" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2022-05-22T17:15:49+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/bip-13-bao-baskets-modifications/1132">[BIP-13] Bao Baskets modifications</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://gov.bao.finance/c/governance-proposals/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Governance Proposals</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[BIP-13] Bao Baskets modifications'>
+        <meta itemprop='articleSection' content='Governance Proposals'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-22T17:15:49Z' class='post-time'>
+                    May 22, 2022,  5:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-22T17:15:49Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <h1>
+<a name="abstract-1" class="anchor" href="#abstract-1"></a>Abstract</h1>
+<p>This proposal is to redefine the composition and strategy of the Bao Basket, bSTBL, after the initial vote of BIP-10 (<a href="http://gov.bao.finance/t/bip-10-approve-soft-synths-bao-baskets-on-main-net/1096/5">[BIP-10] Approve Soft Synths (Bao Baskets) on main net - #5</a>) and remove bDEFI as a starting basket on launch.</p>
+<h1>
+<a name="background-2" class="anchor" href="#background-2"></a>Background</h1>
+<p>Recent events in the crypto market surrounding stablecoins has lead us to re-evaluate the criteria used for bSTBL and ensure only the safest stablecoins are included.</p>
+<p>During the implementation of Baskets on main net a number of issues arose with bDEFI, hampering its ability to be an attractive product.</p>
+<h1>
+<a name="bstbl-3" class="anchor" href="#bstbl-3"></a>bSTBL</h1>
+<p>The first goal of this proposal is to make bSTBL more effective and secure as collateral in Bao Markets (hard synths) especially with respect to baoUSD. We will achieve this by focusing on the safety of stables included in the basket, as bSTBL is intended to be accepted as collateral on Bao Markets.</p>
+<p>In order to achieve bSTBL as collateral in Markets, a new criteria will be added for inclusion:</p>
+<ul>
+<li>Must be fully collateralized</li>
+</ul>
+<p><strong>Composition and strategy</strong></p>
+<p>The full criteria for inclusion:</p>
+<ul>
+<li>Top 3 stable coins based on perceived safety, yield options and decentralization.</li>
+<li>Must not rely on the projects governance token for backing</li>
+<li>Be fully backed</li>
+<li>Weighted evenly</li>
+<li>Has at least $2m Liquidity on a main net exchange</li>
+<li>Have a chainlink price feed on main net</li>
+<li>At least 3 months old</li>
+<li>In the event of a safety incident, the team must have addressed the problem responsibly and promptly, providing users of the protocol a reliable solution and document a detailed, transparent breakdown of the incident.</li>
+<li>Be Ethereum-focused</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Weight</th>
+<th>Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USDC</td>
+<td>33.33%</td>
+<td>AAVE</td>
+</tr>
+<tr>
+<td>DAI</td>
+<td>33.33%</td>
+<td>AAVE</td>
+</tr>
+<tr>
+<td>RAI</td>
+<td>33.33%</td>
+<td>AAVE</td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>Fee structure</strong></p>
+<p>The fees are broken down as follows:</p>
+<p>Entry fee 0.5%:</p>
+<p>Annual streaming fee 1%:</p>
+<p>Exit fee 1%:</p>
+<p>Fees will initially be collected by the treasury then as part of the veBAO implementation, usage of fees from all products will be voted on.</p>
+<p><strong>Rebalancing</strong></p>
+<p>Baskets are maintained quarterly in two phases</p>
+<p>Determination Phase</p>
+<p>The determination phase takes place during the final 2 weeks of the quarter. During this phase the changes needed for the next reconstitution are determined.</p>
+<p>Proposed changes will be published on the governance forum for 1 week then a governance vote will run for the community to approve changes.</p>
+<p>Reconstitution Phase</p>
+<p>In the two weeks following a successful vote, the nest components will be adjusted as per the instructions published during the final 2 weeks of the quarter.</p>
+<p><strong>Emergency Maintenance</strong></p>
+<p>The multisig holders are authorized by the community to re-balance nests outside of the usual schedule during moments that they collectively deem to be critical emergencies. This clause will allow for quick re-balancing in the event of a protocol or nests being in danger of failing. An example of when this would be utilized would be if a stable coin begins losing its peg/ becoming insolvent, or a protocol suffers an exploit that is not dealt with sufficiently.</p>
+<p>These scenarios may be time sensitive and require immediate resolution. Thus the team may decide to act without warning and explain their actions in a governance forum post afterwards, or if there is deemed to be time, an emergency governance vote will be posted.</p>
+<p>This is intended as a safety mechanism only, to prevent loss of funds for our users and as such would be a power exclusively exercised under extreme circumstances.</p>
+<h1>
+<a name="bdefi-4" class="anchor" href="#bdefi-4"></a>bDEFI</h1>
+<p>We propose to postpone the launch of bDEFI indefinitely for several reasons.</p>
+<ul>
+<li>Gas prices: Minting a basket with more than 5 different assets in it is very expensive (bDEFI costs around 2400 USD in gas to mint at 100 gwei for example, 400 USD to mint at 19 gwei). This does not seem practical to use given most will not be able to, or want to mint the current bDEFI token.</li>
+<li>bDEFI in its current form does not make good collateral in markets because of its high gas consumption. If we do not use bDEFI as collateral there is little reason to incentivize an LP for it, so demand is expected to be low and not worth the time or cost to run it.</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-22T21:23:49Z' class='post-time'>
+                    May 22, 2022,  9:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-22T21:23:49Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There should be a burn fee added to every entry and exit. Something ranging from 0.1 to 1.0%. Any vote proposed should also include this as one of the options added to what is stated already above.</p>
+<p>Additional voting about how the other fees are spent can be left to separate votes.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-23T10:24:03Z' class='post-time'>
+                    May 23, 2022, 10:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-23T21:27:55Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I suggest we remove the entry and exit fee but keep the 1% Streaming fee for bSTBL, being able to move in and out with your stable coins fluidly matters. Plus, it is a harder sell to potential new users for upfront costs like an exit or entry fee rather than costs to the money they didn’t even have yet.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Fresh_Pizza_of_Bel_A'><span itemprop='name'>Fresh_Pizza_of_Bel_A</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-23T12:02:19Z' class='post-time'>
+                    May 23, 2022, 12:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-23T12:02:19Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would prefer having the entry and exit fees be redistributed to the basket holders. The exit fee should definitely be a lot lower then 1%, so that we do not increase the cost of liquidating positions too much. The steaming fees should not drive the cost of holding bSTBL to the point where the streaming fees + markets borrowing fees outweigh the gained yield. But lowering fees is usually easier then increasing them later on.<br>
+So maybe:</p>
+<p>Entry: 0.5%<br>
+Annualized streaming fee 0.8%<br>
+Exit 0.2%</p>
+<p>…Exit fees should probably be even lower.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-24T23:31:08Z' class='post-time'>
+                    May 24, 2022, 11:31pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-24T23:31:08Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>While it would be nice to distribute some fees to bSTBL holders we also need to think carefully about how easy it is to use bSTBL to help keep baoUSD pegged. Any entry and exit fees will make it so price divergence from the peg has to be greater before a profit can be made by arbitrageurs. If we have them, I think they should be very small.</p>
+<p>It is easier to lower fees than increase them like you say, but yield available on stables is quite low right now. If/when better options become available holders may be happy to pay a larger streaming fee, so could be a good candidate to have set by governance on a regular basis once veBAO. That would allow the fees to be balanced according to available yield, demand and performance of the peg.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-25T23:41:42Z' class='post-time'>
+                    May 25, 2022, 11:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-25T23:41:42Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There is still some discussion about what the fees should be, related to when bSTBL is approved as collateral. If we leave them as they are for now we can launch the baskets platform and bSTBL in alpha testing, then include a fee change with the vote to approve bSTBL as collateral for Bao Markets.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-13-bao-baskets-modifications/1132">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-13T23:12:44Z' class='post-time'>
+                    June 13, 2022, 11:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-13T23:12:44Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          <link rel="preload" href="https://global.discourse-cdn.com/standard10/assets/print-page-56cf61969efa7e4e490b3b2dff49ea19a32c7996a53b6060d3e9c479ad0d0e47.br.js" as="script">
+<script defer src="https://global.discourse-cdn.com/standard10/assets/print-page-56cf61969efa7e4e490b3b2dff49ea19a32c7996a53b6060d3e9c479ad0d0e47.br.js"></script>
+
+
+</html>

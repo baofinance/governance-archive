@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[BIP-21] veBAO Starting Parameters - Governance Proposals - Bao Finance Governance</title>
+    <meta name="description" content="Summary
+This BIP aims to agree on the starting parameters for veBAO after the community approved its implementation in BIP-14. 
+
+Background
+When BIP-14 passed, it left the starting parameters out of scope to be decided &amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta3-dev - https://github.com/discourse/discourse version d5e4b85e8229ffd75ee6b090b054ac936f7a65f5">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_1ccb5355bd053ebf52ea390fa63828c56d5cb1e3.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_18f105c5d1e64e4c2df62884530654f1b5af08b4.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_fcb5a0e5d2051a8ee748d150c77d59c5d1a0a2f9.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[BIP-21] veBAO Starting Parameters&#39;" href="https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163/print" />
+<meta property="og:title" content="[BIP-21] veBAO Starting Parameters" />
+<meta name="twitter:title" content="[BIP-21] veBAO Starting Parameters" />
+<meta property="og:description" content="Summary This BIP aims to agree on the starting parameters for veBAO after the community approved its implementation in BIP-14.   Background When BIP-14 passed, it left the starting parameters out of scope to be decided in a future BIP. We must now agree on how they should be configured. The starting parameters to be approved are:   BAOv2 initial supply &amp; emissions function to determine circulating supply over time. Max Lock time for veBAO holders Max Boost for LPs getting BAO emissions from gau..." />
+<meta name="twitter:description" content="Summary This BIP aims to agree on the starting parameters for veBAO after the community approved its implementation in BIP-14.   Background When BIP-14 passed, it left the starting parameters out of scope to be decided in a future BIP. We must now agree on how they should be configured. The starting parameters to be approved are:   BAOv2 initial supply &amp; emissions function to determine circulating supply over time. Max Lock time for veBAO holders Max Boost for LPs getting BAO emissions from gau..." />
+<meta property="og:article:section" content="Governance Proposals" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2022-09-15T09:53:03+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/bip-21-vebao-starting-parameters/1163">[BIP-21] veBAO Starting Parameters</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://gov.bao.finance/c/governance-proposals/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Governance Proposals</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[BIP-21] veBAO Starting Parameters'>
+        <meta itemprop='articleSection' content='Governance Proposals'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-09-15T09:53:03Z' class='post-time'>
+                    September 15, 2022,  9:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-16T09:15:41Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <h1>
+<a name="summary-1" class="anchor" href="#summary-1"></a>Summary</h1>
+<p>This BIP aims to agree on the starting parameters for veBAO after the community approved its implementation in BIP-14.</p>
+<h1>
+<a name="background-2" class="anchor" href="#background-2"></a>Background</h1>
+<p>When <a href="http://gov.bao.finance/t/bip-14-token-migration-distribution/1140">BIP-14</a> passed, it left the starting parameters out of scope to be decided in a future BIP. We must now agree on how they should be configured. The starting parameters to be approved are:</p>
+<ul>
+<li><strong>BAOv2 initial supply &amp; emissions function to determine circulating supply over time.</strong></li>
+<li><strong>Max Lock time for veBAO holders</strong></li>
+<li><strong>Max Boost for LPs getting BAO emissions from gauges</strong></li>
+<li><strong>Liquidity Gauge weightings for starting gauges determined in BIP-14</strong></li>
+</ul>
+<h1>
+<a name="goals-3" class="anchor" href="#goals-3"></a>Goals</h1>
+<p>ve token economics are designed to incentivize holders to lock their governance tokens and provide liquidity to pools that holders vote for. The goal for configuring the starting parameters should be to optimize them to give the best chance for ve token economics to work as designed.</p>
+<ul>
+<li>
+<strong>BAOv2 initial supply &amp; emissions function to determine circulating supply over time.</strong> This will determine how much of the token supply is distributed to current holders and what is left as rewards for liquidity incentives. To maintain relative governance power, holders must provide liquidity to pools with gauges and stake BAO. This means that Bao holders that are not active participants in the protocol will have their governance power diluted over time. Increasing the supply left to be minted will increase this effect; decreasing the supply left to be minted will reward active participants with less governance power. The aim should balance incentives to provide the best chance for long-term success. A curve that is too aggressive initially may overpay for short-term liquidity, and one that is too flat may be ineffective at bootstrapping liquidity. The BAOv1 total supply is also too large to work with the ve contracts, so the Baov2 token should have a smaller supply.</li>
+<li>
+<strong>Max Lock time for veBAO holders.</strong> Locking tokens is designed to help ensure that governance power is aligned with the long-term goals of the dao. Locking for longer increases your voting power, giving long-term holders more control over the project. Increasing the maximum lock time also increases the opportunity cost for participants, so a balance must be found to find a significant lock period, but not so long that max locking becomes unattractive.</li>
+<li>
+<strong>Max Boost for LPs getting BAO emissions from gauges:</strong> Adjusting this parameter will affect how easy it is for current holders to increase their absolute governance power by locking tokens and providing liquidity. It also changes the incentive to lock tokens. This can be demonstrated by looking at the extremes - a 1.5x max boost would offer little incentive to lock BAO tokens because the additional rewards provide less incentive to make Bao tokens illiquid. A 10x boost would provide lots of motivation to lock tokens but it would be easier for whales or projects similar to convex to gain the lion’s share of governance power because locking Bao tokens significantly increases your ability to earn more.</li>
+<li>
+<strong>Liquidity Gauge weightings for starting gauges determined in BIP-14:</strong> This will be effective for the first epoch; afterward, bao holders will control which pools receive rewards. The goal of this proposal will be to choose the pools that will help provide the most benefit to Bao’s current products.</li>
+</ul>
+<p>Success can be measured by the number of Bao tokens locked in staking and the TVL of the project; however, these success parameters are also affected by other factors like the products we make.</p>
+<h1>
+<a name="proposed-solution-4" class="anchor" href="#proposed-solution-4"></a>Proposed Solution</h1>
+<p><strong>BAOv2 initial supply &amp; emissions function to determine circulating supply over time.</strong></p>
+<p><em>Initial Supply of BAOv2 = (total locked BAOv1 tokens across main-net and xDAI) / 1000 + (all circulating BAOv1 across main-net and xDAI) / 1000</em></p>
+<p>The proposed initial supply matches the current supply of Bao tokens on all networks, including locked tokens, reduced by a factor of 1000. Hence, our total supply is compatible with ve contracts. Users’ ownership of the project will not change even though they will hold fewer tokens because the total supply will change in proportion resulting in the same % ownership.</p>
+<p>The initial supply represents a % (initial rate) of the total supply. The proposed initial rate is 43%, similar to Curve Finance, who distributed 43% of all the CRV tokens that will ever be minted to the initial supply of the token. This left 57% of the supply to be minted over time to the LP tokens staked in their liquidity gauges which is still happening as veCRV/the curve emissions process continues to their CRV token’s theoretical maximum supply.</p>
+<p>The current supply of Bao tokens, including locked and unlocked tokens on all networks, is around 1.09T from a max supply of 1.5T, or 72.6% minted and 27.4% remaining for future incentives. This means current locked and unlocked Bao holders hold 72.6% of all possible governance power with the BAOv1 token. By setting the initial rate to 43% for BAOv2, this is reduced to 43%.</p>
+<p>Emissions function to determine circulating supply over time:</p>
+<p><img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png" alt="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png" width="445" height="274"></p>
+<p>In the graph above, at time = 0 years, it is proposed to start with an initial supply based on the total BAOv2 supply number we get from the token migration/distribution (this number will be roughly 1.09 Billion).</p>
+<p>As time moves forward beyond the starting point of the new token, each year, the slope will reduce the supply emissions rate by 2^(¼) based on the function of the current emissions. This means over time, less and less BAOv2 supply emissions will be given out to LPs staked in gauges as it is with curve finance’s model.</p>
+<hr>
+<p><strong>Max Lock time for veBAO</strong></p>
+<ul>
+<li>The proposed max lock time is four years. If we use a max lock time of under three years it will provide a backdoor to unlock tokens quicker than the three year locked token distribution period already agreed in BIP-14. 4 years is expected to be sufficient to ensure veBAO holders act in the long-term interests of the dao. We have seen other projects implement a four-year max lock successfully.</li>
+</ul>
+<p><strong>Max LP Boost</strong></p>
+<ul>
+<li>The proposed max LP boost is set to 2.5x. A 2.5x has worked well for curve finance; there doesn’t seem to be any reason to change it.</li>
+</ul>
+<p><strong>Liquidity gauge weightings for the starting gauges voted upon in BIP-14</strong></p>
+<p>Proposed starting gauges:</p>
+<ul>
+<li>
+<strong>baoUSD/3CRV Curve LP (50%).</strong> baoUSD generates protocol revenue and liquidity is needed to facilitate liquidations.</li>
+<li>
+<strong>bSTBL/DAI Curve LP (30%).</strong> bSTBL will be used as collateral in Bao-Markets to take out loans in baoUSD. Every time a liquidation event occurs, we need ample incentive for liquidation bots to make a swap back to DAI.</li>
+<li>
+<strong>BAOv2/ETH UNI LP (20%).</strong> BAO/ETH liquidity is necessary to keep our governance token liquid. The most used pool for swaps in and out of BAO has been ETH.</li>
+</ul>
+<p><strong>Multi-Sig operations for veBAO and fee distribution process:</strong></p>
+<ul>
+<li>Set all emergency returns and admin actions for contracts across the veBAO governance system to the DAO multi-sig</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193">Emissions Adjustment Gauge Concept</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://gov.bao.finance/t/bip-24-decision-on-emissions-control-gauge/1198">[BIP-24] Decision on emissions control gauge</a>
+                        <meta itemprop='position' content='3'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-10-03T06:09:58Z' class='post-time'>
+                    October 3, 2022,  6:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-10-03T06:09:58Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          <link rel="preload" href="https://global.discourse-cdn.com/standard10/assets/print-page-56cf61969efa7e4e490b3b2dff49ea19a32c7996a53b6060d3e9c479ad0d0e47.br.js" as="script">
+<script defer src="https://global.discourse-cdn.com/standard10/assets/print-page-56cf61969efa7e4e490b3b2dff49ea19a32c7996a53b6060d3e9c479ad0d0e47.br.js"></script>
+
+
+</html>
