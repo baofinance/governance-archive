@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Voting Escrow Configuration (BIP-XX) ROUGH DRAFT - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="ABSTRACT: 
+Following the passing of the token migration and distribution proposal (BIP-14) we need to vote on how we want our voting escrow system to be configured. 
+
+Decisions that need to be made: 
+-BAOv2 initial suppl&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Voting Escrow Configuration (BIP-XX) ROUGH DRAFT&#39;" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152/print" />
+<meta property="og:title" content="Voting Escrow Configuration (BIP-XX) ROUGH DRAFT" />
+<meta name="twitter:title" content="Voting Escrow Configuration (BIP-XX) ROUGH DRAFT" />
+<meta property="og:description" content="ABSTRACT:  Following the passing of the token migration and distribution proposal (BIP-14) we need to vote on how we want our voting escrow system to be configured.   Decisions that need to be made:  -BAOv2 initial supply and emissions function to determine overtime how much supply will be created  -Max Lock time for veBAO holders (currently 4 years)  -Max Boost for LPs getting BAO emissions from gauges (currently 2.5x)  -Liquidity Gauge weightings for starting gauges determined in BIP-14  -Mult..." />
+<meta name="twitter:description" content="ABSTRACT:  Following the passing of the token migration and distribution proposal (BIP-14) we need to vote on how we want our voting escrow system to be configured.   Decisions that need to be made:  -BAOv2 initial supply and emissions function to determine overtime how much supply will be created  -Max Lock time for veBAO holders (currently 4 years)  -Max Boost for LPs getting BAO emissions from gauges (currently 2.5x)  -Liquidity Gauge weightings for starting gauges determined in BIP-14  -Mult..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="7 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="5 ❤" />
+<meta property="article:published_time" content="2022-07-16T18:37:26+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/voting-escrow-configuration-bip-xx-rough-draft/1152">Voting Escrow Configuration (BIP-XX) ROUGH DRAFT</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Voting Escrow Configuration (BIP-XX) ROUGH DRAFT'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-07-16T18:37:26Z' class='post-time'>
+                    July 16, 2022,  6:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-07-16T18:44:01Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p><strong>ABSTRACT:</strong></p>
+<p>Following the passing of the token migration and distribution proposal (BIP-14) we need to vote on how we want our voting escrow system to be configured.</p>
+<hr>
+<p><strong>Decisions that need to be made:</strong></p>
+<p>-BAOv2 initial supply and emissions function to determine overtime how much supply will be created</p>
+<p>-Max Lock time for veBAO holders (currently 4 years)</p>
+<p>-Max Boost for LPs getting BAO emissions from gauges (currently 2.5x)</p>
+<p>-Liquidity Gauge weightings for starting gauges determined in BIP-14</p>
+<p>-Multi-sig operations</p>
+<hr>
+<p>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+<p><strong>IMPLEMENTATION:</strong></p>
+<p>Current emissions function for BAOv2 token</p>
+<p>Proposed function:</p>
+<p><img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png" alt="" data-base62-sha1="AiU18MO7pmcNhT4GoDKnX1ZByvn" width="445" height="274" role="presentation"></p>
+<p>In the graph above, at time = 0 years, we will start with an initial supply based on the total BAOv2 supply number we get from the token migration/distribution (this number will be roughly 1.1 Billion to 1.5 Billion BAOv2 tokens based on when we end BAOv1 farms after BIP-14 goes through governance). As time moves forward beyond the starting point of the new token, each year the slope will reduce the supply emissions rate by 2^(¼) based on current emissions function. This means overtime less and less BAOv2 supply emissions will be given out to LPs staked in gauges as it is with curve finance’s model.</p>
+<p>-Initial Supply of BAOv2 =</p>
+<p>(total locked BAOv1 tokens across main-net and xDAI) / 1000 +</p>
+<p>(all circulating BAOv1 across main-net and xDAI) / 1000</p>
+<hr>
+<p>-Pre Mine: (given the initial supply, what percentage of the total supply as time heads to 999 years should we allocate to the initial supply of BAOv2 tokens)</p>
+<p><strong>Pre Mine will be determined by the <em>INITIAL RATE</em></strong></p>
+<h2>
+<a name="reference-to-vecrv-curve-finance-gave-43-of-all-the-crv-tokens-that-will-ever-be-minted-to-the-initial-supply-of-the-token-this-left-57-of-the-supply-to-be-minted-over-time-to-the-lp-tokens-staked-in-their-liquidity-gauges-which-is-still-happening-currently-as-vecrvthe-curve-emissions-process-continues-to-their-crv-tokens-theoretical-maximum-supply-1" class="anchor" href="#reference-to-vecrv-curve-finance-gave-43-of-all-the-crv-tokens-that-will-ever-be-minted-to-the-initial-supply-of-the-token-this-left-57-of-the-supply-to-be-minted-over-time-to-the-lp-tokens-staked-in-their-liquidity-gauges-which-is-still-happening-currently-as-vecrvthe-curve-emissions-process-continues-to-their-crv-tokens-theoretical-maximum-supply-1"></a>Reference to veCRV: Curve Finance gave 43% of all the CRV tokens that will ever be minted to the initial supply of the token. This left 57% of the supply to be minted over time to the LP tokens staked in their liquidity gauges which is still happening currently as veCRV/the curve emissions process continues to their CRV token’s theoretical maximum supply.</h2>
+<p>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+<p><strong>Max Lock time for veBAO</strong></p>
+<p>-The proposed max lock time is 4 years. That is how the contracts are currently configured.</p>
+<p>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+<p><strong>Max LP Boost (currently 2.5x)</strong></p>
+<p>-The proposed max LP boost is set to 2.5x. That is how the contracts are currently configured.</p>
+<p>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+<p><strong>Liquidity gauge weightings for the starting gauges voted upon in BIP-14</strong></p>
+<p>Starting gauges:</p>
+<p>-baoUSD/3CRV Curve LP (highest gauge weight)</p>
+<p>-bSTBL/DAI Curve LP (second highest gauge weight)</p>
+<p>-BAOv2/ETH UNI LP (third highest gauge weighting)</p>
+<p>-The more baoUSD is used, the more revenue/profits the protocol generates, so having liquidity for baoUSD at the highest makes the most sense for profits.</p>
+<p>-bSTBL will be used as collateral in Bao-Markets to take out loans in baoUSD. Everytime a liquidation event occurs we need ample incentive for liquidation bots to make a swap back to DAI profitably, so incentivizing liquidity around the basket is also necessary to make running liquidation strategies to keep our lending market healthy easier.</p>
+<p>-BAO/ETH liquidity is necessary to keep our governance token liquid. Historically the most used pool for swaps in and out of BAO has been to ETH so that is the pool proposed to incentivize.</p>
+<p>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+<p><strong>Multi-Sig operations for veBAO and fee distribution process:</strong></p>
+<p>-Set all emergency returns and admin actions for contracts across the veBAO governance system to the DAO multi-sig</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="http://gov.bao.finance/t/what-will-happen-when-all-the-bao-unlocks-after-3-years-all-at-once-alternative-proposals-to-vesting-schedule/1151/3">What will happen when all the $BAO unlocks after 3 years all at once? (alternative proposals to vesting schedule)</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-17T13:19:03Z' class='post-time'>
+                    August 17, 2022,  1:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-17T13:19:03Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>ideally we should move this to a governance proposal in the next week or so.</p>
+<p>The key points Bao holders should consider in my opinion are:</p>
+<ul>
+<li>
+<p><strong>Initial supply</strong>: This will determine how much of the token supply is distributed to current holders vs what is left as rewards for liquidity incentives. In order to maintain your relative governance power, you will be required to provide liquidity to pools with gauges and stake BAO. This means that Bao holders that are not active participants in the protocol will be diluted over time. more supply left to be minted will increase this effect and less will decrease it. My current feeling is that we have no real reason to change it from the 43/57 ratio used by Curve.</p>
+</li>
+<li>
+<p><strong>Max lock time for veBAO</strong>: I dont think we can have lower than 3 years as that is the length of the disribution period for locked tokens. It would provide a loophole to unlock Bao early. 5 years feels like a long time to ask people to lock tokens. In my opinion 4 years gives us an extra year beyond the unlock distribution period to help flatten the number of tokens hitting the market at any one time, but other members of the community could feasibly make arguments for anything 3 years+.</p>
+</li>
+<li>
+<p><strong>max LP boost</strong>: Adjusting this parameter will effect how easy it is for current participants to increase their control over the protocol and the incentive to keep bao tokens locked vs a more decentralized distribution but less incentive to lock. This can be demonstrated by looking at the extremes - a 1.5x max boost would provide little additional incentive to lock BAO tokens because the additional rewards provide less compensation for the potential opportunity cost of having to purchase and make your Bao tokens illiquid. A 10x boost would make it easy for whales or projects similar to convex to gain a lions share of governance because locking Bao tokens significantly increases your ability to earn more. A 2.5x max boost may provide a balanced approach.</p>
+</li>
+<li>
+<p><strong>Liquidity gauge weightings</strong>: This will be effective for the first epoch, afterwards bao holders will control which pools receive rewards. Guardians have identified what we believe are the highest importance pools to the protocol to start with. Something like a 50/30/20 split for the 3 suggested pools seems reasonable to start with, then we holders can adjust from there as necessary.</p>
+</li>
+</ul>
+<p>If there are no more comments in the next few days I’ll assume everyone is happy with the suggested parameters and proceed with moving this to a BIP. If there is an active conversation, i’ll wait.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jens'><span itemprop='name'>Jens</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-18T07:49:40Z' class='post-time'>
+                    August 18, 2022,  7:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-18T07:49:40Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I the parameters has worked for Curve it is very difficult to argue for something different… It is the best guess to go with. Depend so much on an unknown future… So I say go.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-18T17:55:31Z' class='post-time'>
+                    August 18, 2022,  5:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-18T17:55:31Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If I understand this correctly there are going to be an additional 500 million tokens out of the cap of 1.5 billion tokens. Out of the 43/57 ratio for distribution does this mean a portion of the 43% of those 500 million will be airdropped to existing token holders?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-18T21:54:46Z' class='post-time'>
+                    August 18, 2022,  9:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-21T15:40:13Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>For the Initial supply, I’m curious what you think of having it decreased slightly to 37/63</p>
+<p>And Increase max lp boost to 3x</p>
+<p>This would increase incentives minorly right?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-21T15:33:51Z' class='post-time'>
+                    August 21, 2022,  3:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-21T15:33:51Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>not sure where you got 500 million tokens from but the new token contract will not have a cap…It will have a theoretical maximum supply that it approaches over time as it mints token to give to liquidity providers in gauges. Also the supply of the new BAO token at the start of the distribution will correspond to the number of tokens in existence when we end farms on main-net so it will be some number less than 1.5T so divided by 1000 that results in some starting supply around &lt;1.5B for the BAOv2 token</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-21T15:39:37Z' class='post-time'>
+                    August 21, 2022,  3:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-21T15:39:37Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m open to it initially. Essentially we would be decreasing incentives to locked bao holders overtime, and by association veBAO holders as well to redirect to liq gauges</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-23T03:32:08Z' class='post-time'>
+                    August 23, 2022,  3:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-23T03:32:08Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How do you figure with the veBAO holders part? Either way the same amount of fees go to veBAO holders right?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-24T07:08:20Z' class='post-time'>
+                    August 24, 2022,  7:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-24T07:08:20Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If the existing supply is 1 trillion divided by 1000 and we roughly have 1 billion tokens now that is where I got the extra 500 million tokens to reach a total 1.5 billion token level.</p>
+<p>Where is the 43/57 distribution going? Consider this educational to everyone reading this. Your post shows that 43% of the initial supply of the CRV token given to the initial supply of the token. If another 400-500 million tokens are going to be minted where are they going?  Are 100% of all further tokens being given to those providing liquidity?     Why does Jester want a higher ration of 37/63?</p>
+<p>You should put a bit more effort into explaining what is happening judging by the constant questions on discord showing a lack of clarity in what is happening with the project and the lack of basic understanding in most people that invested in this project.</p>
+<p>I still question this notion that it is somehow not beneficial to this project to have people passively hold the token and have some return on their investment. If the project has a viable use case it’s going to generate revenue. Many stocks that have value are held for passive investment. Unless I am wrong here I would like to hear why  having less investors is somehow better for this project when we have a history of massive dumping and devaluation of the value of the token so far. It’s also discouraging to see the sentiment of the average person on discord that just wants to dump their holdings asap due to the massive devaluation that has already happened.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-24T20:47:36Z' class='post-time'>
+                    August 24, 2022,  8:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-24T21:11:32Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We are adding a use case with all this, the migration, veBAO. It is all to make a use case for BAO that is more than just to burn tokens and resolve the locked token and infrastructure issues. After this is finished, you will be able to lock veBAO and own a portion of the revenue generated by the project when synthetics are made and when products of Bao Finance are utilized. This incentivizes people to hold the token and to lock the token, the use case is true ownership of Bao Finance as this project is ran by its community, ownership of revenue, and ownership of the governance. The reason why I believe that we should lower the initial supply is because my thought was we should have people be incentivized towards participating in the ecosystem that keeps people who care for the best of the project and who want to participate around. And this isn’t all at once, it would be over time with plenty of time for those who aren’t interested to do what they need. Farming was not the best way to align incentives, especially when many of the farms did not have a direct impact or use/help of the protocol since they did not provide value to BAO yet we gave rewards away. If people stay and remain with BAO and lock in for rewards of course they get the best result by participating. However, like nox says that would move towards the end incentives more to staked gauges and not to vebao itself and I think the way curve has done it is a fine balance. I was only talking about alternatives to ways this could be done because we have to discuss and explore to make progress.</p>
+<aside class="quote no-group" data-username="R11" data-post="10" data-topic="1152">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/r/3ec8ea/48.png" class="avatar"> R11:</div>
+<blockquote>
+<p>Where is the 43/57 distribution going? Consider this educational to everyone reading this. Your post shows that 43% of the initial supply of the CRV token given to the initial supply of the token. If another 400-500 million tokens are going to be minted where are they going? Are 100% of all further tokens being given to those providing liquidity? Why does Jester want a higher ration of 37/63?</p>
+</blockquote>
+</aside>
+<p>The rest will be distributed over time by the staking gauges its not minted all at once its till its theoretical cap.</p>
+<aside class="quote no-group" data-username="R11" data-post="10" data-topic="1152">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/r/3ec8ea/48.png" class="avatar"> R11:</div>
+<blockquote>
+<p>You should put a bit more effort into explaining what is happening judging by the constant questions on discord showing a lack of clarity in what is happening with the project and the lack of basic understanding in most people that invested in this project.</p>
+</blockquote>
+</aside>
+<p>There have been announcements, educational pieces for people to read, and community calls where people could join voice chat and ask any questions they want in voice. If you have suggestions on something more then happy to work with you in creating something.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-24T21:43:13Z' class='post-time'>
+                    August 24, 2022,  9:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-24T21:43:13Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I appreciate the response and maybe I don’t get it so just let me ask this again. The 400 - 500 million tokens are to be given out as veBao to the three categories providing liquidity after the migration to veBAO is that correct?</p>
+<p>If the ratio changes from 43/57 to 37/63 this just means a higher amount of devaluation and more than 400 - 500 million tokens handed out during the next 4 years.</p>
+<p>Your idea may create participation but it also may not if the token value decreases as those rewards are given out. This is why burning creates value and desire for people to hold and purchase the token as it gains in value as the supply gets reduced. I think it deserves some consideration which plan actually creates demand for the token.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/edb124aa0e6183c57c584c54bcbe9ee92399e523.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-24T23:13:26Z' class='post-time'>
+                    August 24, 2022, 11:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-24T23:43:46Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="R11" data-post="12" data-topic="1152">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/r/3ec8ea/48.png" class="avatar"> R11:</div>
+<blockquote>
+<p>If the ratio changes from 43/57 to 37/63 this just means a higher amount of devaluation and more than 400 - 500 million tokens handed out during the next 4 years.</p>
+</blockquote>
+</aside>
+<p>You’re right, in a way it’s better towards rewarding with baoUSD through veBAO than to reward BAO in staking gauges. I think the current setup curve uses now is a better choice than what I suggested. I hadn’t considered that it incentivized veBAO less when talking about it.</p>
+<aside class="quote no-group" data-username="R11" data-post="12" data-topic="1152">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/r/3ec8ea/48.png" class="avatar"> R11:</div>
+<blockquote>
+<p>I appreciate the response and maybe I don’t get it so just let me ask this again. The 400 - 500 million tokens are to be given out as veBao to the three categories providing liquidity after the migration to veBAO is that correct?</p>
+</blockquote>
+</aside>
+<p>This is a quick little spreadsheet representing how new incentive systems will work</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/edb124aa0e6183c57c584c54bcbe9ee92399e523.png" data-download-href="/uploads/short-url/xUIGF2cVvu2KSCpoPnazG0qAnWX.png?dl=1" title="unknown"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/edb124aa0e6183c57c584c54bcbe9ee92399e523.png" alt="unknown" data-base62-sha1="xUIGF2cVvu2KSCpoPnazG0qAnWX" width="690" height="125" data-dominant-color="D6C585"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">unknown</span><span class="informations">868×158 9.05 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-25T16:54:05Z' class='post-time'>
+                    August 25, 2022,  4:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-25T16:54:05Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>existing supply of the token is not 1 trillion? read the docs about the token supply as well as BIP-14 where we explained in depth how the transfer from the old system to new veBAO system happens across mainnet/xDAI, if you are interested.</p>
+<p>and 43% refers to the initial supply to be given to those who used BAO/have locked BAO before we migrate to the new vote escrow governance system. The 57% of supply thereafter as time approaches infinity will be given out to those who are actively participating in the vote escrow system just as it is in others such as veCRV.</p>
+<p>also if you did have a problem as others could have addressed as well you should have voted against moving to a vote escrow system months ago as the fundamental idea of a vote escrow system is that the token is inflationary. So in accordance with past votes the DAO has agreed we want an inflationary governance token that only has incentives if it is locked, and that emits the inflation to liquidity providers in gauges.</p>
+<p>BAO is not a stock. And having ownership over the defi protocol in the way we have voted to make veBAO work is only possible if you provide something of value in the ecosystem of decisions you can make. passively holding the token when it is inflationary and has no mechanism to take tokens out of circulation for a specific amount of time serves no value as that only increases downward pressure on LP incentives. This is why the proposed change to veBAO was made</p>
+<p>for example when locking your tokens into veBAO you make them non-transferable which is essentially an agreement that you will take tokens out of circulation for a predetermined time making price more deflationary and in return we receive ownership over the fees the protocol produces. You also when locking increase incentives to LP providers in gauges. Also liquidity providers are providing value to the protocol in a more obvious manor…they provide liquidity</p>
+<p>past votes solidified us implementing these big changes</p>
+<p>this rough draft of the BIP is simply breaking down how we configure it to make the products BAO is in the process of scaling work and make profit for those who seek to own a piece of the protocol by locking veBAO or getting BAO from LP emissions</p>
+<p>also keep in mind this is a rough draft and not the finalized proposal so criticism is welcome but these small ideas of the voting escrow parameters are the only thing subject to change…although if we choose ridiculous parameters that damage long term incentives for the protocol we will basically destroy any chance it has of scaling so this is the reason I have proposed what I have thought of as best for a balance between incentives for users who were here early on and the future use of the protocol</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-25T16:58:41Z' class='post-time'>
+                    August 25, 2022,  4:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-25T18:03:42Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>read in the docs how the supply of the token currently works</p>
+<p>I still dont know where you are getting that we will be arbitrarily minting an extra 400/500 million?</p>
+<p>as discussed in BIP-14 (highly recommend you read this) the total supply of the token when the veBAO system STARTS is &gt;&gt;&gt;</p>
+<p>circulating + locked BAO <strong>on mainnet</strong> + circulating + locked BAO <strong>on xDAI</strong></p>
+<p>that number I speculate will be around 1.2 to 1.3 trillion BAOv1 tokens when we do stop the farms and start migration. Which then will result in a starting supply of around 1.2 to 1.3 Billion BAOv2 tokens</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/8keyser8soze8'><span itemprop='name'>8keyser8soze8</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-27T23:34:14Z' class='post-time'>
+                    August 27, 2022, 11:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-27T23:34:14Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Two things.<br>
+He suggests creating ultimately accessible graphics that simply and easily explain all the revolutionary changes in Bao.<br>
+In the future, we must absolutely cut ourselves off from USDC and only use DAI in our protocol.<br>
+Reason. Future synthetics to be made on BAO may cause circle USDC to be blocked on wallets.<br>
+To sum up. I seem to have it. Time for voting and the next stage of evolution.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-28T06:43:42Z' class='post-time'>
+                    August 28, 2022,  6:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-28T06:43:42Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have BAO which will be converted to veBAO and locked in, I will likely stake some liquidity pool tokens but the graphic doesn’t really break down how my returns will be calculated clearly or how the amount of locked BAO will factor into what kind of gain I will get related to my liquidity pool token amounts.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-28T07:08:41Z' class='post-time'>
+                    August 28, 2022,  7:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-28T07:08:41Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have read BIP-14 over and over and over again and maybe it seems clear to you but I still have questions and I probably have a greater understanding compared to the average BAO holder.</p>
+<p>I voted along with others for the escrow system so progress can be made in a timely manner. There still remains specific votes upcoming that define how the protocol will use its resources and although the token is inflationary in the four year design passively holding the tokens still takes them out of circulation, if they are worth holding! Some effort should be put into the design to consider a two fold approach of going forward with the existing plan and also tapping into passive buyers that will purchase and hold the token for price appreciation over time.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-09-03T03:22:42Z' class='post-time'>
+                    September 3, 2022,  3:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-03T03:22:42Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nothing about proposals centered around the switch to the veBAO system will indicate exact returns anyone will receive from locking into veBAO or staking LP in gauges</p>
+<p>the free market forces of ethereum decide when/at what volume to use baoUSD and that is where fees come from. Why would you expect us to be able to predict the future?</p>
+<p>Also speaking to the same point the value or percentage yield from BAO liq gauges is also relative to free market forces. There is no way for us to make graphics that predict the future with accuracy</p>
+<p>The only things we have addressed is how veBAO lockers will be incentivized and how liq gauges will be as well</p>
+<p>veBAO holders receive all of the baoUSD revenue but we do not know exact amount of revenue that will be cuz we cant predict future as I said. Market forces on the BAO token price relative to the voted upon gauge weight for a given LP gauge also determines the yield gauge stakers could theoretically get but again…we cannot predict the future so the yield as a percentage of the money you put in is entirely relative to the performance of the protocol.</p>
+<p>only as time progresses and we get more historical data does that become easier to forecast roughly but also still impossible at high accuracy just like every other financial product in defi as well as in tradfi. Chaotic financial time series forecasting is a doozy to say the least lol</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-09-03T03:30:58Z' class='post-time'>
+                    September 3, 2022,  3:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-03T03:33:16Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If someone can hold a token in a wallet or contract wallet and choose to sell it at any time based on their own accord/decisions that is the actual definition of a “circulating” token, even if they arbitrarily choose to hold the token for 100 years for example. Therefore it is not being taken out of circulation because it is in circulation. Only when a smart contract enforces the ability to not to sell the token does it become illiquid and therefore taken out of circulation for a predefined time period (or permanently AKA burn the tokens)</p>
+<p>Overtime as the DAO scales the token will have deflationary pressure people can speculate on but this is by default a higher risk position because the token is inflationary (has both deflationary pressure and inflationary pressure so free market forces will determine the net direction of price at any given time based on several factors) and meant to route rewards to those that do the desired actions defined above (1. lock tokens (veBAO) for baoUSD fees 2. stake LP in gauges for BAO emissions)</p>
+<p>look at the price of the CRV token as an example. We have a different revenue source than curve does as they get fees from swaps on the exchange pools but we fundamentally have same revenue sharing model only our fees come from people using the synthetics market.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-escrow-configuration-bip-xx-rough-draft/1152">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-09-25T21:19:20Z' class='post-time'>
+                    September 25, 2022,  9:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-25T21:19:20Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

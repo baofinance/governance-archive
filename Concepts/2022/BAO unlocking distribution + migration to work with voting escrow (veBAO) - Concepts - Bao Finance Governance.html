@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BAO unlocking distribution + migration to work with voting escrow (veBAO) - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="Abstract: 
+This proposal plans to layout a solution of how to fairly give out locked BAO that was promised to those that participated in bao liquidity farms (early bao users) without issues of over dilution/inflation and&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;BAO unlocking distribution + migration to work with voting escrow (veBAO)&#39;" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e7abf0bd100bb823d4d6dfc569a78f8b0a5983ee_2_1024x158.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e7abf0bd100bb823d4d6dfc569a78f8b0a5983ee_2_1024x158.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123/print" />
+<meta property="og:title" content="BAO unlocking distribution + migration to work with voting escrow (veBAO)" />
+<meta name="twitter:title" content="BAO unlocking distribution + migration to work with voting escrow (veBAO)" />
+<meta property="og:description" content="Abstract:  This proposal plans to layout a solution of how to fairly give out locked BAO that was promised to those that participated in bao liquidity farms (early bao users) without issues of over dilution/inflation and move BAO DAO to a voting escrow model for both sharing profits of our products and governance power over all aspects of the system. (reference BIP-6)  Summary:  The BAO smart contract galaxy has been looking at ways in which to safely and fairly move away from our original gover..." />
+<meta name="twitter:description" content="Abstract:  This proposal plans to layout a solution of how to fairly give out locked BAO that was promised to those that participated in bao liquidity farms (early bao users) without issues of over dilution/inflation and move BAO DAO to a voting escrow model for both sharing profits of our products and governance power over all aspects of the system. (reference BIP-6)  Summary:  The BAO smart contract galaxy has been looking at ways in which to safely and fairly move away from our original gover..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="14 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="38 ❤" />
+<meta property="article:published_time" content="2022-05-03T17:18:29+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">BAO unlocking distribution + migration to work with voting escrow (veBAO)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='BAO unlocking distribution + migration to work with voting escrow (veBAO)'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e7abf0bd100bb823d4d6dfc569a78f8b0a5983ee.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-03T17:18:29Z' class='post-time'>
+                    May 3, 2022,  5:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-04T02:44:46Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p>Abstract:</p>
+<p>This proposal plans to layout a solution of how to fairly give out locked BAO that was promised to those that participated in bao liquidity farms (early bao users) without issues of over dilution/inflation and move BAO DAO to a voting escrow model for both sharing profits of our products and governance power over all aspects of the system. (reference BIP-6)</p>
+<p>Summary:</p>
+<p>The BAO smart contract galaxy has been looking at ways in which to safely and fairly move away from our original governance model using the Bao MasterFarmer contract and the accompanying Bao Token (both on main-net and xDAI/Gnosis chain). To briefly reiterate on previous discussion, this is because with the current state of how many locked tokens there are relative to circulating tokens as a result of the farming era that took place on both chains, the rate at which the original linear unlock was scheduled to happen would have caused too large of a dilution (inflation of the Bao token supply) for the protocol to safely handle, and to avoid potentially systemic governance attacks that would mis-align incentives for early participants (those who chose to farm with their liquidity tokens).</p>
+<p>To explain further, this is given that we have not yet successfully scaled bao-markets (hard-synths on main-net), before the original unlock time was scheduled, which was/is necessary to help mitigate the dilution of our governance token. More details can be read in previous governance concepts and the proposal to delay the unlock (reference BIP-6).</p>
+<p>Bao Distribution:</p>
+<p>This brings me to how the smart contract galaxy plans to unlock the tokens that were promised to Bao liquidity farmers. The first proposed step is to define a migration to a new token (BAO v2) that reduces the supply by a factor of 1,000 relative to the original BAO token (~1.5 trillion → ~1.5 billion tokens). This is because the math used inside of the voting escrow contract implementation we will be using from curve finance’s contracts causes errors when using larger numbers for some operations.</p>
+<p>The proposed distribution will take place over 2 years and allow anyone to claim their locked tokens before the 2 year period is over in the form of BAOv2 tokens, but at a slashed rate defined by a function of some kind that increases the number of tokens available the longer you wait to claim all the tokens. For example, if one were to wait for 1 year (half-way point of the distribution) to claim all their tokens, they would receive all the unlocked tokens from the first year of the distribution with no slash and the rest beyond the one year they waited to claim would be given to them at a slashed rate. Only after 2 years do you receive all the locked BAO tokens promised at no slash, given as the new BAOv2 token. We have yet to decide where the slashed balances will go, but most practically they would go to the protocol for future incentives to people who are long term invested in BAO. We also need to decide where bao that is never claimed (inactivity) goes and how long past 2 years we allow people with locked BAO to interact with the distribution contract before they are deemed inactive (3-6 months?).</p>
+<p>Example:</p>
+<p>-Here is the function the smart contract galaxy currently has proposed (weighted more heavily to the end)</p>
+<p>-this is to make a larger slash for those that want to dilute the token faster and sell</p>
+<p>-X in this piecewise function below is the number of days (the end being the 730th day, AKA 2 years)</p>
+<p><strong><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e7abf0bd100bb823d4d6dfc569a78f8b0a5983ee.png" data-download-href="/uploads/short-url/x3sFVv9IuOj6bC4FRvUxSH0o1gG.png?dl=1" title="" rel="noopener nofollow ugc"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e7abf0bd100bb823d4d6dfc569a78f8b0a5983ee_2_624x96.png" alt="" data-base62-sha1="x3sFVv9IuOj6bC4FRvUxSH0o1gG" width="624" height="96" role="presentation" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e7abf0bd100bb823d4d6dfc569a78f8b0a5983ee_2_624x96.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e7abf0bd100bb823d4d6dfc569a78f8b0a5983ee_2_936x144.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e7abf0bd100bb823d4d6dfc569a78f8b0a5983ee_2_1248x192.png 2x" data-dominant-color="4D7FB4"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1600×248 106 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></strong></p>
+<p>-we have also graphed other example functions on the graphic below</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/022c24e57d30b69f01e810a9e873688e1056a41d.png" data-download-href="/uploads/short-url/jdx3Zq3EI21BJYabjDRawgkSN7.png?dl=1" title="" rel="noopener nofollow ugc"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/022c24e57d30b69f01e810a9e873688e1056a41d_2_624x239.png" alt="" data-base62-sha1="jdx3Zq3EI21BJYabjDRawgkSN7" width="624" height="239" role="presentation" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/022c24e57d30b69f01e810a9e873688e1056a41d_2_624x239.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/022c24e57d30b69f01e810a9e873688e1056a41d_2_936x358.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/022c24e57d30b69f01e810a9e873688e1056a41d_2_1248x478.png 2x" data-dominant-color="040505"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1600×612 113 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>The function we implemented is in <strong>purple</strong>, and the others are examples of some other options. The piecewise function we’ve defined so far is designed to weight distribution towards the end, but not as heavily as an e^((1/n)x) function (plus, the purple function is very gas efficient/cheaper on chain)</p>
+<p>For BAOv1 that is already circulating, we will make a simple swapping function that converts the BAOv1 balance to the resultant BAOv2 balance factoring in the supply reduction as mentioned previously.</p>
+<p>To summarize, all tokens whether unlocked/circulating or locked will be converted and given at a supply reduction of 1/1000 (.001) relative to the ~1.5 trillion BAOv1 tokens.</p>
+<p>veBAO:</p>
+<p>With the distribution proposed above, we will now have an unlocking process taking place over the 2 year time period that gives everyone a proportional weighting of the tokens they were promised in the original unlock of locked BAO balances and to already circulating BAOv1 tokens.</p>
+<p>The smart contract galaxy plans to set minting privileges for the new BAOv2 token to the BAO voting escrow contract so the only source of new BAOv2 supply will be from emissions in the voting escrow model (as it is in curve finance). We will have to make a separate proposal/concept and discussion for what we want our emissions function to look like and how much our “pre-mine” will be, or in other words how much extra supply as a percentage will be used in the future mining epochs for BAO rewards to BAO liquidity gauges.</p>
+<p>-here is curve’s token inflation schedule below for reference in the context of veCRV (pre-mine is 43%)</p>
+<p>-this means curve liquidity gauges will receive ~57% of the future curve token supply as time =&gt; infinity</p>
+<p><img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/7c418ca9c4045cb4a54c4697696aa98bfc4d4cf0.png" alt="" data-base62-sha1="hJdE0Z5YogiuK7dwAySC2YPrfyw" width="270" height="166" role="presentation"></p>
+<p>-a 43% BAO pre-mine as an example leaves ~57% of the total supply that will exist as time =&gt; infinity to the veBAO/BAO liquidity gauges</p>
+<p>As for veBAO with regards to the distribution, the smart contract galaxy proposes we allow for 3 possible outcomes for those with locked BAO.</p>
+<ol>
+<li>
+<p>Collect/claim all tokens available before 2 years at a slashed rate depending on how soon they are claimed (in the form of BAOv2 tokens) (tokens are now in circulation after this function call)</p>
+</li>
+<li>
+<p>Collect/claim all tokens at 2 years (or sometime after) to receive 100% of the locked balance (in the form of the BAOv2 token) into the account address that farmed BAOv1 (now circulating)</p>
+</li>
+<li>
+<p>Choose to lock your balance in the BAOv2 distribution into voting escrow for a minimum of 2 years and a maximum of 4 years to get into veBAO as early as possible (your tokens will not be circulating but you will get the benefits of having veBAO.</p>
+</li>
+</ol>
+<p>This is meant to be a rough concept of how we could provide a solution for allowing several options (the 3 listed above) to those that participated in BAO early on when it first launched, while still preserving long term incentives for those that continue to support the DAO looking into the future.</p>
+<p>The smart contract galaxy has been working on this both in writing code/testing it and giving constructive feedback so hopefully the rest of the community thinks this is a reasonable solution to move forward as it fairly moves us into the voting escrow system we want to use for our product suite on Ethereum Main-net, while also allowing people to decide what they will do with locked Bao they are owed without over inflating/diluting Bao token holders. Let me know what you guys think</p>
+<p>With Love,</p>
+<p>nox</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="http://gov.bao.finance/t/v2-token-migration-distribution-and-setting-up-for-vebao/1133/2">V2 Token Migration, Distribution and setting up for veBAO</a>
+                        <meta itemprop='position' content='3'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/cryptomando'><span itemprop='name'>cryptomando</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-04T02:28:03Z' class='post-time'>
+                    May 4, 2022,  2:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-04T02:28:03Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Supply will be decreased by a factor of 1,000 or 10,000?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-04T02:46:24Z' class='post-time'>
+                    May 4, 2022,  2:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-04T02:46:24Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>lol brainfart on my part, In the contract it will be written to scale the supply down by 1000 or in other words ~1.5 billion Baov2 tokens…I have edited the post to reflect that :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-05T08:55:18Z' class='post-time'>
+                    May 5, 2022,  8:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-05T08:55:18Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’d like to have this clarified, we would be voting on approving all three outcomes at once? Or would we be voting for three separate options?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/WAGMIcapital'><span itemprop='name'>WAGMIcapital</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-05T11:17:45Z' class='post-time'>
+                    May 5, 2022, 11:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-05T11:17:45Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This seems to be a very well thought out proposal team - well done.</p>
+<p>I support the concept of filtering out the mercenary farmers from the longer term supporters of the project. The function put forward achieves a good balance.</p>
+<p>It would be interesting to get an update on how the curve aligns with the current roadmap that will further create a sink for $BAO.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-05T14:12:49Z' class='post-time'>
+                    May 5, 2022,  2:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-05T14:12:49Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/jester">@Jester</a><br>
+veBAO is relevant to the distribution in that it lays out what people who still invest/support BAO after the fact can do with the tokens they receive as more gets unlocked/circulating…hence the 3 options at the bottom</p>
+<p>That being said I believe we should still split them up (token migration and veBAO related stuff) in terms of voting to make things as simple as they can be, to avoid over involving one super complex BIP when we could have made 2 BIPs with a lot less going on to get a more accurate vote…the first vote, imo, should focused on the distribution itself and its respective parameters in an official BIP, but that will also ultimately decide what is possible for the voting escrow piece moving forward…whether it is the same as I propose or different</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-05T14:14:16Z' class='post-time'>
+                    May 5, 2022,  2:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-05T14:14:16Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did you mean supply reduction/burn by the term sink?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/RichAndCreamy'><span itemprop='name'>RichAndCreamy</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-05T16:46:57Z' class='post-time'>
+                    May 5, 2022,  4:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-05T16:46:57Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What are the benefits of veBAO?</p>
+<p>I’m ok waiting how ever long it takes for hard synths so I’m most likely locking up or just waiting till the 2 year mark</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-05T17:35:20Z' class='post-time'>
+                    May 5, 2022,  5:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-05T17:35:20Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/richandcreamy">@RichAndCreamy</a><br>
+That has yet to be defined 100% at this point, as I think that is something we should vote on in more detail after we agree upon the token unlocking/distribution in its own vote.</p>
+<p>If we were to fork curve finance’s voting escrow governance contract directly that would mean veBAO is used to calculate voting power for new BAO proposals, changing the weightings of each BAO liquidity gauge (or in other words the LP tokens we want to incentivize (add/remove) and which one’s are weighted the heaviest/receive the most emissions and lastly, collecting half of all fees generated by the DAO’s products</p>
+<p>We would have the same setup as curve finance only instead of all the curve pools and veCRV working in tandem it will be liquidity pools/tokens we need to incentivize for BAO products to work and veBAO working in tandem with those BAO liquidity providers</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/nvb'><span itemprop='name'>nvb</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-05T22:21:07Z' class='post-time'>
+                    May 5, 2022, 10:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-05T22:21:07Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Very nice. Regarding veBAO distribution can we have the option of choosing between 1, 2, and 3 or do we have to stick to one? I think most people will fall into 1 and 3.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Aaron_Az_Craic'><span itemprop='name'>Aaron_Az_Craic</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T00:05:57Z' class='post-time'>
+                    May 6, 2022, 12:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T00:05:57Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The concept makes sense, but wow, 2 years is a long time - especially since we have already been forced to wait while you deploy hard synths and so on. I am concerned the whole crypto space will have moved on/changed significantly, and what Bao is building, will be totally redundant by that point (or atleast built by someone else, a lot faster).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/8keyser8soze8'><span itemprop='name'>8keyser8soze8</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T00:13:13Z' class='post-time'>
+                    May 6, 2022, 12:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T00:13:13Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The official Max Total Supply BAO<br>
+979,818,838,089.753020493021753894 BAO Increasing this sum to 1.5 trillion and denomination by 1000 factor will automatically reduce the current value of the project by 40% -50%. What in the absence of a real product can practically kill the project. This is only a speculative and comparative analysis in relation to similar projects and their supply. An interesting pattern seems to be the locking approach taken by Hex. A denomination based on a factor of 100 seems more appropriate to me.<br>
+There is also a quite radical approach. Copy the project and move it to layer zero.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/QSix'><span itemprop='name'>QSix</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T04:06:17Z' class='post-time'>
+                    May 6, 2022,  4:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T04:06:17Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I was hoping for a slashing component to be added to the claim of locked BAO, so it’s great to see it being proposed with the token migration.</p>
+<p>It’s clear that there are some who would prefer to cash out and move on, and that’s fine. It just can’t come at the expense of governance, and the security of the protocol.</p>
+<p>This will also allow some of the token supply to be fairly redistributed back into usage incentives, and to users who want to interact with the protocol.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T04:26:47Z' class='post-time'>
+                    May 6, 2022,  4:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T04:26:47Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Me and Vex are writing the contract to where you can choose a specific amount you want slashed at a given time, and a particular amount you want locked in veBAO (min 2yrs) and if you want a specific amount streamed normally over the curve with no slash as well, you can…all simultaneously as the 2 year migration moves forward but only with the total balance you have to play with based on how much locked bao you have</p>
+<p>no new tokens will be created/destroyed as a percentage of your current amount of the supply in the current Bao token, just scaled down by 1000 as I said, that is unless we vote to burn the slashed tokens instead of giving that back to protocol for more liquidity farming incentives that will help scale Bao markets and Bao baskets using those emissions to give to people who mint the liquidity we need…but I will be making a very technical dive in another concept post in next few days but this was a lot more simple initial idea</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T04:32:39Z' class='post-time'>
+                    May 6, 2022,  4:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T04:32:39Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That would be the supply number for main-net only…there are also bao coupons on xDAI. The total supply we will actually stop farms at to do the migration accounting for both chains will be my guess is 1.2T&lt;X&lt;1.5T tokens…so we will in pure technicality on the contract side of things only be using Bao main-net circulatingSupply() + lockedSupply() and xDAI circualtingSupply() + lockedSupply() all put together as our total supply number. This means there will perhaps be 1.2B-1.5B Baov2 tokens</p>
+<p>I will be making a full technical dive in the next few days for everyone to read everything that will be involved in this process including things like what we will tell CEXs to do with their circulating tokens. This was simply a quick rough idea of how we could unlock…all the numbers will be in that new post I/smart contract galaxy will post</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/nvb'><span itemprop='name'>nvb</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T04:51:25Z' class='post-time'>
+                    May 6, 2022,  4:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T04:51:25Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Got you. Awesome. Sounds like giving the tokens back to the protocol would be the preferred move, right? Any downsides?</p>
+<p>Thanks for the explanation. Much appreciated.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/cryptomando'><span itemprop='name'>cryptomando</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T05:29:39Z' class='post-time'>
+                    May 6, 2022,  5:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T05:29:39Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Well done. Regarding slashing, is there opposition to burning the slashed tokens? The mechanics of burning would benefit all holders of bao making it more attractive from a tokenomics perspective whereas just rewarding stakers and community doesn’t directly onboard more participants.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T15:33:25Z' class='post-time'>
+                    May 6, 2022,  3:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T15:35:06Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I disagree with you in some aspects but that’s a fair point. Do you think curve finance is obsolete for example? There governance started in the same way we are proposing and they are still going strong since early 2020 as an example. Also something to note is that the products launching/scaling and veBAO governance and liquidity incentives can start before the distribution is finished and we will not be stopping development of baskets and markets on main-net just to wait for the tokens to unlock (those products will be are ways in which to generate fees for those in veBAO). So all those things will be done before 2 years is over with and those with locked bao that chose to lock for a minimum 2 years as was stated in this concept will be the first to benefit from all those things as they will be the first aquire veBAO if they want and have access to possible extra incentives from the slashed balances being redirected perhaps…we can also vote to burn all the slashes though</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T15:37:27Z' class='post-time'>
+                    May 6, 2022,  3:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T15:37:27Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yeah that was my thinking but I think we should still vote specifically whether we want to burn or redirect slashed balances to those more long term people that make liquidity that help scale our products (so community wide choice between the 2)…even so I lean towards making people have to provide value/liquidity for the dao rather than simply hold the token passively in order to benefit and scale the products more but other might disagree</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T15:40:40Z' class='post-time'>
+                    May 6, 2022,  3:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T15:40:40Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I lean more towards using those slashed balances to help scale bao markets specifically because we need liquidity pools above a certain size for those synths to work.</p>
+<p>But I also think that should be left to the community to decide so if we vote to simply burn the slashes so be it…Its still positive for the DAO members (token becomes more valuable) but it makes scaling bao markets to success harder and potentially other things in the future not possible to provide benefits for those that continue to invest long term and support bao</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/cryptomando'><span itemprop='name'>cryptomando</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T16:42:31Z' class='post-time'>
+                    May 6, 2022,  4:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T16:42:31Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you explain about how slashed balances could help scale BAO thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_23' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/cryptomando'><span itemprop='name'>cryptomando</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T16:52:11Z' class='post-time'>
+                    May 6, 2022,  4:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T16:52:11Z'>
+              <span itemprop='position'>23</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>1.5 trillion was always the hardcap. There was discussion to reduce it to 1 trillion since mining ended early. This might be a good idea if we are implementing slashing for vebao claims. I would like more discussion about suppl/slashing component.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_24' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T16:59:27Z' class='post-time'>
+                    May 6, 2022,  4:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T16:59:27Z'>
+              <span itemprop='position'>24</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In order for baoUSD (an example synth on bao-markets) to be usable and increase its ability to take on higher leverage loans, more competitive apr, and overall have demand to be used, we will need a lot more money in our baoUSD-3crv liquidity pool…so we can use the liquidity gauge inside veBAO for that crv pool just as is the case with curve liquidity gauges which will give people a certain APY in BAOv2 emissions to start based on how much liquidity they added…With the slashed balances we can for example create an even higher APY temporarily (~say 6 months) to further incentivize people to add more baoUSD-3CRV for more baov2 emitted to them</p>
+<p>then after the extra boost (could be ~6 month extra farming rewards on top for those LPs that we need to scale depending on what we decide) to get to the pool started with higher APY is done and all those slashed balances have been transferred to those who staked LPs the APY will decrease back to just the Bao liquidity gauge itself…only now lots of liquidity will be in the pool and baoUSD will be advantageous to use</p>
+<p>this is one use case as we can possible think of more ways to give back to community that helps the products work and start generating revenue</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_25' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T17:00:52Z' class='post-time'>
+                    May 6, 2022,  5:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T17:00:52Z'>
+              <span itemprop='position'>25</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>farms on main net are still going to my knowledge, we will, right before we go to start the distribution end farms and take the total balance across eth and xDAI to get our real total supply number as farms continue to increase that balance</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_26' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-06T22:35:13Z' class='post-time'>
+                    May 6, 2022, 10:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-06T22:35:13Z'>
+              <span itemprop='position'>26</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We can get more value into the project from my point of view from utilizing the tokens instead of burning them, if we use them responsibly we can bring far more from than just burning them.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_27' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/8keyser8soze8'><span itemprop='name'>8keyser8soze8</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-07T01:51:47Z' class='post-time'>
+                    May 7, 2022,  1:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-07T01:51:47Z'>
+              <span itemprop='position'>27</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Let’s work out a compromise. We will burn 50% and we will spend 50% on the development of the protocol. In the future, we can vote by adjusting the percentage to the situation so that it brings the greatest benefit to Bao and the community.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_29' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/gabrield'><span itemprop='name'>gabrield</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-07T20:00:47Z' class='post-time'>
+                    May 7, 2022,  8:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-07T20:00:47Z'>
+              <span itemprop='position'>29</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>With the supply reduction, are we still burning bao to mint synths? Can we derive anything from polly regarding the protocol revenue part of veBao? Is that still in the plans?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_30' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-07T22:15:00Z' class='post-time'>
+                    May 7, 2022, 10:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-07T22:15:00Z'>
+              <span itemprop='position'>30</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>BIP-10 details that what will be done with Bao Basket fees will have to be voted on in the future, we will need a proposal to go through from the DAO on it.</p>
+<p>“Fees will initially be collected by the treasury then as part of the veBAO implementation, usage of fees from all products will be voted on.”</p>
+<p>I imagine its the same for Hard synths where we as a community will need to decide together in their own separate votes.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_31' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Charlie_Hustle'><span itemprop='name'>Charlie_Hustle</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-10T01:53:13Z' class='post-time'>
+                    May 10, 2022,  1:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-10T01:53:13Z'>
+              <span itemprop='position'>31</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How can we place vebao in a similar position to vecrv, i.e the use of locked tokens for bribes for liquidity voting?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_32' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-12T15:11:28Z' class='post-time'>
+                    May 12, 2022,  3:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-12T15:11:28Z'>
+              <span itemprop='position'>32</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>whether we are burning BAO or not to mint synths has been undecided to my knowledge…</p>
+<p>although if we are to choose a vote escrow governance/profit sharing model we would be dis-incentivizing locking BAO/staking liquidity tokens in gauges more, if fees generated were converted to token burns instead of given as fees to those that are using the vote escrow system</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_33' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-12T15:24:08Z' class='post-time'>
+                    May 12, 2022,  3:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-12T15:24:08Z'>
+              <span itemprop='position'>33</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It will be in a very similar position</p>
+<p>BAOv2 emissions will represent control over the liquidity we incentivize which results in the synths we want to build being possible (both baskets and markets synths)</p>
+<p>for example baoUSD-3CRV LP, or other stable pools paired to the synthetic stable coin, baoUSD</p>
+<p>another one is bSTBL-3CRV LP, or other stable pools paired to the synthetic stable coin, bSTBL</p>
+<p>another one is bDEFI/ETH LP or something else with similar dynamics</p>
+<p>all these liquidity pools will be voted between to determine which one gets the most emissions and therefore profits ranked from highest to lowest</p>
+<p>generally it will be the free market deciding over a given time frame (during each of the mining epochs) how/what to rank the LPs based on how much they are used mainly, but also secondly the differential in fee structures we end up deciding for Bao Baskets (soft-synths) and Bao Markets (hard synths) as the 2 are not created equally in terms of the fees they generate</p>
+<p>and to your point, I’ve thought about building a contract that does the same thing to CRV governance that convex does but instead using our governance model, so having an indefinitely locked BAO token that gives you a tokenized veBAO position just like convex does with curve vote locks to offer bribing</p>
+<p>once veBAO is up and running I will send a vote through to see if community wants that contract to be whitelisted and allowed to participate in governance…this is exactly how convex started in the context of curve voting them through to make cvxCRV</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_34' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-13T00:00:31Z' class='post-time'>
+                    May 13, 2022, 12:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-13T00:00:31Z'>
+              <span itemprop='position'>34</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>When making this new BAO token it will be possible to go beyond the current cap correct? I think increasing the supply over time and pulling it back down to match the utilization of BAO is important for encouraging people to keep participating in the project.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_35' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-13T15:27:48Z' class='post-time'>
+                    May 13, 2022,  3:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-13T15:27:48Z'>
+              <span itemprop='position'>35</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes…With mining epochs as it is in Curve finance the supply will approach a theoretically defined maximum limit (horizontal asymptote)…This means people will need to use veBAO locking mechanism and staking of liquidity pool tokens in gauges (plus boosting in the gauges) to receive incentives and no dilution</p>
+<p>with this design those who simply want to hold the token and do nothing else will not benefit (only governance participants in veBAO and the people who take risks to provide the liquidity will benefit as the token supply increases and gets given out to the groups that support/provide value to the DAO)…as it is in Curve</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_36' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-13T17:10:04Z' class='post-time'>
+                    May 13, 2022,  5:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-13T17:10:04Z'>
+              <span itemprop='position'>36</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nice, yeah that’s what I was exactly hoping for thanks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_37' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-17T21:26:25Z' class='post-time'>
+                    May 17, 2022,  9:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-17T21:26:25Z'>
+              <span itemprop='position'>37</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Burn should be 100%. This incentivizes people to actually buy the token and in turn creates value for the whole project. Flooding out more worthless tokens has got us to the price level we are at now and those that already have taken a 90% loss on supporting this project already deserve to be made whole again without being locked in for eternity.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_38' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-17T21:31:28Z' class='post-time'>
+                    May 17, 2022,  9:31pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-17T21:31:28Z'>
+              <span itemprop='position'>38</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>People have already taken risks and lost badly supporting this project not to mention having a large chunk of my reward pool raked away and kept by those running this project when the previous pools were ended to the amount of 50,000,000 tokens.</p>
+<p>Anyone holding the token deserves to benefit even if that is less than those that decide to provide future liquidity. This also incentivizes people to buy the token and more people get involved.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_39' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-18T06:00:56Z' class='post-time'>
+                    May 18, 2022,  6:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-18T06:04:00Z'>
+              <span itemprop='position'>39</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>yeah but we would decide whether or not we burn or keep any given amount slashes<br>
+based on people’s decisions (I lean more toward like 50/50 burn/keep or like 75% burn/25% keep, just my opinion based on several factors and future of the protocol in the context of vote escrow model), after the distribution finishes or perhaps monthly burns to mitigate gas cost when reducing supply? if we did end up voting to burn some that is, we can always vote either way 100% or meet in the middle somewhere based on the other proposal I wrote assuming the distribution we are still fine tuning gets passed through as vote. But to your point, the timing means the people who want to sell there tokens quickly and leave/stop supporting the DAO in less than 6 months to year will not experience any of the deflation on supply from burns regardless unless they waited around a year or more to claim, but the longer you wait as holder the more total inflation you experience, as the other side of the coin so to speak. We are trying to do our best to make a distribution that balances those 2 outcomes which is hard with as many tokens locked relative to circulating supply we have for the current Bao token. We are trying to solve that problem using vote escrow but that involves using an inflationary token people have to lock in order to avoid dilution, meaning underlying holders get diluted without locking. Burning tokens directly incentivizes those who hold the token liquid so we must decide as a percentage how much is burned vs kept based on how many want to stay/lock in veBAO for baskets and markets revenue (and vote to collect further incentives as token emissions) or leave the dao and sell.</p>
+<p>Also this is not the finalized curve and slashing function we will  propose as the galaxies have come up with a better solution…will hopefully have that done in next few days and get Baowolf or chickn to announce it for me :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_40' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-18T16:16:45Z' class='post-time'>
+                    May 18, 2022,  4:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-18T16:16:45Z'>
+              <span itemprop='position'>40</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>100% of any recovered tokens due to slashes should be burned. This will reduce the supply as those that claim their tokens early will also be potentially selling those tokens within the increasing circulating supply. At least then there is some relatively immediate reduction in the supply as this is happening. This will indirectly also increase the value of the tokens that the protocol already holds in addition to starting to dig out of this inflationary hole the investors are in at this point.</p>
+<p>Locking the tokens only delays the inevitable dilution. The inflation from the remaining farms is ending this year, The veBAO baskets should be functional enough on their own without diluting the token value further to then transfer to the baskets.</p>
+<p>As for slashing penalties it could work as a month by month reduction for two years, first month roughly 95% penalty, second 90%, third 85% ect.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_41' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-18T17:52:51Z' class='post-time'>
+                    May 18, 2022,  5:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-18T17:52:51Z'>
+              <span itemprop='position'>41</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>yeah I get that that’s your opinion on what we should do with the slashed balances, I share a similar sentiment only that we should both keep and burn some of the slashes based on a vote. but to the operation of the whole process, understand certain things are impossible unless we vote to spend an insane amount of gas money using distribution contract so continuous deflation/burning across distribution can happen.</p>
+<p>also can you please define what a veBAO basket is? im confused based on my understanding of the contracts what that is?</p>
+<p>and also if you did build any test contracts for the distribution I would love to see them! and to your point about the slash function (95 to 90 to 85% as time goes by as you made an example of) have you seen or made a model of just how many tokens that is relative to current supply as time moves forward? I can tell you, as we have modeled this, that it is not possible if we want the dao to still exist lol…simply too much inflation to incentivize people who will continue to support the dao</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_42' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-18T18:51:53Z' class='post-time'>
+                    May 18, 2022,  6:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-18T18:51:53Z'>
+              <span itemprop='position'>42</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Continuous burning can be delayed as you said, monthly if necessary to make it feasible within the gas costs.</p>
+<p>No I can’t define what you have asked me. And I’m confused as well as it seems the main proposal here to deal with inflation is locking the tokens for a long period of time and paying rewards with further inflation. Whatever my suggestion was is just to see as much burning as possible.</p>
+<p>What happens in two years when all the tokens unlock and the price is further devalued by another 90%?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_43' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T04:10:40Z' class='post-time'>
+                    May 19, 2022,  4:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T04:10:40Z'>
+              <span itemprop='position'>43</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>yeah I dont really see an issue with monthly burns on the tokens from slashing we do decide to burn…think it would be good but need to confirm by changing distribution contract and retesting with this idea.</p>
+<p>also, Since we voted to implement a voting escrow model the gov token will be inflationary and people will need to lock up to receive incentives, so burning the supply in continuous operation, outside simply for the distribution part of our governance migration, is contradictory to that…Because we voted to use a VE system, passive token holders will not receive governance power or added APY as an LP from BAO emissions</p>
+<p>and to your last point most of the tokens will be out of circulation under the ve system due to incentives changing, with the option to lock tokens for incentives people are paid to hold on to their tokens in the lock, only those that wish to sell will need liquid tokens, and they will not get incentives because of the way vote escrow works. so yes they will be able to be unlocked and used in EOAs/sold but there is no incentive to do so if you want to vote/profit from the underlying application, for the reasons above inflation we be much less than simply linearly unlocking all of them with no incentive to provide LP or other forms of participation for the DAO</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_44' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/mars'><span itemprop='name'>mars</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/a01de5312a897b0a46be5f36fc7a5050b15ee130.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T05:25:40Z' class='post-time'>
+                    May 19, 2022,  5:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T05:25:40Z'>
+              <span itemprop='position'>44</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What is the meaning behind these particular fixed numbers?</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/a01de5312a897b0a46be5f36fc7a5050b15ee130.jpeg" data-download-href="/uploads/short-url/mQsrCX0pjzMtN3OQl8QcKp1aR56.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/a01de5312a897b0a46be5f36fc7a5050b15ee130_2_690x113.jpeg" alt="image" data-base62-sha1="mQsrCX0pjzMtN3OQl8QcKp1aR56" width="690" height="113" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/a01de5312a897b0a46be5f36fc7a5050b15ee130_2_690x113.jpeg, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/a01de5312a897b0a46be5f36fc7a5050b15ee130_2_1035x169.jpeg 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/a01de5312a897b0a46be5f36fc7a5050b15ee130_2_1380x226.jpeg 2x" data-dominant-color="25272A"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2450×402 92.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Why <code>0.000199914</code> not <code>0.0002</code> for example?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_45' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T05:26:34Z' class='post-time'>
+                    May 19, 2022,  5:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T05:26:34Z'>
+              <span itemprop='position'>45</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Details have yet to be voted on but I am starting to wonder if this project just exists for the benefit of those operating it. Continuing to give APY to only those that continue to provide liquidity doesn’t seem right at this point when early investors have already taken a 90% loss.</p>
+<p>There’s something bothering me about your original post because it sounds like you intend on claiming  tokens that are inactive. This is totally unacceptable and tantamount to theft. Do you intend on warning people of their loss of tokens on some other site than the main bao.finance site and then taking them as you previously did?</p>
+<p>“We also need to decide where bao that is never claimed (inactivity) goes and how long past 2 years we allow people with locked BAO to interact with the distribution contract before they are deemed inactive (3-6 months?).”</p>
+<p>I lost months of my liquidity pool rewards totaling 50,000,000 tokens because whoever is running this project couldn’t spend five minutes and put up a warning on the bao.finance site of the fact that staking pools were ending and the rewards would be lost. Nothing has been done to rectify this. I’m sorry but I can’t help but see that these proposal plans are self serving for those working on this project with little to no regard for those that supported and lost large amounts of money supporting this project.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_46' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/mars'><span itemprop='name'>mars</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T05:58:48Z' class='post-time'>
+                    May 19, 2022,  5:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T05:58:48Z'>
+              <span itemprop='position'>46</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="R11" data-post="45" data-topic="1123">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/r/3ec8ea/48.png" class="avatar"> R11:</div>
+<blockquote>
+<p>you intend on claiming tokens that are inactive</p>
+</blockquote>
+</aside>
+<p>Most of the projects do that.</p>
+<p>ENS, Gitcoin, etc etc… They had limited time to claim tokens.</p>
+<p>The goal here - weed out inactive participants.</p>
+<aside class="quote no-group" data-username="R11" data-post="45" data-topic="1123">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/r/3ec8ea/48.png" class="avatar"> R11:</div>
+<blockquote>
+<p>this project just exists for the benefit of those operating it</p>
+</blockquote>
+</aside>
+<p>That is a statement that does not bring much support.</p>
+<p>Focusing on a problem - 95% of the tokens are vested and some way of finding sustainable unlock has be established.</p>
+<aside class="quote no-group" data-username="R11" data-post="45" data-topic="1123">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/r/3ec8ea/48.png" class="avatar"> R11:</div>
+<blockquote>
+<p>the fact that staking pools were ending</p>
+</blockquote>
+</aside>
+<p>Something similar happened to me in another project… I was happily staking on autopilot and they migrated.</p>
+<p>It sucks.</p>
+<p>I feel you.</p>
+<p>Shit happens.</p>
+<p>I think there were announcements in Discord, not sure about the giant red banner on the main website.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_47' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T16:06:03Z' class='post-time'>
+                    May 19, 2022,  4:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T16:06:03Z'>
+              <span itemprop='position'>47</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If tokens are going to be claimed it has to be in a fair and transparent manner. I didn’t see any forewarning of the pools ending and that the staking rewards would be taken and I was frequently checking the main site and the forums. At best this is poor management and planning and at worst it’s a deliberate and premeditated way of stealing those earned tokens.</p>
+<p>The question also arises is weeding out inactive participants a worthy goal in the first place? I don’t think so. I think that more participants is better overall regardless of their participation level. If people can benefit even by just owning the token through price appreciation and burning this does take some circulating supply off the market if it’s being held by investors.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_48' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T17:07:10Z' class='post-time'>
+                    May 19, 2022,  5:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T17:45:12Z'>
+              <span itemprop='position'>48</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>basically we have a piece wise function with an arbitrary slope of .03065x in the first 100 days that determines available BAO tokens, this is subject to change (if you have a proposal made to change the function we can vote on it if you make a proposal for it) but will ultimately change the availability of BAO if a different linear coefficient is selected…</p>
+<p>with regards to the second part of the piece wise function (100 days to 730 days) we wanted a polynomial function degree 2 that would be in direct correspondence (in its y value at 100 days) with the starting value of the line in the fist part at the 100 day intersection point (this way both functions on either side of 100 days touch the same value), hence the weird arbitrary decimals. One thing to note is any function weighted more heavily to the end will be ideal for the people who stay at the DAO and do not want to sell and exit tokens. This function combined with a slash function that will work on top of it is the end goal here.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_49' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T17:26:05Z' class='post-time'>
+                    May 19, 2022,  5:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T17:35:14Z'>
+              <span itemprop='position'>49</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yeah I dont get why you think I am not going to have the same options you will have when we vote something through to unlock the tokens? (same with other people/developers who have been here longer then I have)…</p>
+<p>everyone will be subject to the same rules of distribution and <strong>those who support the dao more, will get benefited more</strong> but not in liquid tokens, everyone who wants to come out on top/with the most incentives in a voting escrow system will all have to lock tokens to where they cannot use them for anything else just as it is in CRV. no one can sell off tokens and receive benefits at the same time, hopefully you are not mis-informed in this regard but the negativity you bring makes me think you are under an assumption that dev/people working for the DAO somehow get paid in a different way regarding the distribution specifically. If we go through with this distribution or one similar I and the rest of the team will have to either slash or lock our tokens in variable amounts we currently have locked just as everybody else does. I will personally max lock them in veBAO for 4 years meaning I will get veBAO benefits just like everyone else who locks in veBAO but I wont be able to do anything else with my tokens…</p>
+<p>I started working here as contract dev in april-ish of this year and have been trying to move us forward and fix these problems that I went through as just an investor (just like you, if you put money in xdai/mainnet farms and never received you initial unlock in BAO because we delayed it, or farms ended early) before I understood or learned how to write smart contracts/test them. So I have inherited these problems as a developer here now but that is ok in my mind as we have plans to do what we can for everyone to come out with something, even those that want to sell what they can and leave</p>
+<p>do you believe we are sending slashes directly to developer wallets or something? (this is not the case at all, the ones we keep will be giving back to community for different things, main thing would be veBAO holders and Liq providers)</p>
+<p>also to your point about lack of notification, I was an investor in farms just like you (not a developer yet, at this point) and the week farms ended on xDAI I was more than noticed, Chickn/other community peeps made very clear guidelines for how to remove all the liquidity and bridge tokens back to main-net if you were on xDAI and if on main-net they made guides for that too. In my opinion, those who missed these announcements on their farms ending did not keep track of the discord announcements/BIP snapshots that correspond to literally all things this DAO does. Don’t get me wrong tho, I believe BAO is a small project in the grand scheme of things and I do have sympathy for those that went inactive/forgot to unstake their LPs when farms did end. But we were all clearly notified base on my experience as an investor</p>
+<p>again if you have anything of value to help make the proposal to unlock and migrate better/more fair im all ears but I do not see any concepts/word documents detailing ideas/github repos showing examples yet, so someone actually has to do the work to reach a solution that everyone will vote through otherwise we will be in this forever stagnate state and not move forward which is really what I want most for this DAO to do as an early investor turned self taught dev that likes the grand idea of synths we are building</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_50' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/mars'><span itemprop='name'>mars</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/749d36e122c1a0da0514cfcfc9dd432530658c8e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T18:13:45Z' class='post-time'>
+                    May 19, 2022,  6:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T18:13:45Z'>
+              <span itemprop='position'>50</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="N0x" data-post="48" data-topic="1123">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://sjc6.discourse-cdn.com/standard10/user_avatar/gov.bao.finance/n0x/48/514_2.png" class="avatar"> N0x:</div>
+<blockquote>
+<p>One thing to note is any function weighted more heavily to the end will be ideal for the people who stay at the DAO and do not want to sell and exit tokens.</p>
+</blockquote>
+</aside>
+<h3><a name="yeah-i-get-it-1" class="anchor" href="#yeah-i-get-it-1"></a>Yeah I get it…</h3>
+<p>It makes think really hard about my personal allocation, personal strategy.</p>
+<p>I admit I farmed loads of early <code>$BAO</code> and it is totally skewing my imaginary paper “net worth”.</p>
+<p>At a risk of doxxing myself - if I was to apply for a job as a senior engineer I would expect roughly this amount of equity.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/749d36e122c1a0da0514cfcfc9dd432530658c8e.png" data-download-href="/uploads/short-url/gDCdrqsoGCHiL0mZwCy5dGOyEGO.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/749d36e122c1a0da0514cfcfc9dd432530658c8e_2_690x264.png" alt="image" data-base62-sha1="gDCdrqsoGCHiL0mZwCy5dGOyEGO" width="690" height="264" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/749d36e122c1a0da0514cfcfc9dd432530658c8e_2_690x264.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/749d36e122c1a0da0514cfcfc9dd432530658c8e_2_1035x396.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/749d36e122c1a0da0514cfcfc9dd432530658c8e_2_1380x528.png 2x" data-dominant-color="F3F3F4"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1686×646 92 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>My personal incentives are aligned with <code>$BAO</code> and I genuinely do not know… 🤷‍♀️</p>
+<div class="youtube-onebox lazy-video-container" data-video-id="YKMG7D4rxX4" data-video-title="Ask Not What Your Country Can Do For You... Kennedy, Archive film 98910" data-video-start-time="" data-provider-name="youtube">
+  <a href="https://www.youtube.com/watch?v=YKMG7D4rxX4" target="_blank" rel="noopener nofollow ugc">
+    <img class="youtube-thumbnail" src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/251202a2c5035347dcf0d292f9584634541db9d1.jpeg" title="Ask Not What Your Country Can Do For You... Kennedy, Archive film 98910" data-dominant-color="555555" width="690" height="388">
+  </a>
+</div>
+
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/a86d23b29a7b42c151ab321ab780eb37ed492735.jpeg" data-download-href="/uploads/short-url/o1Y2NOcwt76gjI484vpyMWiJLx3.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/a86d23b29a7b42c151ab321ab780eb37ed492735_2_690x388.jpeg" alt="image" data-base62-sha1="o1Y2NOcwt76gjI484vpyMWiJLx3" width="690" height="388" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/a86d23b29a7b42c151ab321ab780eb37ed492735_2_690x388.jpeg, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/a86d23b29a7b42c151ab321ab780eb37ed492735_2_1035x582.jpeg 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/a86d23b29a7b42c151ab321ab780eb37ed492735.jpeg 2x" data-dominant-color="494747"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1280×720 73.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>I have a few things going on:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://medium.com/@marsrobertson/so-what-do-you-do-ba0f598af5c3">
+  <header class="source">
+      <img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/360db83263e79cba7951e7ba15aa4495131aa0f1.png" class="site-icon" data-dominant-color="585858" width="32" height="32">
+
+      <a href="https://medium.com/@marsrobertson/so-what-do-you-do-ba0f598af5c3" target="_blank" rel="noopener nofollow ugc" title="09:08AM - 20 May 2022">Medium – 20 May 22</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:551/500;"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/2dc35edef76f159574156cee3112af1425ce9726_2_551x500.jpeg" class="thumbnail" data-dominant-color="B4B4B4" width="551" height="500"></div>
+
+<h3><a href="https://medium.com/@marsrobertson/so-what-do-you-do-ba0f598af5c3" target="_blank" rel="noopener nofollow ugc">So what do you do?</a></h3>
+
+  <p>TLDR: New definition of value. New incentives.</p>
+
+  <p>
+    <span class="label1">Reading time: 5 min read</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Ideally, I would like to liquidate, stake ETH, have more brainpower available, less mental effort managing all the coins.</p>
+<p>My assumption is that others have exactly the same incentive, therefore it will be a rush to the exit.</p>
+<p>Thanks to your design of the function, on the first day it is only <code>0.03065%</code> it takes 100 days to get <code>3.065%</code></p>
+<hr>
+<h3><a name="random-ideas-2" class="anchor" href="#random-ideas-2"></a>Random ideas</h3>
+<p><em>(but complicated, gas cost, error prone, bug prone, not really)</em></p>
+<p>Maybe claiming in 10% batches?</p>
+<p>Maybe after each claim 1 month cooling off period</p>
+<p>Maybe longer unlock period? (more than 2 years)</p>
+<hr>
+<p>I actually quite like your proposal, proper game theory and aligned incentives.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_51' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T19:39:36Z' class='post-time'>
+                    May 19, 2022,  7:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T19:39:36Z'>
+              <span itemprop='position'>51</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I get it; there are no easy solutions and I am still pissed that my tokens were taken.  I don’t have the same background as you do so I am limited in this discussion to my ability to put forward detailed proposals so having this discussion is what I am doing for now.</p>
+<p>I am looking through your Understanding vote escrow post and I can see that lending and trading fees are to be paid to those locking in veBAO. Those then providing liquidity are to be given more veBAO. What’s concerning is that the Curve token price is flatlined. Something has to be done to correct this if veBAO is going to use this model to get people to want to buy the veBAO token for simple price appreciation.</p>
+<p>When is the proposed vote happening for these changes to veBAO?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_52' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T22:26:51Z' class='post-time'>
+                    May 19, 2022, 10:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T22:26:51Z'>
+              <span itemprop='position'>52</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Are you certain your Bao has been taken? I know some would have been lost because it would have been that you farmed them at a different rate none of them went to the project or us just back to master farmer I believe. But try accessing your farms on old.bao.finance and see if you have anything to harvest. If you went into the discord and messaged me I wouldn’t mind helping see if you got farms going still.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_53' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T23:01:19Z' class='post-time'>
+                    May 19, 2022, 11:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T23:01:19Z'>
+              <span itemprop='position'>53</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yeah if you could send me your github profile and ping me in the discord i would love to see your past work in solidity/vyper (testing with hardhat/foundry/brownie) or if in the front end context is what you mean, if you know react native plus ethers.js and/or web3.js that would also be a great help!..new talent would help speed up our development goals a lot if the person has advanced skills :)</p>
+<p>Also to your point i am still waiting for feedback on the next iteration of what i and others think is more fair and better overall as a solution</p>
+<p>I think lengthing of the distribution function to 3 years is up to what we as community prefer, or some other time besides 2 years, definitely has its owned set of benefits so is a good topic to visit for sure!</p>
+<p>And i also think if we do vote to burn slashes in some amount/percentage we can do monthly burns…which wont be too much gas cost and provide se deflative upside pressure on bao price as the distribution inflates things on the other end of net supply number as time moves forward</p>
+<p>Again please get involved and ping me on discord if you guys have ideas (“nox” is my name), im usually much more active there but i do post large documents here :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_54' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T23:23:09Z' class='post-time'>
+                    May 19, 2022, 11:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T23:23:09Z'>
+              <span itemprop='position'>54</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The whole point of a vote escrow token is that the price is more closely in line with a stable coin because rewards are distributed using new tokens to those who participate (not a higher/more valuable token price) although long term the price will be increasing slowly as larger sums of liquidity enter the system but the short term horizon of revenues all goes to those who are active and not just token holder because token is now under an emissions model which means you need to be active locker to benefit</p>
+<p>And no vote has taken place yet, you can look at the process for BIPs (concept, BIP for week, then snapshot for a week…im making this concept in order to push the entire dao to make a decision we can all vote above quorm on to make sure we move on wh…</p>
+<p>right now we only have 1 solution, move to veBAO which is what we voted on previosuly</p>
+<p>Smart contract galaxy is going to release an improved verison that we believe is more fair based on this first iteration, this design is a good start but we can definitely do better</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_56' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T23:41:29Z' class='post-time'>
+                    May 19, 2022, 11:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T23:41:29Z'>
+              <span itemprop='position'>56</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I understand that is the plan but since it still benefits all token holders to burn tokens, I hope there will be a balance of burning and distributing tokens to those that have the ability to participate more. At least to get closer to the starting value the original tokens were sold at in the first few months of distribution.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_57' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-19T23:45:01Z' class='post-time'>
+                    May 19, 2022, 11:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-19T23:45:54Z'>
+              <span itemprop='position'>57</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yeah i agree…</p>
+<p>Im personally leaning toward 50% burn 50% keep or 75% burn 25% keep, then. Doing monthly burns or maybe every 2 months…whatever we think is sensible in terms of burn frequency based on gas cost</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_58' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-unlocking-distribution-migration-to-work-with-voting-escrow-vebao/1123">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-29T16:06:06Z' class='post-time'>
+                    May 29, 2022,  4:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-29T16:06:06Z'>
+              <span itemprop='position'>58</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

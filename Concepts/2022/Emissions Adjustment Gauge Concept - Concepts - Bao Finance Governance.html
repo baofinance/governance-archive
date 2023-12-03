@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Emissions Adjustment Gauge Concept - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="Summary
+During the lead-up and after the release of BAOv2, guardians have identified a concern with the level of BAO emissions compared to the liquidity available or that can be available in BAOv2 and wish to address it&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Emissions Adjustment Gauge Concept&#39;" href="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193/print" />
+<meta property="og:title" content="Emissions Adjustment Gauge Concept" />
+<meta name="twitter:title" content="Emissions Adjustment Gauge Concept" />
+<meta property="og:description" content="Summary During the lead-up and after the release of BAOv2, guardians have identified a concern with the level of BAO emissions compared to the liquidity available or that can be available in BAOv2 and wish to address it before starting with new emissions.   Background  Inflation is scheduled to be 230M BaoV2 for the first year based on the starting parameters agreed by the DAO (https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163). This is around 4.4 million BAO per week ($175k at th..." />
+<meta name="twitter:description" content="Summary During the lead-up and after the release of BAOv2, guardians have identified a concern with the level of BAO emissions compared to the liquidity available or that can be available in BAOv2 and wish to address it before starting with new emissions.   Background  Inflation is scheduled to be 230M BaoV2 for the first year based on the starting parameters agreed by the DAO (https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163). This is around 4.4 million BAO per week ($175k at th..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta property="article:published_time" content="2022-12-06T15:01:07+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/emissions-adjustment-gauge-concept/1193">Emissions Adjustment Gauge Concept</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Emissions Adjustment Gauge Concept'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-06T15:01:07Z' class='post-time'>
+                    December 6, 2022,  3:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-06T15:01:07Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <h1>
+<a name="summary-1" class="anchor" href="#summary-1"></a>Summary</h1>
+<p>During the lead-up and after the release of BAOv2, guardians have identified a concern with the level of BAO emissions compared to the liquidity available or that can be available in BAOv2 and wish to address it before starting with new emissions.</p>
+<h1>
+<a name="background-2" class="anchor" href="#background-2"></a>Background</h1>
+<ul>
+<li>Inflation is scheduled to be 230M BaoV2 for the first year based on the starting parameters agreed by the DAO (<a href="https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163">https://gov.bao.finance/t/bip-21-vebao-starting-parameters/1163</a>). This is around 4.4 million BAO per week ($175k at the current market value of $0.04)</li>
+<li>The FTX scandal has effectively reduced the circulating supply by around 70% at the time (52.4B BaoV1 form a circulating supply of 73B) which cannot be used to migrate to BAOv2 or create liquidity in the markets. A reduced circulating supply of 70% effectively means inflation will have around 3x the impact.</li>
+<li>The yield available on stable pools typically ranges from 1%-20% depending on perceived risk. Emitting rewards many times more than this when liquidity settles after the launch of emissions will not attract many times more value to the protocol and encourage participants to liquidate rewards.</li>
+<li>Protocol revenue will help to offset inflation as it is distributed to veBAO holders, creating an incentive to stake BAO tokens instead of liquidating them on the open market</li>
+<li>The treasury can seed around $300k into the gauges so that a portion of emissions go back to the treasury</li>
+<li>You can check the status of BAOv2 migration here: <a href="https://etherscan.io/token/0xce391315b414d4c7555956120461d21808a69f3a?a=0x235b30088e66d2d28f137b422b9349fba51e0248#tokenAnalytics">0x235b30088e66d2d28f137b422b9349fba51e0248</a>
+</li>
+</ul>
+<h1>
+<a name="goals-3" class="anchor" href="#goals-3"></a>Goals</h1>
+<p>Due to the effective change in circulating supply, the community should vote on whether to continue with the same emissions schedule or to reduce emissions by creating a new gauge type that burns BAO tokens. Before any changes, veBAO holders would vote to direct 100% of new emissions to the pools of their choice, where they can be claimed. A new gauge type can be created that directs a % of emissions away from the gauges voted on by the community and burns them. The community should choose between 2 options to signal the preferred route to take.</p>
+<p>Option 1. Start emissions <strong>without</strong> a new gauge type for burning a % f BAO emissions. One can still be created in the future if the community chooses.<br>
+Option 2. Start emissions <strong>with</strong> a new gauge type to burn a % of BAO emissions.</p>
+<h1>
+<a name="follow-up-tasks-4" class="anchor" href="#follow-up-tasks-4"></a>Follow-up Tasks</h1>
+<p>If option 1 is chosen emissions will start 3 days after the completion of the vote.</p>
+<p>If option 2 is chosen there will be new proposals posted straight to snapshot to decide the nature of the new gauge type and the starting parameters. The gauge could be implemented quickly (&lt;1 week) with manual controls while an automated solution is worked on, or we could wait for the automated solution which would take a number of weeks to develop.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-06T16:01:17Z' class='post-time'>
+                    December 6, 2022,  4:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-06T16:01:17Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This poll will work as a temperature check from the community on how you would like us to proceed.</p>
+<p>It will not be binding, the intention is to help to spark discussions on the correct route to take as well as allow guardians to make preparations for what will be the likely outcome of any related vote.</p>
+<div class="poll" data-poll-status="open" data-poll-max="1" data-poll-min="1" data-poll-results="always" data-poll-charttype="bar" data-poll-type="multiple" data-poll-name="poll">
+<div>
+<div class="poll-container">
+<ul>
+<li data-poll-option-id="050e9c68b9fffd17a675d2a0fcfc6d69">Start emissions with no change (no additional delay)</li>
+<li data-poll-option-id="8be04413ed092a8de9b89cf68cd6f843">Start emissions with a manually controlled gauge, make it trustless in the future (no additional delay)</li>
+<li data-poll-option-id="f95ad68f95f12089903d318a862b9e11">Delay emissions until a trustless gauge is implemented (approx 1-3 month delay)</li>
+</ul>
+</div>
+<div class="poll-info">
+<p>
+<span class="info-number">0</span>
+<span class="info-label">voters</span>
+</p>
+</div>
+</div>
+</div>
+<p>It would be helpful if you also give the reasons for your choice in a comment below so we can take everyone’s arguments on board</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/zela'><span itemprop='name'>zela</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-13T09:46:36Z' class='post-time'>
+                    December 13, 2022,  9:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-13T09:46:36Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Why has this become an issue now? Wouldn’t this problem have been much worse if some BAO wasn’t lost on FTX? If yes, then why is a solution necessary when the impact is smaller?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-15T13:54:55Z' class='post-time'>
+                    December 15, 2022,  1:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-15T13:54:55Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>At least some of the BAO on FTX was providing more liquidity for trading &amp; could be migrated to BAOv2 to do the same in our gauges (or elsewhere)</p>
+<p>The fact that that BAO is no longer circulating means there is now less liquidity available to absorb new BAO tokens that come onto the market.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/emissions-adjustment-gauge-concept/1193">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-02-08T02:53:03Z' class='post-time'>
+                    February 8, 2023,  2:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-02-08T02:53:03Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

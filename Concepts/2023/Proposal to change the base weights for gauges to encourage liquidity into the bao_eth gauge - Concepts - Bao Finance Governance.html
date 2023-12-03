@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Proposal to change the base weights for gauges to encourage liquidity into the bao/eth gauge - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="This proposal is to change the guage voting weights from the current weight of 5m, 3m and 2m for the respective guages to 5m,3m and 10m. This will increase the APR for the Bao/eth pool and hopefully encourage people to a&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Proposal to change the base weights for gauges to encourage liquidity into the bao/eth gauge&#39;" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207/print" />
+<meta property="og:title" content="Proposal to change the base weights for gauges to encourage liquidity into the bao/eth gauge" />
+<meta name="twitter:title" content="Proposal to change the base weights for gauges to encourage liquidity into the bao/eth gauge" />
+<meta property="og:description" content="This proposal is to change the guage voting weights from the current weight of 5m, 3m and 2m for the respective guages to 5m,3m and 10m. This will increase the APR for the Bao/eth pool and hopefully encourage people to add liquidity into the gauge and to start an upward trend in the token price.  The Bao/eth uni pool is the only place BaoV2 is currently available to trade. For potential buyers being able to buy without major slippage costs and gas fees will help the project by making it easier f..." />
+<meta name="twitter:description" content="This proposal is to change the guage voting weights from the current weight of 5m, 3m and 2m for the respective guages to 5m,3m and 10m. This will increase the APR for the Bao/eth pool and hopefully encourage people to add liquidity into the gauge and to start an upward trend in the token price.  The Bao/eth uni pool is the only place BaoV2 is currently available to trade. For potential buyers being able to buy without major slippage costs and gas fees will help the project by making it easier f..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta property="article:published_time" content="2023-01-03T21:58:59+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">Proposal to change the base weights for gauges to encourage liquidity into the bao/eth gauge</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Proposal to change the base weights for gauges to encourage liquidity into the bao/eth gauge'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-03T21:58:59Z' class='post-time'>
+                    January 3, 2023,  9:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-03T21:58:59Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p>This proposal is to change the guage voting weights from the current weight of 5m, 3m and 2m for the respective guages to 5m,3m and 10m. This will increase the APR for the Bao/eth pool and hopefully encourage people to add liquidity into the gauge and to start an upward trend in the token price.</p>
+<p>The Bao/eth uni pool is the only place BaoV2 is currently available to trade. For potential buyers being able to buy without major slippage costs and gas fees will help the project by making it easier for investors to get involved as this pool becomes larger.</p>
+<p>For everyone putting assets in the gauges the rewards should be set higher than the losses they are taking from supporting the Bao/eth gauge as the token price has decreased due to those selling the tokens they are receiving from the gauges. This proposal is a first step in finding a balance to incentivize people to add liquidity to the pool.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://gov.bao.finance/t/the-patient-dumplings-war-economy/1210">The Patient Dumpling&#39;s War Economy</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/attenboro'><span itemprop='name'>attenboro</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-04T13:43:42Z' class='post-time'>
+                    January 4, 2023,  1:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-04T13:43:42Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>First off I support efforts on balancing out the weights to help the tokenomics. That being said there already is voting on weighting  the gauges with vebao.</p>
+<p>A few questions:</p>
+<p>What happens then with the vote ending today/tomorrow, will it not affect? Will it affect until this proposal goes through?</p>
+<p>How does weighting affect the future votes?</p>
+<p>Is this supposed to be a one time change or continuously a thing?  If so that will be conflicting with gauge voting.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-04T19:05:34Z' class='post-time'>
+                    January 4, 2023,  7:05pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-04T19:12:02Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The individual voting isn’t going to fix this problem because the votes are just going to where the assets are going. And we see the result of that now. The gauge weight for the baoUSD-3CRV pool is set to increase to 56% from 50 while the bao/eth pool is set to increase to 21%. The price declines will get worse after this takes effect.</p>
+<p>This vote is beside the individual voting which will continue on as is for now but now that you mention it there may be a problem with the voting system because as more tokens are accumulated by the largest holders they are able to increase their rewards by voting for the pool with their assets creating a increasing feedback loop. I have to wonder now if the voting is really providing any benefit or should be scrapped entirely and just left for voting like this or guardians to set periodically.</p>
+<p>This vote is a one time thing but future votes may be necessary if base gauge votes need to be updated to balance out the rewards to stop the price decline.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-05T15:23:21Z' class='post-time'>
+                    January 5, 2023,  3:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-05T15:23:21Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think this could be a good solution instead of implementing the emissions control gauge.</p>
+<p>We are already close to the TVL target but the main issue we see is a lack of liquidity in the BAO/ETH pool, mostly due to the rewards that are sent to other gauges and sold into the BAO/ETH liquidity providers. In hindsight, the starting weight for BAO/ETH should probably have been larger.</p>
+<p><a class="mention" href="/u/attenboro">@attenboro</a>  Base weights have already been set for the pools to set the starting weights and last until they are changed or removed. This would be an adjustment to them. Base weights are like votes on top of user votes, so right now there is the equivalent of 5m votes added to the baoUSD gauge, 3m added to the bSTBL gauge and 2m to the baoUSD gauge. We could remove them altogether. Either way, it is the same veBAO holders that vote for base weights and individual gauge votes every period.</p>
+<p>We could also adjust base weights to give more control to individual voting periods. say 2.5m, 1.5m, 5m base weights.</p>
+<p>For reference there is around 90m veBAO at the moment, which gives you an indication of how much control each voting period could have on weights.</p>
+<p>One other thing to consider, a change to base weights seems to reset any votes that have already been made. We should make everyone aware of this before any changes are approved and let people know they will need to vote again to apply their chosen weights.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-05T17:13:56Z' class='post-time'>
+                    January 5, 2023,  5:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-05T17:13:56Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Are the individual voting periods really helping much of anything? It seems like the bulk of the assets are in the bao/USD-3CRV pool and they are just voting for the same pool.</p>
+<p>For the liquidity in the bao/eth pool to increase we are likely going to have to rely on the base weight being set higher rather than expecting individual voters to boost the gauge weight.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-06T00:14:56Z' class='post-time'>
+                    January 6, 2023, 12:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-06T00:14:56Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I dont think very many people voted, but no - the weight of the BAO/ETH pool didnt change much - more people voted for the baoUSD one.</p>
+<p>I support this proposal in general. I think the numbers suggested are a good starting point. If the community wants to lower all base weights we could do that in the future.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-06T21:08:49Z' class='post-time'>
+                    January 6, 2023,  9:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-06T21:08:49Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Instead of altering current weights, we could add a new BAO pool with an 8m base weight.</p>
+<p>Something like a balancer 80/20 pool could work well because it would mean to compound, users only have to sell 20% of their BAO tokens.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-07T21:01:22Z' class='post-time'>
+                    January 7, 2023,  9:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-07T21:01:22Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As was mentioned in the general chat on the discord channel the ratio of bao/eth is around 90/10 due to the recent price drop. Having another gauge might not be a bad idea but this will spread out the liquidity into two pools that isn’t beneficial for creating a large pool with small slippage and gas fees involved. I think we should carry on with the original proposal and see how it works for a while.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-08T04:50:02Z' class='post-time'>
+                    January 8, 2023,  4:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-08T04:50:02Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Univ2 pools are always 50/50 in asset ratios.</p>
+<p>The benefit of a 80/20 balancer pool is that liquidity providers have to hold 80% BAO vs only 50% in a univ2 pool.</p>
+<p>If liquidity mining participants wanted to compound into the pool they would only need to sell 20% of their rewards</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-09T00:39:13Z' class='post-time'>
+                    January 9, 2023, 12:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-09T00:39:13Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I see what you mean but it still does dilute the pool into more than one gauge. We have a working bao/uni pool, why not at least make this change and see how it responds for a while?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/R11'><span itemprop='name'>R11</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-18T17:22:42Z' class='post-time'>
+                    January 18, 2023,  5:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-18T17:22:42Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is anyone concerned that the emissions from the two larger pools continue to create ongoing selling into the bao/eth pool?</p>
+<p>There has been a small increase in liquidity added to the pool but the emission rewards into the pool still aren’t high enough to offset the selling and price decline.</p>
+<p>I am starting to wonder if all baoV1 migrations to baoV2 should have to go through the bao/eth uni pool going forward.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/proposal-to-change-the-base-weights-for-gauges-to-encourage-liquidity-into-the-bao-eth-gauge/1207">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-19T05:40:34Z' class='post-time'>
+                    January 19, 2023,  5:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-19T05:40:34Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, I have considerable concern for this.</p>
+<p>Some of that issue I was trying to tackle in my proposal concept <a href="https://gov.bao.finance/t/the-patient-dumplings-war-economy/1210" class="inline-onebox">The Patient Dumpling's War Economy</a></p>
+<p>Though, I recently thought we should make new gauges that all pair with BAO.</p>
+<p>baoUSD/BAO</p>
+<p>bSTBL/BAO</p>
+<p>building protocol owned liquidity and removing reliance on gauges over time will be important as well.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

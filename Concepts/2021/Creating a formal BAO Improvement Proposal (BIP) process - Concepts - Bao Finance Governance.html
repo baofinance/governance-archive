@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating a formal BAO Improvement Proposal (BIP) process - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="BAO currently does not have a formal process for submitting a governance proposal - something we would like to change so we hopefully see more proposals from the community. There are 2 things I would like to discuss and &amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Creating a formal BAO Improvement Proposal (BIP) process&#39;" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/15c0581ca63044aedd6a65fd766bd1302fc63514_2_471x1023.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/15c0581ca63044aedd6a65fd766bd1302fc63514_2_471x1023.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712/print" />
+<meta property="og:title" content="Creating a formal BAO Improvement Proposal (BIP) process" />
+<meta name="twitter:title" content="Creating a formal BAO Improvement Proposal (BIP) process" />
+<meta property="og:description" content="BAO currently does not have a formal process for submitting a governance proposal - something we would like to change so we hopefully see more proposals from the community. There are 2 things I would like to discuss and reach consensus on, and if successful, create a BIP to go to vote.  1. Do you agree with the draft process for creating a proposal I have laid out below?     2. What requirements should there be for moving a proposal to snapshot for voting and making a vote binding?  We want to e..." />
+<meta name="twitter:description" content="BAO currently does not have a formal process for submitting a governance proposal - something we would like to change so we hopefully see more proposals from the community. There are 2 things I would like to discuss and reach consensus on, and if successful, create a BIP to go to vote.  1. Do you agree with the draft process for creating a proposal I have laid out below?     2. What requirements should there be for moving a proposal to snapshot for voting and making a vote binding?  We want to e..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="9 ❤" />
+<meta property="article:published_time" content="2021-06-22T23:27:39+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/creating-a-formal-bao-improvement-proposal-bip-process/712">Creating a formal BAO Improvement Proposal (BIP) process</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Creating a formal BAO Improvement Proposal (BIP) process'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/15c0581ca63044aedd6a65fd766bd1302fc63514.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-22T23:27:39Z' class='post-time'>
+                    June 22, 2021, 11:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-22T23:27:39Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p>BAO currently does not have a formal process for submitting a governance proposal - something we would like to change so we hopefully see more proposals from the community. There are 2 things I would like to discuss and reach consensus on, and if successful, create a BIP to go to vote.</p>
+<p><strong>1. Do you agree with the draft process for creating a proposal I have laid out below?</strong><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/15c0581ca63044aedd6a65fd766bd1302fc63514.png" data-download-href="/uploads/short-url/36q7Avj8FGWkUMzVCKpQsuM9gAA.png?dl=1" title="image"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/15c0581ca63044aedd6a65fd766bd1302fc63514_2_230x499.png" alt="image" data-base62-sha1="36q7Avj8FGWkUMzVCKpQsuM9gAA" width="230" height="499" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/15c0581ca63044aedd6a65fd766bd1302fc63514_2_230x499.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/15c0581ca63044aedd6a65fd766bd1302fc63514_2_345x748.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/15c0581ca63044aedd6a65fd766bd1302fc63514_2_460x998.png 2x" data-dominant-color="D6D7D8"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">907×1969 191 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p><strong>2. What requirements should there be for moving a proposal to snapshot for voting and making a vote binding?</strong></p>
+<p>We want to enable the community to post proposals and at the same time avoid getting spammed and have a clear guidelines for which votes will be binding and which aren’t</p>
+<p>An example I think that could be reasonable:</p>
+<ul>
+<li>
+<p>minimum voting power of 50m BAO to create a snapshot.</p>
+</li>
+<li>
+<p>The snapshot becomes binding when it has followed the documented process and reaches a quorum of 25 billion BAO voting power (the recent vote on what to do after rewards stopped on xDai reached around 35 billion).</p>
+</li>
+<li>
+<p>An exception could be allowed for proposals submitted by multisig holders (or maintainer galaxy before multisig is implemented), who may want to speed up the process for an emergency vote.</p>
+</li>
+<li>
+<p>New proposals can over ride old ones.</p>
+</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="http://gov.bao.finance/t/proposal-for-a-formal-bao-improvement-proposal-bip-process/738">Proposal for a formal BAO Improvement Proposal (BIP) process</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Fong'><span itemprop='name'>Fong</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-23T01:12:28Z' class='post-time'>
+                    June 23, 2021,  1:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-23T01:43:27Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We should also include a template to use, so people can build on or understand what may be needed for consideration. This is a rough draft*</p>
+<p>(~) is Optional information.</p>
+<p><strong>Proposal:</strong></p>
+<p><strong>Purpose:</strong></p>
+<p>~<strong>Example</strong> (explanation of the function/usage/inspiration. This can be either the site/medium/github. As much information is appreciated):<br>
+~<strong>Requirements</strong> (Is there something that would be needed to set this in motion?):</p>
+<p>Example:<br>
+<strong>Proposal</strong>: To create a Compounding Vault via Yearn strategies</p>
+<p><strong>Purpose</strong>: Integrate a well-known/successful strategy to generate income for the users of BAO as well as the DAO for future marketing/development in the network.</p>
+<p><strong>Example of Idea</strong>: <a href="https://yearn.finance/vaults" class="inline-onebox" rel="noopener nofollow ugc">yearn.finance</a> , <a href="https://docs.yearn.finance/developers/v1-yvaults-documentation/v1-yvaults-overview" class="inline-onebox" rel="noopener nofollow ugc">v1 yVaults Overview - yearn.finance</a></p>
+<p><strong>Requirement</strong>: Alot of Dev work.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-23T02:15:54Z' class='post-time'>
+                    June 23, 2021,  2:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-23T02:15:54Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Here are a few comments or refinement we could do :</p>
+<p>Stage 1 : If an idea as refined from a rough model to well crafter one, should the OP update the first post or make a new thread before asking Staff for validation and move forward to the Stage 2 ?</p>
+<p><strong>2. What requirements should there be for moving a proposal to snapshot for voting and making a vote binding?</strong></p>
+<ul>
+<li>
+<p>I like the quorum idea. But i’m afraid the 25B mark could be too high currently. I don’t like the mega bills, but the way voting power is accounted as of now ( 33% of your locked Bao + 1/4th of your $BAO + 3x your $BAO that is in Bao/ETH Party Pool) without accounting for BAO coupons on xDai, it may be hard to get there. As we had 2 persons reprensenting 20B who voted, if we skip those 2, a quorum of 10B could be interesting.</p>
+</li>
+<li>
+<p>I would prefer to not set a minimum voting power to create a snapshot, nor i would like to see everyone write directly on snapshot without using the workflow and the process we try to design here. I don’t like to impose a quota for pushing up to vote as it’s like we are sending a message that only whales or big members can do proposals. I think we could see a lot of great ideas if we accept them through a process from anyone, independent of their voting weight.</p>
+</li>
+<li>
+<p>If a Concept is well crafted, with a clear and actionable mechanic or model, move to BIP for a week to account final comments, then could be move out to snapshot by the staff.</p>
+</li>
+<li>
+<p>My idea is that the community could entrust the staff or a governance galaxy to process forward the BIP that are mature to hold a vote</p>
+</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-23T13:34:27Z' class='post-time'>
+                    June 23, 2021,  1:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-23T13:34:27Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/fong">@Fong</a>, yeah like the idea of a template to help people give the level of detail we need and could tie in with <a class="mention" href="/u/baowolf">@Baowolf</a> suggestion of an “approval” section of the forum where community members believe a concept has progressed to the stage of being ready to become a BIP.</p>
+<p>So an idea gets developed in concepts. Then the template in “BIP approvals” is filled in to help make sure it has all the details needed. Moderators can check with “galaxies” nothing else needs to be added, then once approved moderators can move to the “governance proposals” section. The community can review the final wording for 1 week before it is moved to a snapshot vote, where if it passes with quorum over xx billion, it become binding.</p>
+<p>I guess we already have an element of centralization in this process, so there would be no advantage to having snapshot open to let anyone post a proposal directly for voting where people can bypass the procedure and cause confusion by creating votes that would be ignored.</p>
+<p>Do people agree with this approach -  where moderators ensure proposals are fully formed before posting them as a governance proposal and eventually a snapshot vote, where we trust them not to block or slow down proposals they may not personally agree with in favor of cleaner/ less confusing snapshots where there are no votes getting ignored for not following the correct process?</p>
+<div class="poll" data-poll-status="open" data-poll-results="always" data-poll-charttype="bar" data-poll-type="regular" data-poll-name="poll">
+<div>
+<div class="poll-container">
+<ul>
+<li data-poll-option-id="923cf46356db722e3cd97cc030965d5b">Yes, sounds good</li>
+<li data-poll-option-id="38306157df6a96a0f28459d245366d32">Back to the drawing board. Whole process needs rethinking (please comment on why)</li>
+</ul>
+</div>
+<div class="poll-info">
+<p>
+<span class="info-number">0</span>
+<span class="info-label">voters</span>
+</p>
+</div>
+</div>
+</div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/NNoperator'><span itemprop='name'>NNoperator</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-23T16:52:45Z' class='post-time'>
+                    June 23, 2021,  4:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-23T16:52:45Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Chickn" data-post="1" data-topic="712">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://sjc6.discourse-cdn.com/standard10/user_avatar/gov.bao.finance/chickn/48/149_2.png" class="avatar"> Chickn:</div>
+<blockquote>
+<ol start="2">
+<li>What requirements should there be for moving a proposal to snapshot for voting and making a vote binding?</li>
+</ol>
+</blockquote>
+</aside>
+<p>I’d like to add the requirement that all Bao holders be eligible to vote.  This would require fixing our voting system so the community members who hold Bao outside of ETH get to vote.<br>
+Please also account for tBao holders.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-23T17:41:55Z' class='post-time'>
+                    June 23, 2021,  5:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-23T17:41:55Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, not having cross chain voting is one of our biggest issues at the moment.It is definitely something we want to do, but does not effect the process we are trying to establish here - Creating a proposal and getting it to a vote.</p>
+<p>Cross chain voting was not possible on snapshot &amp; this is one of the reasons we have listed coupons as one the biggest things we have learned from. We also mention that cross chain infrastructure is very young.  <a href="http://gov.bao.finance/t/learnings-from-bao/681">http://gov.bao.finance/t/learnings-from-bao/681</a></p>
+<p>As soon as we can, we will implement voting rights for BAOcx and tBAO holders.</p>
+<p>This was one of the downsides of treading new paths with an alpha product - we come across problems we did not think of or expect.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-29T22:00:03Z' class='post-time'>
+                    June 29, 2021, 10:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-29T22:00:03Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ok, looks like people agree with the approach so far.</p>
+<p>Next thing to work out is what level of quorum should be needed.</p>
+<p>For a vote to be considered binding it should be something that the community feels strongly about, so the number should not be too low. Galaxies could always choose to take direction anyway from a vote that did not meet quorum.</p>
+<p>Previous votes have ranged along the lines of 5b BAO to 40b voting. So I’m thinking something like 10b.</p>
+<p>would be good to see peoples thoughts on this</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-30T14:28:36Z' class='post-time'>
+                    June 30, 2021,  2:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-30T14:28:36Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The issue with having a relatively low quorum is that a whale, or small group of coordinated whales could push through votes that aren’t in the best interests of the wider community.</p>
+<p>To get help avoid this we can build in some kind of veto mechanism, that allows multisig holders to veto a vote. Over riding a veto could still be possible by holding another vote with a higher % of quorum needed and a higher % majority in favor.</p>
+<p>25% of voting power quorum and 2/3 majority for example.</p>
+<p>While this does add an element of centralization, its important to remember that multisig holders will be voted in and its their job to act in the interests of the project, so this would only be used very sparingly and intended as a safety mechanism.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Madotsuki'><span itemprop='name'>Madotsuki</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-02T22:46:14Z' class='post-time'>
+                    July 2, 2021, 10:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-02T22:46:14Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think that works perfectly as a fail-safe. I’m pretty sure BaoMan proposed a similar veto mechanism initially. I don’t really think it centralized things, just adds an additional layer of checks and balances, and if the community truly wants to push the vote through despite the veto they still have the ability to. It just encourages more engagement with contested proposals.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-04T23:59:17Z' class='post-time'>
+                    July 4, 2021, 11:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-06T00:52:20Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>[edit: formatting]<br>
+As there seem to be no objections to this setup, I think we are ready to move to the governance proposals section of the forum with the following process for a BIP:</p>
+<hr>
+<h2>
+<a name="bip-process-1" class="anchor" href="#bip-process-1"></a>BIP process</h2>
+<ul>
+<li>
+<p>There is no minimum number of BAO required to follow the steps to add a proposal</p>
+</li>
+<li>
+<p>You should develop a concept/ proposal in the <a class="hashtag" href="/c/concepts/7">#<span>concepts</span></a> section of the forum.</p>
+</li>
+<li>
+<p>After 1 week you can request a moderator to add it to the <a class="hashtag" href="/c/governance-proposals/5">#<span>governance-proposals</span></a> section.</p>
+</li>
+<li>
+<p>Moderators will check that the proposal has all the detail needed to be implemented without ambiguity. Moderators will not filter proposals based on their views on the proposal itself, just on whether it is fully formed or not.</p>
+</li>
+<li>
+<p>The proposal should spend at least 1 week in <a class="hashtag" href="/c/governance-proposals/5">#<span>governance-proposals</span></a>, where the community can review its final wording. After 1 week unchanged, it can be moved to snapshot for a vote.</p>
+</li>
+<li>
+<p>Multisig holders (or core team before multisig is implemented) can bypass this process and put up a vote straight to snapshot where it is deemed time sensitive</p>
+</li>
+</ul>
+<hr>
+<h2>
+<a name="voting-2" class="anchor" href="#voting-2"></a>Voting</h2>
+<ul>
+<li>
+<p>Quorum requirement is 10b votes.</p>
+</li>
+<li>
+<p>Multisig holders (or core team, before multisig is implemented) can veto a vote. When this happens it will automatically go to a revote where 25% of voting power and a majority of 2/3 is required to overturn the veto</p>
+</li>
+</ul>
+<p>…<br>
+I’d like one final pulse check before I post a formal proposal in <a class="hashtag" href="/c/governance-proposals/5">#<span>governance-proposals</span></a></p>
+<div class="poll" data-poll-status="open" data-poll-results="always" data-poll-charttype="bar" data-poll-type="regular" data-poll-name="poll">
+<div>
+<div class="poll-container">
+<ul>
+<li data-poll-option-id="2c45ed1c7992d1db1301e3acb4670e2b">Agree with this process</li>
+<li data-poll-option-id="abb3231f04dd032545b0fadd7c238438">Disagree with this process (please comment)</li>
+</ul>
+</div>
+<div class="poll-info">
+<p>
+<span class="info-number">0</span>
+<span class="info-label">voters</span>
+</p>
+</div>
+</div>
+</div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/creating-a-formal-bao-improvement-proposal-bip-process/712">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-18T14:45:38Z' class='post-time'>
+                    September 18, 2021,  2:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-18T14:45:38Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

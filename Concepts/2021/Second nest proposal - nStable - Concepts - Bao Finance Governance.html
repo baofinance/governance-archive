@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Second nest proposal - nStable - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="About
+The Polly stable nest is divided into key stable tokens. We believe in a true decentralized and non pegged against fiat stables, and also that a nest composed of stable tokens should provide a secure and good yiel&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Second nest proposal - nStable&#39;" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/second-nest-proposal-nstable/880/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/second-nest-proposal-nstable/880/print" />
+<meta property="og:title" content="Second nest proposal - nStable" />
+<meta name="twitter:title" content="Second nest proposal - nStable" />
+<meta property="og:description" content="About The Polly stable nest is divided into key stable tokens. We believe in a true decentralized and non pegged against fiat stables, and also that a nest composed of stable tokens should provide a secure and good yield for their holder.  The Stable nest reaches a good balance by spreading the risk of fiat pegged stables while earning a decent yield.   Objective To provide exposure to a diversified basket of stable coins with a focus on yield and decentralization. By spreading risk over a numb..." />
+<meta name="twitter:description" content="About The Polly stable nest is divided into key stable tokens. We believe in a true decentralized and non pegged against fiat stables, and also that a nest composed of stable tokens should provide a secure and good yield for their holder.  The Stable nest reaches a good balance by spreading the risk of fiat pegged stables while earning a decent yield.   Objective To provide exposure to a diversified basket of stable coins with a focus on yield and decentralization. By spreading risk over a numb..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="15 ❤" />
+<meta property="article:published_time" content="2021-09-21T02:01:34+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/second-nest-proposal-nstable/880">Second nest proposal - nStable</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Second nest proposal - nStable'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-21T02:01:34Z' class='post-time'>
+                    September 21, 2021,  2:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-23T00:57:05Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <h1>
+<a name="about-1" class="anchor" href="#about-1"></a>About</h1>
+<p>The Polly stable nest is divided into key stable tokens. We believe in a true decentralized and non pegged against fiat stables, and also that a nest composed of stable tokens should provide a secure and good yield for their holder.</p>
+<p>The Stable nest reaches a good balance by spreading the risk of fiat pegged stables while earning a decent yield.</p>
+<h1>
+<a name="objective-2" class="anchor" href="#objective-2"></a>Objective</h1>
+<p>To provide exposure to a diversified basket of stable coins with a focus on yield and decentralization. By spreading risk over a number of coins, you reduce the impact of problems any of the coins face. By focusing on decentralized stables, you also reduce exposure to regulatory risk and do not rely on central issuers to continually act as they should.</p>
+<p>The nest will start with a mixture of centrally issued and decentralized stable coins and deposit them in a variety of protocols to earn yield on them, swapping strategies regularly to maximize the yield earned.</p>
+<p>Currently, single sided yield options on polygon are limited for coins like FRAX and MAI. In order to provide a greater yield farming return USDC and USDT, which are centrally issued, will be included. Over time, we expect the weightings of these coins to be reduced in favor of decentralized alternatives once they are sufficiently mature and have yield strategies that are suitable for a stables nest on polygon.</p>
+<h1>
+<a name="project-inclusion-criteria-3" class="anchor" href="#project-inclusion-criteria-3"></a>Project Inclusion Criteria</h1>
+<p>For a project to be included in the Polly Stable Index, it must fit the below criteria in order to reduce the risk of the index and fit the desires of the community.</p>
+<ul>
+<li>Be a Stable token project available on the Ethereum blockchain or Polygon.</li>
+<li>Be in liquid markets and being used in different lending protocols</li>
+<li>The protocol must be running for 6 months before qualifying to be included in the index</li>
+<li>In the event of a safety incident, the team must have addressed the problem responsibly and promptly, providing users of the protocol a reliable solution and document a detailed, transparent breakdown of the incident.</li>
+<li>Must be sufficiently decentralized and/or collateralized</li>
+</ul>
+<h1>
+<a name="nest-composition-4" class="anchor" href="#nest-composition-4"></a>Nest Composition</h1>
+<p>The composition of this nest is a fair balance between decentralized stable tokens and collateralized pegged stables heavily used in lending protocols</p>
+<ul>
+<li>RAI - 40%</li>
+<li>DAI - 30%</li>
+<li>USDC - 15%</li>
+<li>USDT - 15%</li>
+</ul>
+<h1>
+<a name="yield-strategy-5" class="anchor" href="#yield-strategy-5"></a>Yield Strategy</h1>
+<p>It is possible for the underlying tokens to follow strategies that will earn yield, maximizing value for nest holders, who benefit from this productivity without having to perform any actions themselves. These strategies will be changed over time to take advantage of new opportunities or to maximize the yield earned. Strategies already available include lending and staking, with more advanced strategies planned to be developed in the future.</p>
+<p>We will rely primarily on Kashi markets, which at the moment are giving the best yields for stables, but are also monitoring the yields offered on Cream and AAVE.</p>
+<h1>
+<a name="fees-6" class="anchor" href="#fees-6"></a>Fees</h1>
+<p>Fees for the index will be used for a combination of burning the governance token, adding to the treasury as well as a unique reflexive payment to current index holders as a way to incentivize long term holders. This will be achieved by distributing ⅓ of exit fees to anyone currently holding the index token. The fees are broken down as follows:</p>
+<p><strong>Entry fee 0.5%:</strong> used to burn Polly tokens<br>
+<strong>Annual streaming fee 1%:</strong> accumulated by the treasury<br>
+<strong>Exit fee 1%:</strong> 0.66% accumulated by the treasury, 0.33% distributed to current index holders</p>
+<h1>
+<a name="index-maintenance-7" class="anchor" href="#index-maintenance-7"></a>Index Maintenance</h1>
+<p>The Index is maintained quarterly in two phases</p>
+<p><strong>Determination Phase</strong></p>
+<p>The determination phase takes place during the final 2 weeks of the quarter. During this phase the changes needed for the next reconstitution are determined. Strategies and allocation % will be revisited in order to reach the balance between decentralization and having the most optimal yet secure yield possible for those stables. Proposed changes will be published on the governance forum for 1 week then a governance vote will run for the community to approve changes.</p>
+<p><strong>Reconstitution Phase</strong></p>
+<p>In the two weeks following a successful vote, the index components will be adjusted as per the instructions published during the final 2 weeks of the quarter.</p>
+<p><strong>Emergency Maintenance</strong></p>
+<p>The multisig holders are authorized by the community to re-balance indexes outside the usual schedule during moments that they collectively deem to be critical emergencies. This clause will allow for quick re-balancing in the event of a protocol or index being in danger of failing.</p>
+<p>An example of when this would be utilized would be if a stable coin begins losing its peg/ becoming insolvent, or a protocol suffers an exploit that is not dealt with sufficiently. These scenarios may be time sensitive and require immediate resolution. Thus the team may decide to act without warning and explain their actions in a governance forum post afterwards, or if there is deemed to be time, an emergency governance vote will be posted.</p>
+<p>This is intended as a safety mechanism only, to prevent loss of funds for our users and as such would be a power exclusively exercised under extreme circumstances.</p>
+<p>Edit :</p>
+<p><strong>Farms</strong></p>
+<p>The following pool will be added to the liquidity farming pools</p>
+<p>RAI/ETH - 2000<br>
+nStable - 3000<br>
+nStable/ETH - 7000</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="http://gov.bao.finance/t/bip-5-approve-nstable-polly-nest/902">[BIP-5] Approve nStable Polly nest</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-21T02:37:48Z' class='post-time'>
+                    September 21, 2021,  2:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-21T02:37:48Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As far as I can see I can’t find anything I disagree with, only except that I would like to make sure that acting without an emergency vote for reconstitution outside of schedule is a last resort for sure.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Crypt0Nauta'><span itemprop='name'>Crypt0Nauta</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-21T03:09:14Z' class='post-time'>
+                    September 21, 2021,  3:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-21T03:09:14Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I really like the idea of ​​nStable, the decentralized part is the best, many will put their liquids in nStable, Yield + 0.33% exit fees + Farming pollys and burning more pollys.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jusdefi'><span itemprop='name'>Jusdefi</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-21T03:21:20Z' class='post-time'>
+                    September 21, 2021,  3:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-21T03:21:20Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Longtime follower / LP for Bao.  Usually lurk in the background, but created a forum account just to say YES!  Always moving my stables all over to farm a good yield.  This would make my life way easier, as long as we stayed on top of the farming strategy.  Would also like to see more decentralized options (FEI, MAI, FRAX) included, when they meet the inclusion criteria.  Maybe go cross chain when we can too…(thinking UST on Anchor as an example.)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Kasper23'><span itemprop='name'>Kasper23</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-21T14:26:15Z' class='post-time'>
+                    September 21, 2021,  2:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-21T14:26:15Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I believe there is a small typo in the document: “We will rely primarily on Kashi markets, <strong>where</strong> at the moment are giving the best yields for stables”. I guess “where” should read “which”?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-21T14:36:58Z' class='post-time'>
+                    September 21, 2021,  2:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-21T14:36:58Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for your time. I edited my post</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Shield'><span itemprop='name'>Shield</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-22T01:07:26Z' class='post-time'>
+                    September 22, 2021,  1:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-22T01:07:26Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Baowolf" data-post="1" data-topic="880">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://sjc6.discourse-cdn.com/standard10/user_avatar/gov.bao.finance/baowolf/48/545_2.png" class="avatar"> Baowolf:</div>
+<blockquote>
+<p><strong>Annual streaming fee 1%:</strong> accumulated by the treasury</p>
+</blockquote>
+</aside>
+<p>Would this be at the time of minting or after 365 days or some other schedule?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-22T02:21:21Z' class='post-time'>
+                    September 22, 2021,  2:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-22T02:21:21Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It is continuously applied inside the nest throughout the year</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-23T00:57:36Z' class='post-time'>
+                    September 23, 2021, 12:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-23T00:57:36Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Edit : Added the farming pool around nStable and RAI</p>
+<p>RAI/ETH 2000<br>
+nStable 3000<br>
+nStable/ETH 7000</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/antshares14'><span itemprop='name'>antshares14</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-23T03:48:40Z' class='post-time'>
+                    September 23, 2021,  3:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-23T03:48:40Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Why is USDT in there?  It has more than a whiff of scandal about it, plus gov’t regulators worldwide have USDT in their sights.  There are so many quality, trusted stables out there. Why USDT?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/fabiaZ84'><span itemprop='name'>fabiaZ84</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-23T05:44:17Z' class='post-time'>
+                    September 23, 2021,  5:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-23T05:44:17Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The centralized options are only in there temporarily due to the possible yield being generated, as soon as we have alternative options which seem to be available soon we will replace it.</p>
+<p>If you disagree with the centralized options and don’t want them in we welcome your composition and update to the proposal.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/attenboro'><span itemprop='name'>attenboro</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-23T09:16:27Z' class='post-time'>
+                    September 23, 2021,  9:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-23T09:16:27Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I really like the idea of nStable, though I’d love if there was more emphasis on the stable being decentralized. With the recent regulatory climate this is more important than ever. Also, that would make this stand out from other similar projects. So IMO neither USDT or USDC should be there. I realize there are issues with DAI being heavily based on USDC, but that is gradually being sorted out. I’m not aware of other projects mature enough to be included.</p>
+<p>If you believe USDT/USDC would contribute to volume and would rather gradually phase them out, that’s discussable I guess, though I don’t see how that would be done in practice when they’re part of the synth? Also, if so, I’d love a specific block/date for when they’re phased out.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/fabiaZ84'><span itemprop='name'>fabiaZ84</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-23T10:18:06Z' class='post-time'>
+                    September 23, 2021, 10:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-23T10:18:06Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I don’t think we need to agree on a block or date, we feel exactly the same as you.<br>
+But we also feel that the nest should be generating yield for its users.<br>
+Which is why these centralized options are included right now, however we will phase them out as quickly as possible. So we can have a completely decentralized nest for stables.</p>
+<p>As I mentioned above if you have a different opinion, please provide the nest composition and list it in this thread. It would help greatly with forming the BIP.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/specialedge'><span itemprop='name'>specialedge</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-23T16:00:28Z' class='post-time'>
+                    September 23, 2021,  4:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-23T16:00:28Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>if a nest is updated, for example to include USDT and then replaced with UST, is this done automatically by the contract, or do existing tokens require migration?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-26T12:41:22Z' class='post-time'>
+                    September 26, 2021, 12:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-26T12:41:22Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, there are functions in the contract to rebalance the nest. It doesn’t require token migration.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/second-nest-proposal-nstable/880">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-11-13T14:37:30Z' class='post-time'>
+                    November 13, 2021,  2:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-11-13T14:37:30Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

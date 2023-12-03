@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fix Bao soft cap and emission schedule on main net - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="After the farming of Bao coupons ended prematurely on xDai network, we checked if the same bug could occur on the main net for the master farmer contract. We indeed found that token emission would stop at exactly 1 trill&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Fix Bao soft cap and emission schedule on main net&#39;" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677/print" />
+<meta property="og:title" content="Fix Bao soft cap and emission schedule on main net" />
+<meta name="twitter:title" content="Fix Bao soft cap and emission schedule on main net" />
+<meta property="og:description" content="After the farming of Bao coupons ended prematurely on xDai network, we checked if the same bug could occur on the main net for the master farmer contract. We indeed found that token emission would stop at exactly 1 trillion tokens and that would occur in April 2022 and not December 2022.  The other problem is that the ETH emission is lagging compared to xDai emission and we have printed more BAO coupons on xDai than BAO to make the 1:1 redemption sustainable over 3 years. This is not a major iss..." />
+<meta name="twitter:description" content="After the farming of Bao coupons ended prematurely on xDai network, we checked if the same bug could occur on the main net for the master farmer contract. We indeed found that token emission would stop at exactly 1 trillion tokens and that would occur in April 2022 and not December 2022.  The other problem is that the ETH emission is lagging compared to xDai emission and we have printed more BAO coupons on xDai than BAO to make the 1:1 redemption sustainable over 3 years. This is not a major iss..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="8 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="18 ❤" />
+<meta property="article:published_time" content="2021-06-13T14:51:03+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">Fix Bao soft cap and emission schedule on main net</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Fix Bao soft cap and emission schedule on main net'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T14:51:03Z' class='post-time'>
+                    June 13, 2021,  2:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T16:15:55Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p>After the farming of Bao coupons ended prematurely on xDai network, we checked if the same bug could occur on the main net for the master farmer contract. We indeed found that token emission would stop at exactly 1 trillion tokens and that would occur in April 2022 and not December 2022.</p>
+<p>The other problem is that the ETH emission is lagging compared to xDai emission and we have printed more BAO coupons on xDai than BAO to make the 1:1 redemption sustainable over 3 years. This is not a major issue currently, but it would need to be planned accordingly.</p>
+<p>Paying attention to the soft cap with the farming contract versus the hard cap would also help to give future incentives without going through a token migration process. This is why this proposal does not raise the rate of BAO distribution through liquidity yield farming. We will need space under the hard cap to switch to our phase 2 of distribution rewards and incentives through synthetic assets (<a href="https://docs.bao.finance/distribution-tokenomics#phase-2-synthetic-assets" class="inline-onebox">Distribution/Tokenomics - Bao Finance</a>)</p>
+<p>Finally, the current distribution schedule has a lot of halvings occurring this August, with the weekly multiplier dropping from 64 to 8 in only two weeks before we see it rise again shortly thereafter. This situation would cause a sudden drop of APR% from our farms and BAO is at risk of seeing more TVL leaving the protocol on the main net. Some of the options would change the weekly distribution to decrease linearly the distribution schedule halvings.</p>
+<p>Options up to vote are below :</p>
+<p><strong>Option 1</strong> : We do nothing and we keep the current distribution schedule and soft cap limit</p>
+<ul>
+<li>Farming will stop around April 2022 if the community doesn’t vote to switch to other way to give incentives to his members</li>
+<li>There is a risk that in 3 years, the unlocked BAO coupons number doesn’t match the number of BAO tokens in the treasury for a 1:1 redemption. This could be circumvented by manually minting more Bao tokens</li>
+<li>More BAO under the hard cap for further incentives after the hard synths are launched</li>
+</ul>
+<p><strong>Option 2</strong> : We change the distribution schedule to lower the emission of incentives in BAO token to still be under the soft cap (1T) and decrease linearly the distribution schedule halvings</p>
+<ul>
+<li>The farms won’t stop prematurely</li>
+<li>Lower but more constant BAO incentives given</li>
+<li>Less risk to see liquidity exit the protocol</li>
+<li>More BAO under the hard cap for further incentives after the hard synths are launched</li>
+<li>Risk of seeing 1:1 redemption in 3 years struggle from Bao Coupons to BAO</li>
+</ul>
+<p>Proposed emission schedule :<br>
+<code>[0,4096,2048,2048,1024,1024,512,512,256,256,256,256,256,256,256,256,128,128,128,128,128,128,128,128,128,64,64,256,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,32,32,32,32,32,32,16,16,16,16,16,16,16,16,16,16,16,16,8,8,8,8,8,8,8,8,8,8,4,4,4,4,4,4,4,0,0]</code></p>
+<p><strong>Option 3</strong> : We raise the soft cap to around 1.1T in the farming contract to match initial planned emission in the docs and we rework the distribution schedule halvings</p>
+<ul>
+<li>The farms won’t stop prematurely</li>
+<li>More constant BAO incentives given</li>
+<li>Consistent with the docs (Total emission)</li>
+<li>Less risk to see liquidity exit the protocol</li>
+<li>Less BAO under the hard cap for further incentives after the hard synths are launched than the other options (but we still have room under the hard cap)</li>
+<li>We should have enough BAO tokens for 1:1 redemption in 3 years from Bao Coupons to BAO</li>
+</ul>
+<p>Proposed emission schedule :<br>
+<code>[0,4096,2048,2048,1024,1024,512,512,256,256,256,256,256,256,256,256,128,128,128,128,128,128,128,128,128,0,256,256,256,256,256,256,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,64,64,64,64,64,64,64,64,64,64,64,32,32,32,32,32,32,32,32,32,32,32,32,16,16,16,16,16,16,16,16,16,16,16,16,8,8,8,8,8,8,8,8,8,8,8,8,4,4,4,4,0,0]</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Shield'><span itemprop='name'>Shield</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T15:06:13Z' class='post-time'>
+                    June 13, 2021,  3:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T15:06:13Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How high will the soft cap need to be raised for option <span class="hashtag">#3</span>?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/tommywun'><span itemprop='name'>tommywun</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T15:30:52Z' class='post-time'>
+                    June 13, 2021,  3:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T15:30:52Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Would any of these proposals include changing the weights on the eth mainnet pools again to make up for the lost emissions on xdai?</p>
+<p>Or are these changes being proposed solely due to the cap-glitch with the plan being to keep the emissions weights for each pool the same as they are now?</p>
+<p>The thing is, that if having ‘More BAO under the hard cap for further incentives after the hard synths are launched’ is a really good idea, then it’d be great to get more feedback on that from Baoman and the devs, as I can’t see the overall architecture and what’s going to be really useful to the project once hard synths come online.</p>
+<p>I’d imagine those extra incentives might come in very handy to direct LP provision to where it’s needed throughout the BAO ecosystem - across all franchises to make sure liquidation is working efficiently and making the whole ecosystem more attractive. I’m not sure which franchises will issue rewards in BAO, and which in native tokens, so it’s hard to tell what impact the extra BAO will have.</p>
+<p>It’d be lovely to have more mainnet rewards, but if the future health of the protocol and ecosystem as a whole means we take advantage of the cap-limit oversight, and save those emissions for later, when they might be much more useful, then I’d go with that idea.</p>
+<p>I’d imagine TVL in xdai is almost gone, apart from staking of BAOcx, so possibly a slight re-weighting upwards for the mainnet pools, whilst still keeping the total cap lower than is stipulated in docs right now, might help some liquidity to flow back in, but also keep a bit of a bigger war chest than was planned for liquidity attraction to wherever needed once hard synths go live. That war chest for attracting liquidity to the right places later seems really important to me…</p>
+<p>Again though, it’s you devs who can see the bigger picture, so I’d defer to your judgement on whether the BAO is going to be more valuable to the protocol later on rather than via emissions in short-to-medium term.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/jjs'><span itemprop='name'>jjs</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T15:56:24Z' class='post-time'>
+                    June 13, 2021,  3:56pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T15:56:24Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can options 2 &amp; 3 done without those in farms needing to take any action?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T16:16:50Z' class='post-time'>
+                    June 13, 2021,  4:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T16:16:50Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Around 1.11T  (1.110.179.440.000)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/fabiaZ84'><span itemprop='name'>fabiaZ84</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T16:17:38Z' class='post-time'>
+                    June 13, 2021,  4:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T16:17:38Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>For option three the weights or base rewards will not change, but the multipliers will be upped abit to distribute more Bao, if I’m not mistaken it will be less than initially forecasted in the docs.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T16:18:01Z' class='post-time'>
+                    June 13, 2021,  4:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T16:18:01Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Totally. We would not change any pool weight nor block weight. Only weekly multiplier.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T16:27:46Z' class='post-time'>
+                    June 13, 2021,  4:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T16:27:46Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The option 3 would benefit to everyone in the main net until the end of the year easily has the weekly multiplier proposed is more front loaded and will decrease more linearly than what we have actually.</p>
+<blockquote>
+<p>Or are these changes being proposed solely due to the cap-glitch with the plan being to keep the emissions weights for each pool the same as they are now?</p>
+</blockquote>
+<p>I was thinking since may to propose the change in the weekly multipliers when i saw the distribution schedule for the summer and the potential glitch in august. xDai farming that ended has just accelerated my thoughts and i think it is ideal to combine both suggestions at the same time because we don’t want to change the contract parameters every month :)</p>
+<blockquote>
+<p>The thing is, that if having ‘More BAO under the hard cap for further incentives after the hard synths are launched’ is a really good idea, then it’d be great to get more feedback on that from Baoman and the devs, as I can’t see the overall architecture and what’s going to be really useful to the project once hard synths come online.</p>
+</blockquote>
+<p>If we distribute BAO only for liquidity yield farming participants, we won’t have too much incentives left for attracting users interacting with soft / hard synths and the protocol. This project has a long term vision and keeping more BAO for the next phase in the next 2-4 years is something worth keeping in mind.</p>
+<p>Also, we still have good farming opportunities with Panda, and with the launch of future franchises, new opportunities will be available for our community.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T18:37:09Z' class='post-time'>
+                    June 13, 2021,  6:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T18:37:09Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Baowolf" data-post="1" data-topic="677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://sjc6.discourse-cdn.com/standard10/user_avatar/gov.bao.finance/baowolf/48/545_2.png" class="avatar"> Baowolf:</div>
+<blockquote>
+<ul>
+<li>arming will stop around April 2022 if the community doesn’t vote to switch to other way to give incentives to his members</li>
+<li>There is a risk that in</li>
+</ul>
+</blockquote>
+</aside>
+<p>I have the same concerns as <a class="mention" href="/u/tommywun">@tommywun</a> - we should be careful not to give out rewards for the sake of giving out rewards especially since they will all add to the number being unlocked in December and when there may be core products further down the line we want to heavily incentivise to bootstrap their launch.</p>
+<p>One option not listed is to reduce the number of pools significantly + reduce the base rewards so that the timescale for distribution stays roughly the same. If we were to reduce to say 10-20 pools then I’m sure we can make the APRs more attractive even if we reduced the base rewards</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="3" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Cookies'><span itemprop='name'>Cookies</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T19:38:25Z' class='post-time'>
+                    June 13, 2021,  7:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T19:38:25Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This sounds like a great idea. Why not chop a bunch of the UNI pools seeing as the focus has been on using sushi LPs?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/alien'><span itemprop='name'>alien</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T19:46:59Z' class='post-time'>
+                    June 13, 2021,  7:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T19:46:59Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>My opinion on the options given above:<br>
+Option 1: Liquidity must stay on mainnet, mainnet farms are very important and ending earlier won’t benefit the project.<br>
+Option 2: Nice option but there must be enough baos for 1:1 redemption or the exceeding bao coupons would be meaningless.<br>
+Option 3: The best option in my opinion. The small increase in the soft cap would incentivize a better distribution over the next year, possibly increasing the overall value of the project even with a few more tokens issued.<br>
+Nice to be able to discuss this before voting. Great project, great team, very happy to be part of it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/old_con'><span itemprop='name'>old_con</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-13T20:29:45Z' class='post-time'>
+                    June 13, 2021,  8:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-13T20:29:45Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I really like the idea to include reducing the pools to concentrate more liquidity in certain pairs, but also improve APRs wtih reduced base rewards.</p>
+<p>Option 3 seems like the best option as well to increase the soft cap. Having enough bao tokens for the 1:1 redemption in 3 years should definitely be prioritized for a lot of the core community members when we first migrated to xDAI.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-14T00:22:49Z' class='post-time'>
+                    June 14, 2021, 12:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-14T00:22:49Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That could work if we introduce back the chopping block concept (<a href="http://gov.bao.finance/t/featured-farming-pools-and-chopping-block-reintroduction/655" class="inline-onebox">Featured Farming Pools and Chopping Block Reintroduction</a>)</p>
+<p>The idea was stopped due to xDai farming that ended, but we could always pursue and continue that idea.</p>
+<p>But in my opinion, this is a not a way to primary correct the current BAO emission. It is a method to change our community behavior by giving more rewards to a subset of high performing assets. We would need more data to achieve this and that could be achieved through a concept similar to the chopping block.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Cookies'><span itemprop='name'>Cookies</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-14T04:06:30Z' class='post-time'>
+                    June 14, 2021,  4:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-14T04:06:30Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Could you explain why you don’t think it would be a good method to help fix the emission of BAO?</p>
+<p>If we could vote to eliminate three quarters of the pools in one motion instead of voting weekly it would allow for the surviving pools to have more attractive APRs and lower base rewards as Chicken mentioned, which would likely solve the problem at hand.</p>
+<p>It would also be interesting to see how much liquidity migrates to the surviving pools. I’m assuming BAO initially attracted a lot of early investors some of which may no longer be keeping up with the project.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/baref00t'><span itemprop='name'>baref00t</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-14T06:36:31Z' class='post-time'>
+                    June 14, 2021,  6:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-14T06:36:31Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>(Just a thought)<br>
+As it’s the same bug as on xDai where xDai Bao/Bao.cx hodlers had no vote, shouldnt this bug be resolved the same way as it was already been voted → is there a need for the vote as it’s a vote fixing the same bug. This would look like this (based on Option B that was already voted).</p>
+<ul>
+<li>Leave Bao at the 1T Softcap (No more farming rewards on mainnet)</li>
+<li>Leave the withdrawal fee on farms on.</li>
+<li>Activate Bao staking for ETH fees to keep the swap rewards.</li>
+<li>Then focus on the next franchise (Matic + Soft Synths)</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/tommywun'><span itemprop='name'>tommywun</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-14T13:50:06Z' class='post-time'>
+                    June 14, 2021,  1:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-14T13:50:06Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Baowolf" data-post="8" data-topic="677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://sjc6.discourse-cdn.com/standard10/user_avatar/gov.bao.finance/baowolf/48/545_2.png" class="avatar"> Baowolf:</div>
+<blockquote>
+<p>Also, we still have good farming opportunities with Panda, and with the launch of future franchises, new opportunities will be available for our community.</p>
+</blockquote>
+</aside>
+<p>Honestly, this seems an important concept… The franchises offering fresh farming opportunities, whilst the BAO tokens themselves are reserved for directing liquidity provision once the synths come online…</p>
+<p>I’m assuming that you guys envisage most of the synth volume as requiring liquidation on mainnet? I’m not sure about how you’re forecasting that one, and it might make a difference to how much BAO will be needed for the liquidity direction efforts for Synths.</p>
+<p>Since you’re building the network of franchises largely to provide liquidation across multiple chains, I’d assume that liquidity direction on each chain will mean rewarding Liquidity providers in each franchise’s native token - is that right? If so, the BAO wouldn’t be needed there and would only benefit mainnet and possibly XDAI liquidation-facilitation (tongue twister!)</p>
+<p>(pure speculation here*)</p>
+<p>I’m not sure if the longer-term alternative chains like DOT or SOL will have BAO franchises, but it may be likely that the L2 Eth chains see a drastic drop in volume once mainnet sorts out its scaling issues, so liquidation across multiple L2 chains may not be seen as such a priority as it has been of late, meaning it’s mainnet where liquidation of synths will largely be happening and the highest priority for incentivisation of liquidity provision - meaning that BAO will come in very handy …</p>
+<p>I think it may also depend on how fast you think the soft synths are going to be ready so people can start using them. The farming rewards are obviously what kept everyone engaged - we want rewards and the protocol needs liquidity and to distribute its token and gain a user base. Without the farming rewards, there’ll be a drop-off in TVL and engagement to the point where it could be dangerous to the BAO ecosystem. So whilst I’m talking about keeping emissions lower as the BAO may be better used in future for synths, it’d possibly be smartest to start to tease the alternative revenue stream for investors as overlapping the end or lowering of emissions.</p>
+<p>I’m sure you already planned this, but if the idea is to lower emissions prematurely* (compared to what’s outlined in docs) is it also possible to start offering an alternative revenue source via backing synths prematurely*?</p>
+<p>But then we need BAO to back synths… Could there be a situation where from now until synths are released, emissions are lowered but less is vested? Would that also incentivise liquidity provision whilst still lowering emissions? Or a certain amount unlocks now, a certain amount is vested, and another portion of the BAO we farm will unlock only for the use of backing synths when they’re released?</p>
+<p>That may be too complicated and ruin your tokenomics entirely, but vesting does seem to be another factor which could possibly be adjusted to facilitate lower emissions with TVL stability, and the community-wide engagement with the idea of synths-as-a-revenue-stream.</p>
+<p>I may have over-complicated things there :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/tommywun'><span itemprop='name'>tommywun</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-14T14:09:37Z' class='post-time'>
+                    June 14, 2021,  2:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-14T14:48:08Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Chickn" data-post="9" data-topic="677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://sjc6.discourse-cdn.com/standard10/user_avatar/gov.bao.finance/chickn/48/149_2.png" class="avatar"> Chickn:</div>
+<blockquote>
+<p>they will all add to the number being unlocked in December and when there may be core products further down the line we want to heavily incentivise</p>
+</blockquote>
+</aside>
+<p>I’m repeating what I wrote above here, but as an idea for how to overcome this, what if from now until the synths are released, any tokens we earn as rewards are still vested and remain locked (apart from the usual 5%), but we will be able to use another percentage of the locked rewards which we accrue in this time to back synths when they’re released?</p>
+<p>Could that provide an alternate way to keep the community engaged and focused on a stable revenue stream from the bao ecosystem, and allow the project to lower emissions whilst still keeping TVL?</p>
+<p>Although lower emissions would mean people are getting less rewards, they would actually have access to more of them in the short term (as more of their tokens unlock sooner) - but allowing more tokens to ‘unlock’ wouldn’t damage the protocol or cause capital-flight as the unlocking BAO can only be used to back synths - so it’s almost like a form of staking… The value remains within the Bao ecosystem and the entire community is transitioned from a farming mindset to a synths-backing mindset on mainnet, and everyone who still wants to farm can carry on with it on the new franchises across all other chains. (with the added incentive that if they hold BAO, they’re still benfiting their own investment in BAO by farming on BAO franchises as it’s flowing value back to their BAO investment via the 15% share in franchises…)</p>
+<p>Potentially the chopping block could be brought back at the same time to further lower emissions whilst keeping higher APYs for the current farming pools, but the transition to a synth-backing revenue stream could be introduced as well. I can see in the docs that the way we all earned BAO from the protocol was always going to move from LP provision to synth-backing, but since the cap-glitches have potentially moved the ending of BAO emissions forward, and left a sort of gap, this might be a way to bridge the gap and keep everyone engaged and make the transition to synth-backing a bit more exciting for everyone (more of our tokens potentially unlocking sooner than we thought)</p>
+<p>Or it could just confuse everyone :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-14T22:23:13Z' class='post-time'>
+                    June 14, 2021, 10:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-14T22:23:13Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Pool weights and number of pools are only relative when distributing the token. So if you reduce from 200 to 10 pools and keep the remaining 10 pools with the same pool weight, the current distribution will be distributed to the proportional share of the remaining pool. So instead of getting from 0.1-1% of the rewards, they will get anywhere from 5-15% of the rewards.</p>
+<p>But the total BAO given will not change. This is why i’m saying it would not fix the emission problem by itself with current contract parameters.</p>
+<p>But it could be considered as another mechanic if we want to focus and give incentives to less number of assets</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-14T22:25:50Z' class='post-time'>
+                    June 14, 2021, 10:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-14T22:25:50Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Not in my eyes because currently BAO emission is lagging behind the total Bao.CX printed. So it can cause more harms in the future if we leave it as it is (Option 1).</p>
+<p>On main net, we also don’t have an equivalent of BaoSwap, so the same outcome could not occur.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-14T22:58:20Z' class='post-time'>
+                    June 14, 2021, 10:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-14T22:58:20Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <blockquote>
+<p>Since you’re building the network of franchises largely to provide liquidation across multiple chains, I’d assume that liquidity direction on each chain will mean rewarding Liquidity providers in each franchise’s native token - is that right?</p>
+</blockquote>
+<p>Each franchise will have his own governance token. But synths will be designed to be backed with liquidity pool tokens instead of being backed by the native or governance token (like SNX).</p>
+<blockquote>
+<p>I’m not sure if the longer-term alternative chains like DOT or SOL will have BAO franchises, but it may be likely that the L2 Eth chains see a drastic drop in volume once mainnet sorts out its scaling issues</p>
+</blockquote>
+<p>I personally think there will be room and spaces to L2 and main net solutions. I think we will see more intensives dApps as the years pass.</p>
+<blockquote>
+<p>I’m sure you already planned this, but if the idea is to lower emissions prematurely* (compared to what’s outlined in docs) is it also possible to start offering an alternative revenue source via backing synths prematurely*?</p>
+</blockquote>
+<p>Possible, but my crystal ball cannot go that far :)</p>
+<blockquote>
+<p>Could there be a situation where from now until synths are released, emissions are lowered but less is vested?</p>
+</blockquote>
+<p>This is not something we could change mid term (the 95% locked and vested rewards)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Cookies'><span itemprop='name'>Cookies</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-15T02:34:10Z' class='post-time'>
+                    June 15, 2021,  2:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-15T02:34:10Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes true, but coupled with a decrease in BAO distribution this would allow users to be rewarded according to the original schedule, while also creating a situation where engaged users can receive higher rewards in the remaining pools.</p>
+<p>So the only issue that arises from this is less diverse liquidity on eth, and I’m not sure how important that is. I realize the goal is to capture liquidity in as many tokens and across as many chains as possible, but why not narrow it down to the most relevant and useful ones?</p>
+<p>The LP tokens are going to be used for collateral against minting synths so does it not make sense to incentivize farming LPs which people want to hold long term? I realize initially it was about creating diverse and exciting farming opportunities, however, shouldn’t the focus now be more forward looking?</p>
+<p>Perhaps I’m way off base with reasoning, so if you disagree could you please explain why its better for the ecosystem to have 153 UNIV2 pools and 11 sushi LP pools, versus concentrating the liquidity into the top 20-50 pools - perhaps even adding a few new sushi pools.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-15T03:13:27Z' class='post-time'>
+                    June 15, 2021,  3:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-15T03:13:27Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>reducing pools and moving them to sushi pool is something i believe. i did write a lengthy proposal in that matter (but appeared unfortunately just before xDai farms ended). <a href="http://gov.bao.finance/t/featured-farming-pools-and-chopping-block-reintroduction/655" class="inline-onebox">Featured Farming Pools and Chopping Block Reintroduction</a></p>
+<p>I just think that the pool reduction could be debated and discussed outside of this proposal because there are multiple ways to achieve this depending of the final goal we want to achieve. It would merit in my eyes to have a good and healty debate and more importantly, specify the “why” we want to do this. Also, i am a fan of small steps. Accepting this proposal as is would be easier than to throw a megabill where a lot of persons could be upset about a part of the proposal. But it’s a personal preference…</p>
+<p>Baoman stated multiple times that having all those farms would give data to find the reliable collaterals (<a href="https://discord.com/channels/784449645157285898/784449645672923138/819692762177863690" class="inline-onebox">Discord</a>). Saying that, i would not rush this IMO as we would need also to question ourselves when we will want to definately switch rewarding our members to minting synths…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_23' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Cookies'><span itemprop='name'>Cookies</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-15T04:03:59Z' class='post-time'>
+                    June 15, 2021,  4:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-15T04:03:59Z'>
+              <span itemprop='position'>23</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I re-read your proposal. I think it is a good idea and it is definitely still relevant for mainnet and panda. Perhaps on mainnet it could be implemented with more uni pools being chopped and less sushi pools being added so the net loss was 4/month instead of 1.</p>
+<p>This would certainly provide more data regarding LPs as reliable collateral, while shifting the focus onto sushi LPs, and possibly increasing APRs while simultaneously lowering base rewards. However, you may be right that this would be to much for one governance vote, it is probably better to do things one step at a time.</p>
+<p>I’m curious what data has been collected and how it will be used… Perhaps this can be shared with the community at some point? I have some experience with data analytics and wouldn’t mind checking it out.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_24' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-16T16:10:50Z' class='post-time'>
+                    June 16, 2021,  4:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-16T16:10:50Z'>
+              <span itemprop='position'>24</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>To give an idea of what an outcome could be by reducing the pools drastically:</p>
+<p>If the criteria for inclusion is $200k liquidity or be a BAO or SUSHI pool, there would be 27 pools and rewards approximately doubled for each pool, but farming would still end around April 2022</p>
+<p>There are 8 months left until April and 13 months until the scheduled end to rewards, so by the time a proposal is made and passed we would probably have to half the base rewards to finish on schedule, meaning the APR would stay the same.</p>
+<p>Maybe the best solution is to cut pools but leave farming ending in April 2022, then revisit when there are new products being released to propose new rewards for them?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_25' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-04T14:10:26Z' class='post-time'>
+                    July 4, 2021,  2:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-04T20:46:15Z'>
+              <span itemprop='position'>25</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi everyone !</p>
+<p>We had a lot of discussions about the options, but there were a good amount of comments about reducing the number of pools alongside fixing the emission schedule.</p>
+<p>I personally feel that reducing the number of pools is a good approach in the long term, but that should come in another proposal. By doing this, it will be easier to not mix everything in a single proposal and have an healthy debate on how we should reduce the number of pools.</p>
+<p>But this is up to the community to decide before moving forward this concept :) Please vote according to what you think it’s right !</p>
+<div class="poll" data-poll-status="open" data-poll-results="always" data-poll-charttype="bar" data-poll-type="regular" data-poll-name="poll">
+<div>
+<div class="poll-container">
+<ul>
+<li data-poll-option-id="f8a9b0a81988a465310cd9ca9ea0e237">Move the concept “as is” to the next governance stage</li>
+<li data-poll-option-id="ef19fc207691ad914e4db0419827025e">Return to the drawing board to include a chopping block concept</li>
+</ul>
+</div>
+<div class="poll-info">
+<p>
+<span class="info-number">0</span>
+<span class="info-label">voters</span>
+</p>
+</div>
+</div>
+</div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_26' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Stargazer'><span itemprop='name'>Stargazer</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-13T08:29:54Z' class='post-time'>
+                    July 13, 2021,  8:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-13T08:29:54Z'>
+              <span itemprop='position'>26</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Well done everyone it’s still a little over my head but I think I’m starting to get the concepts being talked about Thanks for the idea and input :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_27' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/fix-bao-soft-cap-and-emission-schedule-on-main-net/677">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-18T14:45:46Z' class='post-time'>
+                    September 18, 2021,  2:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-18T14:45:46Z'>
+              <span itemprop='position'>27</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

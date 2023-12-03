@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Main Net Soft Synths - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="Summary
+Approve soft synths deployment on main net and agree the starting baskets and parameters 
+
+Abstract
+If adopted this proposal seeks to: 
+
+Agree which baskets to start with on main net
+define a fee structure for B&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/main-net-soft-synths/1044/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Main Net Soft Synths&#39;" href="https://gov.bao.finance/t/main-net-soft-synths/1044.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/d5c734eba4fdc1b418e683e1dda2657ab56d153e.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/d5c734eba4fdc1b418e683e1dda2657ab56d153e.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/main-net-soft-synths/1044/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/main-net-soft-synths/1044/print" />
+<meta property="og:title" content="Main Net Soft Synths" />
+<meta name="twitter:title" content="Main Net Soft Synths" />
+<meta property="og:description" content="Summary Approve soft synths deployment on main net and agree the starting baskets and parameters   Abstract If adopted this proposal seeks to:   Agree which baskets to start with on main net define a fee structure for Baskets define a rebalancing strategy Approve yield options for underlying assets   Background Soft synths have been deployed on Polygon already under our Polly Finance franchise. The implementation will largely be the same, with the addition of an the “oven” feature that PieDao u..." />
+<meta name="twitter:description" content="Summary Approve soft synths deployment on main net and agree the starting baskets and parameters   Abstract If adopted this proposal seeks to:   Agree which baskets to start with on main net define a fee structure for Baskets define a rebalancing strategy Approve yield options for underlying assets   Background Soft synths have been deployed on Polygon already under our Polly Finance franchise. The implementation will largely be the same, with the addition of an the “oven” feature that PieDao u..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="4 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="6 ❤" />
+<meta property="article:published_time" content="2022-02-02T01:59:01+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/main-net-soft-synths/1044">Main Net Soft Synths</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Main Net Soft Synths'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/d5c734eba4fdc1b418e683e1dda2657ab56d153e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-02T01:59:01Z' class='post-time'>
+                    February 2, 2022,  1:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-18T02:01:40Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <h1>
+<a name="summary-1" class="anchor" href="#summary-1"></a>Summary</h1>
+<p>Approve soft synths deployment on main net and agree the starting baskets and parameters</p>
+<h1>
+<a name="abstract-2" class="anchor" href="#abstract-2"></a>Abstract</h1>
+<p>If adopted this proposal seeks to:</p>
+<ol>
+<li>Agree which baskets to start with on main net</li>
+<li>define a fee structure for Baskets</li>
+<li>define a rebalancing strategy</li>
+<li>Approve yield options for underlying assets</li>
+</ol>
+<h1>
+<a name="background-3" class="anchor" href="#background-3"></a>Background</h1>
+<p>Soft synths have been deployed on Polygon already under our Polly Finance franchise. The implementation will largely be the same, with the addition of an the “oven” feature that PieDao use to make smaller buys more gas friendly.</p>
+<p>The “oven” accepts ETH deposits and waits until there is 10ETH deposited before carrying out the mint transactions, allowing everyone that uses it to share the gas costs involved with minting new baskets.</p>
+<p>You can find the original proposal to deploy soft synths on polygon here: <a href="http://gov.bao.finance/t/bip-2-accelerated-proposal-for-ndefi/814" class="inline-onebox">[BIP - 2] Accelerated Proposal for nDEFI</a></p>
+<h1>
+<a name="motivation-4" class="anchor" href="#motivation-4"></a>Motivation</h1>
+<p>Hard synths minimum viable product is live. The next step in our goals for 2022 is to deploy soft synths, so that they can later be added as collateral for hard synths. This will help to drive growth for both products by allowing users to borrow against a robust basket of yield bearing tokens.</p>
+<h1>
+<a name="h-1-starting-baskets-5" class="anchor" href="#h-1-starting-baskets-5"></a>1. Starting Baskets</h1>
+<p>We would like to propose starting with 2 baskets, bDEFI and bSTBL.</p>
+<p><strong>bDEFI</strong><br>
+Following a similar theme to the nDEFI nest on Polly Finance, which outperformed its competitors, we will release a similar product on main net, designed to weight more towards projects with a high Total Value Locked (TVL) compared to their valuation.</p>
+<p>DeFi projects need value locked in their contracts in order to generate revenue, so this approach is designed to try to weight more towards projects that could be undervalued by the market.</p>
+<p>The Fully Diluted Valuation (FDV) is chosen instead of market cap because this takes into account any inflation that could will occur, which could negate some of the upside potential for the token.</p>
+<p>The criteria for inclusion and weightings are defined as:</p>
+<ul>
+<li>Top 12 DEFI projects by TVL on DefiLlama, that operate on ETH main net</li>
+<li>Weighted by TVL/FDV</li>
+<li>Has at least $2m Liquidity on a main net exchange</li>
+<li>Have a chainlink price feed on main net</li>
+<li>At least 3 months old</li>
+<li>Have at least 7.5% of the total supply in circulation and have a predictable token emission over the next 5 years.</li>
+<li>In the event of a safety incident, the team must have addressed the problem responsibly and promptly, providing users of the protocol a reliable solution and document a detailed, transparent breakdown of the incident.</li>
+<li>Be Ethereum-focused</li>
+<li>Must be sufficiently decentralized</li>
+</ul>
+<p>Based on the selected criteria, if deployed when data was collected the basket would look like this:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/d5c734eba4fdc1b418e683e1dda2657ab56d153e.png" data-download-href="/uploads/short-url/uvauYBjmcUZUNfcc9astKmwl8XY.png?dl=1" title="image"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/d5c734eba4fdc1b418e683e1dda2657ab56d153e.png" alt="image" data-base62-sha1="uvauYBjmcUZUNfcc9astKmwl8XY" width="690" height="413" data-dominant-color="F0F0F0"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">779×467 29.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>One notable exclusion is SPELL. We believe that the project is higher risk than usual due to the recent scandals that have not fully been resolved yet, but may allow it for inclusion in a future rebalance should the situation be resolved in a satisfactory manor.</p>
+<p><strong>bSTBL</strong></p>
+<p>The bSTBL basket is designed to provide yield bearing exposure to a basket of decentralized stable coins, helping to negate risk and provide a low effort means of yield farming the best low risk yields available.</p>
+<p>The criteria for inclusion and weightings are defined as:</p>
+<ul>
+<li>Top 4 decentralized stable coins based on yield potential from the available yield options</li>
+<li>Must not rely on the projects governance token for backing</li>
+<li>Weighted evenly</li>
+<li>Has at least $2m Liquidity on a main net exchange</li>
+<li>Have a chainlink price feed on main net</li>
+<li>At least 3 months old</li>
+<li>In the event of a safety incident, the team must have addressed the problem responsibly and promptly, providing users of the protocol a reliable solution and document a detailed, transparent breakdown of the incident.</li>
+<li>Be Ethereum-focused</li>
+</ul>
+<p><img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/3bd46620f4387f28db7475e5f6b1c6421dbd451b.png" alt="image" data-base62-sha1="8xhet8Lg1F83I9MflozzrbOhKVt" width="325" height="207"></p>
+<h1>
+<a name="h-2-fee-structure-6" class="anchor" href="#h-2-fee-structure-6"></a>2. Fee structure</h1>
+<p>The fees are broken down as follows:</p>
+<ul>
+<li>Entry fee 0.5%:</li>
+<li>Annual streaming fee 1%:</li>
+<li>Exit fee 1%:</li>
+</ul>
+<p>All fees will be split between evenly between burning BAO and the treasury until veBAO is implemented. Afterwards fees will be split evenly between all 3 - burning BAO, the treasury and staking rewards without the need for a further governance vote.</p>
+<h1>
+<a name="h-3-rebalancing-7" class="anchor" href="#h-3-rebalancing-7"></a>3. Rebalancing</h1>
+<p>baskets are maintained quarterly in two phases</p>
+<p><strong>Determination Phase</strong><br>
+The determination phase takes place during the final 2 weeks of the quarter. During this phase the changes needed for the next reconstitution are determined.</p>
+<p>Proposed changes will be published on the governance forum for 1 week then a governance vote will run for the community to approve changes.</p>
+<p><strong>Reconstitution Phase</strong><br>
+In the two weeks following a successful vote, the nest components will be adjusted as per the instructions published during the final 2 weeks of the quarter.</p>
+<p><strong>Emergency Maintenance</strong><br>
+The multisig holders are authorized by the community to re-balance nests outside of the usual schedule during moments that they collectively deem to be critical emergencies. This clause will allow for quick re-balancing in the event of a protocol or nests being in danger of failing. An example of when this would be utilized would be if a stable coin begins losing its peg/ becoming insolvent, or a protocol suffers an exploit that is not dealt with sufficiently.</p>
+<p>These scenarios may be time sensitive and require immediate resolution. Thus the team may decide to act without warning and explain their actions in a governance forum post afterwards, or if there is deemed to be time, an emergency governance vote will be posted.</p>
+<p>This is intended as a safety mechanism only, to prevent loss of funds for our users and as such would be a power exclusively exercised under extreme circumstances.</p>
+<h1>
+<a name="h-4-yield-options-for-underlying-assets-8" class="anchor" href="#h-4-yield-options-for-underlying-assets-8"></a>4. Yield options for underlying assets</h1>
+<p>Yield farming will be approved on the following projects for all tokens</p>
+<ul>
+<li>Aave</li>
+<li>Compound</li>
+<li>Sushi</li>
+<li>Yearn (strategies still to be developed)</li>
+<li>Convex (strategies still to be developed)</li>
+<li>Rari (strategies still to be developed)</li>
+</ul>
+<p>Developing the strategies above that are not yet available is not guaranteed, but can be implemented without a further governance vote. Any additional yield farming strategies will be approved via governance.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/simplelife'><span itemprop='name'>simplelife</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-19T23:43:32Z' class='post-time'>
+                    February 19, 2022, 11:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-19T23:43:32Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is really interesting, some suggestions.</p>
+<p>Given that similar protocols have done synthetics of defi tokens, and tbh without a major big success, but moderate success. Does it make sense to attempt something more aggressive ? Such as listing unproven defi assets? Just a thought as launching the current scheme doesn’t really give enough excitement, from me at least.</p>
+<p>The same for stablecoin where curve and smaller guys like mstable and shell protocol are already doing it.</p>
+<p>Overall I like the progress.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-20T04:56:25Z' class='post-time'>
+                    February 20, 2022,  4:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-20T12:44:54Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think these will be more successful then similar tokens in the past due to it being able to be used as collateral for lending and minting hard synths, it gives them utility since they earn yields and are less volatile then if you were holding any one of these tokens alone. Liquidations will be less likely and you will be able to earn on top of normal supply APY. Of course there are infinite possibilities for baskets and these by far are not going to be the only ones but I think they are good starters especially when we are testing the markets.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Fresh_Pizza_of_Bel_A'><span itemprop='name'>Fresh_Pizza_of_Bel_A</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-21T12:28:38Z' class='post-time'>
+                    February 21, 2022, 12:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-21T12:28:38Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I do wonder if it would be worth it to have something like USDC in there.<br>
+Although I am a proponent of decentralized protocols, including a stable coin that is not at danger of loosing its peg when strong ETH volatility occurs might make the nest a lot more secure.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/simplelife'><span itemprop='name'>simplelife</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-22T05:42:15Z' class='post-time'>
+                    February 22, 2022,  5:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-22T05:42:15Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I doubt stablecoin can be competitive, it is something Curve has been super successful and have fully taken the market.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-22T05:47:16Z' class='post-time'>
+                    February 22, 2022,  5:47am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-22T06:01:22Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is it possible to make an exception in the criteria for the basket and include bUSD in bSTBL? Even if as a far lower weight then the rest of them.</p>
+<aside class="quote no-group" data-username="Chickn" data-post="1" data-topic="1044">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://sjc6.discourse-cdn.com/standard10/user_avatar/gov.bao.finance/chickn/48/149_2.png" class="avatar"> Chickn:</div>
+<blockquote>
+<ul>
+<li>Top 12 DEFI projects by TVL on DefiLlama, that operate on ETH main net</li>
+<li>Weighted by TVL/FDV</li>
+<li>Has at least $2m Liquidity on a main net exchange</li>
+<li>Have a chainlink price feed on main net</li>
+<li>At least 3 months old</li>
+<li>Have at least 7.5% of the total supply in circulation and have a predictable token emission over the next 5 years.</li>
+<li>In the event of a safety incident, the team must have addressed the problem responsibly and promptly, providing users of the protocol a reliable solution and document a detailed, transparent breakdown of the incident.</li>
+<li>Be Ethereum-focused</li>
+<li>Must be sufficiently decentralized</li>
+</ul>
+</blockquote>
+</aside>
+<p>As far as Criteria and motive goes I understand the reasonings behind them and agree with most of them, I’m not certain about the age requirement however. If we look at them and they meet everything else and we do our research and they have good fundamentals I don’t think we should be driven away by it being young same goes for Ethereum-focused.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-22T05:55:56Z' class='post-time'>
+                    February 22, 2022,  5:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-22T05:55:56Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m not sure what you mean by this, I don’t think our point is to compete with stablecoins or stablecoin related projects. We are trying to make things that will work together well in the markets and compliment eachother. Yield bearing basket that has stable coins as underlying assets is excellent collateral for minting synthetics as they go up in value over time and are as the name implies stable meaning that positions supplied with this basket will be less likely to liquidate then other more volatile means.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Fresh_Pizza_of_Bel_A'><span itemprop='name'>Fresh_Pizza_of_Bel_A</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-22T12:04:20Z' class='post-time'>
+                    February 22, 2022, 12:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-22T12:04:20Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yeah we might be limiting ourselves a bit too much there.<br>
+I could see a world where a new protocol emerges that we want to Collab with and that we want to include in our protocol.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-22T15:16:53Z' class='post-time'>
+                    February 22, 2022,  3:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-22T15:16:53Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>yeah I did make a concept (not shared publicly) for a smaller cap defi nest, but in the end decided the 2 above made the most sense to launch with because they likely had the biggest potential for TVL and a more aggressive one probably requires more though + maybe auto rebalancing already implemented so it can be more agile.</p>
+<p>What rules would you like to see for a more aggressive nest? My concept was pretty simple - take the next x number of projects by TVL on defillama, that weren’t included in bDEFI. I’m sure there is something better we could do though.</p>
+<p>If your interested in doing it/ really want to see it happen, you could start a concept for one. If not its probably something we will look into a bit further down the line, after launch.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-22T15:24:33Z' class='post-time'>
+                    February 22, 2022,  3:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-22T15:24:33Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As Jester pointed out, we aren’t trying to compete with curve.</p>
+<p>interest bearing stables collateral is interesting because it allows you to leverage the yield you earn with little risk, if the interest you are paying to mint baoUSD is lower than what your earning on the basket.</p>
+<p>Generating stables revenue is also interesting for us because it makes a good addition to the treasury and as a reward for staking when implemented. Competition is fierce, but using nSTBL as collateral could be enough to get us a share of the market.</p>
+<p>Using curve pools as collateral is a risk because the prices can be manipulated with flash loans - Apparently Andre has refused to use them as collateral in his projects for this reason.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-22T15:39:00Z' class='post-time'>
+                    February 22, 2022,  3:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-22T15:39:00Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The thinking is a new protocol may have unknown risks, so some time in the market, being battle tested, reduces that risk significantly.</p>
+<p>There is also the risk that a new protocol has very short term TVL and makes itself part of the basket - something like the farms for solidly  - 0xdao and WeVe on fantom. The age requirement lets any short term hype cycles play out a bit and filters for projects more likely to have longer term success.</p>
+<p>I figured it would make sense to try to negate these risks for what is meant to be a low risk basket. Maybe there is another way to do that though?</p>
+<p>For me it would make sense to be a bit more relaxed on another basket, with a higher risk profile, like the kind of one <a class="mention" href="/u/simplelife">@simplelife</a> suggested.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-22T15:40:17Z' class='post-time'>
+                    February 22, 2022,  3:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-22T15:40:17Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yeah, I was torn on this tbh.</p>
+<p>Frax is also backed by USDC, so although its a a more decentralized project, it still relies on a centralized token…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/simplelife'><span itemprop='name'>simplelife</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/main-net-soft-synths/1044">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-02-28T01:06:16Z' class='post-time'>
+                    February 28, 2022,  1:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-02-28T01:06:16Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Looking forward to it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

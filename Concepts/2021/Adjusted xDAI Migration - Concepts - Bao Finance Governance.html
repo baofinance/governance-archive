@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Adjusted xDAI Migration - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="Right now Ethereum gas is extremely high and the xDAI migration is still many weeks away at the current pace. 
+There is the possibility of us accelerating the xDAI deploy in a “test in production capacity”. 
+This means w&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/adjusted-xdai-migration/20/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Adjusted xDAI Migration&#39;" href="https://gov.bao.finance/t/adjusted-xdai-migration/20.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/adjusted-xdai-migration/20/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/adjusted-xdai-migration/20/print" />
+<meta property="og:title" content="Adjusted xDAI Migration" />
+<meta name="twitter:title" content="Adjusted xDAI Migration" />
+<meta property="og:description" content="Right now Ethereum gas is extremely high and the xDAI migration is still many weeks away at the current pace.  There is the possibility of us accelerating the xDAI deploy in a “test in production capacity”.  This means we would deploy the Bao farming contract to xDAI with:   Fewer pools to start, and add more over time. Minor adjustments to account for the different block times on xDAI. No 1:1 swap for the $BAO.cx to $BAO being ready. No timelock for the first week (just like we did on main net ..." />
+<meta name="twitter:description" content="Right now Ethereum gas is extremely high and the xDAI migration is still many weeks away at the current pace.  There is the possibility of us accelerating the xDAI deploy in a “test in production capacity”.  This means we would deploy the Bao farming contract to xDAI with:   Fewer pools to start, and add more over time. Minor adjustments to account for the different block times on xDAI. No 1:1 swap for the $BAO.cx to $BAO being ready. No timelock for the first week (just like we did on main net ..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="6 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="225 ❤" />
+<meta property="article:published_time" content="2021-02-05T21:56:53+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/adjusted-xdai-migration/20">Adjusted xDAI Migration</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Adjusted xDAI Migration'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T21:56:53Z' class='post-time'>
+                    February 5, 2021,  9:56pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:09:39Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p>Right now Ethereum gas is <em>extremely</em> high and the xDAI migration is still many weeks away at the current pace.</p>
+<p>There is the possibility of us accelerating the xDAI deploy in a “test in production capacity”.</p>
+<p>This means we would deploy the Bao farming contract to xDAI with:</p>
+<ul>
+<li>Fewer pools to start, and add more over time.</li>
+<li>Minor adjustments to account for the different block times on xDAI.</li>
+<li>No 1:1 swap for the $BAO.cx to $BAO being ready.</li>
+<li>No timelock for the first week (just like we did on main net incase fast adjustments are needed).</li>
+<li>Incomplete testing.</li>
+</ul>
+<p>That deploy could happen as early as late next week or the week after if we choose to approve it.</p>
+<p>During this time we’d have the xDAI farms have their regular planned rewards but we would not reduce the rewards on Ethereum until the pre-planned date of March 1st.</p>
+<p>This would have significant risk if we choose to pursue it and for the first few weeks, users should only consider migrating non-essential funds (AKA funds they predict they would lose 100% of if there was an error)</p>
+<p>I am posting this in concepts to see how many users are interested in this accelerated timeline to deal with gas, given the downside and risks it will hold.</p>
+<p><strong>Update:</strong> I am glad to see that for the most part users agree we should keep the March 1st date. I’ll continue to let this discussion develop and see if sentiment changes but early indication is that we’re all on the same page of not moving up the timeline.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="17" />
+              <span class='post-likes'>17 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/kingbika'><span itemprop='name'>kingbika</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:37:31Z' class='post-time'>
+                    February 5, 2021, 10:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:37:31Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Honestly, I don’t see the rush to migrate to xDai. Gas prices are high, yes. It is prohibitive for new users, primarily those with smaller amounts they want to stake. But I do not think that encouraging all those traders who are discouraged from using the main chain to move to an untested xDai pool is worth it. I think Bao should continue doing due diligence on their contracts, deploying them when they are ready as determined by the team.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="27" />
+              <span class='post-likes'>27 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:39:45Z' class='post-time'>
+                    February 5, 2021, 10:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:39:45Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I generally agree but it is up to the community as well and so I want to make sure we at least explore and voice all options.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Optilon'><span itemprop='name'>Optilon</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/82f69f7e0f29902d99f41984b0e5bd09c51a895c.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:41:45Z' class='post-time'>
+                    February 5, 2021, 10:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:47:13Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think an accelerating of xDAI migration for test purpose is beneficial. Gas fee might rise faster than we expect. Do it! We can also find bugs once it is rolled out.</p>
+<p><img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/82f69f7e0f29902d99f41984b0e5bd09c51a895c.jpeg" alt="" data-base62-sha1="iGysqBXrTjDTREZSiKZN4p4tjdO" role="presentation" width="222" height="227"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chiiso'><span itemprop='name'>Chiiso</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:42:58Z' class='post-time'>
+                    February 5, 2021, 10:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:42:58Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As a softawe engenieer I prefer to deploy production after everything have been tested.</p>
+<p>PD: log in with discord does not work for me.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="15" />
+              <span class='post-likes'>15 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:48:30Z' class='post-time'>
+                    February 5, 2021, 10:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:48:30Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That is outlined in the main post. Reward discount would not be accelerated.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/KAOS'><span itemprop='name'>KAOS</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:49:58Z' class='post-time'>
+                    February 5, 2021, 10:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:49:58Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Prefer to have it tested thoroughly in test env rather than production, any exploits taken advantage of in production would be detrimental to a projects standing even if it is still a test roll out with minimal pools, especially in the crypto community… some projects NEVER recover.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="11" />
+              <span class='post-likes'>11 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/shell42b'><span itemprop='name'>shell42b</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:51:00Z' class='post-time'>
+                    February 5, 2021, 10:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:51:00Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, gas prices are high, and community members are eager. Gas prices will go lower, but live testing is never a good idea. Just look at the guys on BZX, it was an audited code, but somehow 2 bugs got unnoticed, and the community scattered in no time. They are still on the ground since.</p>
+<p>I doo support the method of testing first, production after. Do not give in to the few greedy that are here for the quick buck. Their hands are usually the weakest.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="14" />
+              <span class='post-likes'>14 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/suffex57'><span itemprop='name'>suffex57</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:51:34Z' class='post-time'>
+                    February 5, 2021, 10:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:51:34Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I vote for not rushing the xdai migration. As some has mentioned already, the high gas fees are hurting new adoptors more than those who are already farming. The last thing that we want to do is to push new adoptors away even more with pushing out buggy code to xdai and loosing all of their funds. Ensuring a smooth transition will be more beneficial for the long term success of Bao.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="13" />
+              <span class='post-likes'>13 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/DireDeaths'><span itemprop='name'>DireDeaths</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:52:10Z' class='post-time'>
+                    February 5, 2021, 10:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:52:10Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would prefer to keep the current timeline. As much as I test in production, it’s not a great habit, especially in a case where large amounts of financial assets are involved.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:52:17Z' class='post-time'>
+                    February 5, 2021, 10:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:52:17Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The downside is unlikely to be exploits.</p>
+<p>It would more likely be errors of changes related to xDAI having a shorter blocktime which would mean a risk of changes to the fees or the pace of issuing if we got something wrong.</p>
+<p>Both of those seem to be adjustable.</p>
+<p>Other than that it would only be the standard configuration risks such as halving time coordination that we had with the original contract deploy.</p>
+<p>We will still be using the same pool code we are using on the main net so there is no greater or lesser risk of exploit.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="6" />
+              <span class='post-likes'>6 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/hulahoof'><span itemprop='name'>hulahoof</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:53:44Z' class='post-time'>
+                    February 5, 2021, 10:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:53:44Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would be happy to test on the xDAI network with some non critical funds - my preference would be whatever lends itself to reaching the full migration with the most confidence. Also would taking the adjusted xDAI migration route affect in anyway the expected timeline for beginning of march for the remaining pools?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/GreatArk'><span itemprop='name'>GreatArk</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:59:14Z' class='post-time'>
+                    February 5, 2021, 10:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:59:14Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>IMO, working under “rush” feeling is not good. You can sometimes overlook some tiny errors that could lead to a bigger problem. It is better to use the pre-planned date. Just ~3 weeks more.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/linksirsergeynazarov'><span itemprop='name'>linksirsergeynazarov</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:00:15Z' class='post-time'>
+                    February 5, 2021, 11:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:00:15Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I see no reason to push up the migration. We have established a date of March 1st and we should stick to it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/0xKnobby'><span itemprop='name'>0xKnobby</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:02:20Z' class='post-time'>
+                    February 5, 2021, 11:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:02:20Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I agree that pushing it through faster might not be such a great idea… Yearn have had some costly exploits as a result of growing too quickly for the space.</p>
+<p>If the deadline of 1st March is putting pressure on the team to get the product out, working longer hours into the night can cause even the best dev to make errors. Good things take time and you (BaoMan and team) have done a great job.</p>
+<p>it’s come a long way even in the last couple of weeks, if taking a bit more time means a smoother and more stable transition, I’m all for that :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="6" />
+              <span class='post-likes'>6 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Pierre'><span itemprop='name'>Pierre</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:04:12Z' class='post-time'>
+                    February 5, 2021, 11:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:04:12Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Good idea, but I would personnaly go with testing  first<br>
+Maybe few pre-selected users can help with test validation in order to give it a bit of volume, but I believe you need to pay atttention not to extend to all users as in case of issue it can kill the project for a while and we will lose confidence from users.<br>
+The issue with cloudfare was creating some bad background noise in the chat - Hopefully this was impacting only few users.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Poolboy'><span itemprop='name'>Poolboy</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:04:37Z' class='post-time'>
+                    February 5, 2021, 11:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:04:37Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would rather stick to schedule. We have a set date, it was thought out and decided on well in advance, it will simply confuse the lesser involved and integrated members to change it even for a test. Why risk making any mistakes? It’s an absolutely crucial step that we all hope goes smoothly. If we moved it up and it went poorly it would affect the price which, while I understand it’s not your main interest, Baoman, would lead to many unhappy later investors.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/hyeres'><span itemprop='name'>hyeres</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:08:48Z' class='post-time'>
+                    February 5, 2021, 11:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:08:48Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I like the idea, but would prefer stability and simplicity for the roll-out. I feel that if we did a multi stage roll-out this would lead to a a lot more support questions, taking up the time of the dev team.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:09:12Z' class='post-time'>
+                    February 5, 2021, 11:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:09:12Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am glad to see that for the most part users agree we should keep the March 1st date. I’ll continue to let this discussion develop but early indication is that we’re all on the same page of not moving up the timeline.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="10" />
+              <span class='post-likes'>10 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Pierre'><span itemprop='name'>Pierre</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:10:13Z' class='post-time'>
+                    February 5, 2021, 11:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:10:13Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sorry 1 more thought not completely related with the topic, but that could help to make the project more visible and keep the momentum until xDAI migration → Add BAO on Defi Pulse (BAO will appear as number 22 on Defi based on TVL)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/SpaDe'><span itemprop='name'>SpaDe</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:10:16Z' class='post-time'>
+                    February 5, 2021, 11:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:10:16Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am going to say wait and proceed when everything is tested and ready. The big reason for this is because we already have a good many people who just TLDR all the warnings and other info and jump in and then they freak out after the fact. You will have that X100 if this is rushed.</p>
+<p>Imagine all the obvious questions from the general chat and amplify that by every possible question from the list you posted being reworded a million different ways and you should come to a pretty simple conclusion as to why it would be best to wait and just rollout a tested and true product.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_23' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/elcotuo'><span itemprop='name'>elcotuo</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:10:34Z' class='post-time'>
+                    February 5, 2021, 11:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:10:34Z'>
+              <span itemprop='position'>23</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think that the best for the project is to keep the March 1st date.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_24' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/0xRamz'><span itemprop='name'>0xRamz</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:17:06Z' class='post-time'>
+                    February 5, 2021, 11:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:17:06Z'>
+              <span itemprop='position'>24</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This could be a different topic that can be addressed on a different thread. Perhaps label it “Exposure Proposals”</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_25' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Optilon'><span itemprop='name'>Optilon</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:18:37Z' class='post-time'>
+                    February 5, 2021, 11:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:18:37Z'>
+              <span itemprop='position'>25</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, there is no need to rush. I thought you made the proposal for an earlier deploy because you finished before the set timeline.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_26' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/0xRamz'><span itemprop='name'>0xRamz</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:21:30Z' class='post-time'>
+                    February 5, 2021, 11:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:21:30Z'>
+              <span itemprop='position'>26</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We should wait on this and follow original proposal. Let the community grow and learn. Shake out the non-serious ones that want to just see “moon”. This will also show the seriousness of the project to original holders and new serious holders. The ones who are in for the long term. They perhpas aren’t making too many transactions as to worry about the gas fee too much. I’ll speak for myself when I say I’m mainly farming and holding and can care less about gas fees.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_27' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/RichAndCreamy'><span itemprop='name'>RichAndCreamy</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:26:46Z' class='post-time'>
+                    February 5, 2021, 11:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:26:46Z'>
+              <span itemprop='position'>27</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If testing in prod is good enough for Yearn, it is good enough for Bao. Just do a few select pools and iterate over time. I suggest starting with Stake since it is the consensus token for xDai and experienced xDai users would be interested in an accelerated move.</p>
+<p>If I lose my Stake farm, my timelocked funds will cover that lost in the future.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_28' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/atpeegs'><span itemprop='name'>atpeegs</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:40:12Z' class='post-time'>
+                    February 5, 2021, 11:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:40:12Z'>
+              <span itemprop='position'>28</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I do agree on a full launch to ensure fewest issues. It is a tough time, with Crypto interest booming with Bao and many other developments being priced out of smaller-mid level engagement. Unfortunately, I certainly don’t see gas fees reducing any time soon. I wish I had got my stake in earlier and I’m sure many others feel this way, which is cause for concern, but we can’t let our impatience here dilute the quality of future development, otherwise we all lose.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_29' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Vitalsine'><span itemprop='name'>Vitalsine</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:42:58Z' class='post-time'>
+                    February 5, 2021, 11:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:42:58Z'>
+              <span itemprop='position'>29</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think we should stick with the March 1st migration, but I don’t think it would hurt to have limited testing on xDai. I would volunteer to fiddle around if you were to open pools a little early. With fees so low on xDai we could stake very little and it would cost virtually nothing.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_30' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/samsara'><span itemprop='name'>samsara</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:48:36Z' class='post-time'>
+                    February 5, 2021, 11:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:48:36Z'>
+              <span itemprop='position'>30</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Agree to wait. Those who are most likely to stick with it long term won’t go anywhere. Those who cannot wait 3 weeks on a project with years-long time horizons will likely not stay long enough for any accelerated timelines to matter.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_31' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/MetaMike'><span itemprop='name'>MetaMike</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:57:11Z' class='post-time'>
+                    February 5, 2021, 11:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:57:11Z'>
+              <span itemprop='position'>31</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m perfectly fine staying on the original timeline. No rush here. :)</p>
+<p>“Good things” and all that.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_32' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/voidberg'><span itemprop='name'>voidberg</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:58:35Z' class='post-time'>
+                    February 5, 2021, 11:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:58:35Z'>
+              <span itemprop='position'>32</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>From Baomans description it sounds like the xDAI pools would be hardly useable, and with users trying / complaining about the half finished thing (I KNOW people will jump in head over heels without reading any warning and then complain) I guess it will be a lot of hassle for baoman to be like two weeks earlier on xDai, not worth it in my opinion.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_33' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/linksirsergeynazarov'><span itemprop='name'>linksirsergeynazarov</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:05:30Z' class='post-time'>
+                    February 6, 2021, 12:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:05:30Z'>
+              <span itemprop='position'>33</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I like the idea of some of us testing it can create a special url password protected</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_34' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Nev4Submit'><span itemprop='name'>Nev4Submit</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:26:48Z' class='post-time'>
+                    February 6, 2021, 12:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:26:48Z'>
+              <span itemprop='position'>34</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I vote to take a slow and deliberate migration. Last thing we need is a problem to occur and the bad publicity ruins the project.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="7" />
+              <span class='post-likes'>7 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_35' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/SaltyWaters'><span itemprop='name'>SaltyWaters</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:37:37Z' class='post-time'>
+                    February 6, 2021, 12:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:37:37Z'>
+              <span itemprop='position'>35</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I wouldn’t risk it. My vote is no.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_36' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Robertboud'><span itemprop='name'>Robertboud</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:49:32Z' class='post-time'>
+                    February 6, 2021, 12:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:49:32Z'>
+              <span itemprop='position'>36</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m for sticking to the original March 1st rollout.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_37' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jim123'><span itemprop='name'>Jim123</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:51:52Z' class='post-time'>
+                    February 6, 2021, 12:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:51:52Z'>
+              <span itemprop='position'>37</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Stick with the plan and take your time,</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_38' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Nikeythm'><span itemprop='name'>Nikeythm</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:21:41Z' class='post-time'>
+                    February 6, 2021,  1:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:21:41Z'>
+              <span itemprop='position'>38</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>PLEASE TAKE YOUR TIME. I’ve seen many projects rush out there projects due to impatient holders/investors and the product ends up being full of bugs, exploits, crashes, etc. It may take long but it will be worth it at the end!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_39' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/BaoStar'><span itemprop='name'>BaoStar</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:44:43Z' class='post-time'>
+                    February 6, 2021,  1:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:44:43Z'>
+              <span itemprop='position'>39</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>My vote is to stick with the original plan. Patience will be rewarded.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_40' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:46:22Z' class='post-time'>
+                    February 6, 2021,  1:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:46:22Z'>
+              <span itemprop='position'>40</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have the same opinion of a lot of persons here.</p>
+<ul>
+<li>Let’s not hurry and stick to the schedule of March 1st</li>
+<li>We have one chance to make good impression. xDai migration is the next big milestone in the project</li>
+<li>I encourage for a few selected users to beta test the migration.</li>
+<li>In the beta test period, it will also help to build resources and tutorials for the community</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_41' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Vitalsine'><span itemprop='name'>Vitalsine</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T02:00:19Z' class='post-time'>
+                    February 6, 2021,  2:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T02:00:19Z'>
+              <span itemprop='position'>41</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Keep me on that beta test list! I have a bit of experience with xDai, and wouldn’t be against sacrificing a bit of my holdings to testing this out. For the good of the community :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_42' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/jrizzly'><span itemprop='name'>jrizzly</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T02:10:22Z' class='post-time'>
+                    February 6, 2021,  2:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T02:10:22Z'>
+              <span itemprop='position'>42</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>From a decision analysis perspective there is no good that could come from this: Best case scenario everything works, and you get less time to push out xdai migration. Worst case scenario exploit happens and blacklists the project. A project in its infancy can be scared immediately.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_43' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Fong'><span itemprop='name'>Fong</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T02:12:52Z' class='post-time'>
+                    February 6, 2021,  2:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T02:12:52Z'>
+              <span itemprop='position'>43</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Keep it on track with the roadmap to March 1st. Overall the product should be something that you’re most confident in sending, you shouldn’t have to worry about what some of complained about, as it was well-stated and written that this would be a project that takes time to get into.</p>
+<p>There’s literally one thing that would kill the credibility and reputation that you’ve been trying to develop in Bao and that is to develop a product that is rushed and flawed which end up costing more in damage than the short-term gains of the loud minority.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_44' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/BaoStar'><span itemprop='name'>BaoStar</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T02:14:24Z' class='post-time'>
+                    February 6, 2021,  2:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T02:14:24Z'>
+              <span itemprop='position'>44</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You are the hero we deserve!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_45' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/RichAndCreamy'><span itemprop='name'>RichAndCreamy</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T03:41:59Z' class='post-time'>
+                    February 6, 2021,  3:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T03:41:59Z'>
+              <span itemprop='position'>45</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>With the last change of pools, only 4 pools arrived on time. We should at least test 1 pool in advance of migration so the rest of the pools can launch on time for March.</p>
+<p>Having only 1 test pool would reduce the amount of people who will complain about making their financial decisions around the March 1st date. It would make it clear that it is a test and that the project should not be judged by any bad test results, only by the performance of the live migration.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_46' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T03:50:53Z' class='post-time'>
+                    February 6, 2021,  3:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T03:50:53Z'>
+              <span itemprop='position'>46</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The last pool change was also the first time we ever did a pool change and were using a third-party timelock system that users demand be put in place before I had a chance to test it :P that’s why I took time to figure out.</p>
+<p>After that we lined up 90 pool changes at the same time and they all went through fine.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_47' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/AlderKing777'><span itemprop='name'>AlderKing777</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T04:55:54Z' class='post-time'>
+                    February 6, 2021,  4:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T04:55:54Z'>
+              <span itemprop='position'>47</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’d rather everything be tested first before migrating. I understand gas fees cause issues , but I’m willing to bite that knowing I can migrate worry free.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_48' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/HEEEEEEEEEEE'><span itemprop='name'>HEEEEEEEEEEE</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T05:48:49Z' class='post-time'>
+                    February 6, 2021,  5:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T05:48:49Z'>
+              <span itemprop='position'>48</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m in favour of testing in prod as long as we can limit blast radius.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_49' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T05:54:03Z' class='post-time'>
+                    February 6, 2021,  5:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T05:54:03Z'>
+              <span itemprop='position'>49</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That is a good analogy for us to consider framing this with.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_50' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/0xRamz'><span itemprop='name'>0xRamz</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T06:16:11Z' class='post-time'>
+                    February 6, 2021,  6:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T06:16:11Z'>
+              <span itemprop='position'>50</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="BaoStar" data-post="44" data-topic="20" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/b/8797f3/48.png" class="avatar"> BaoStar:</div>
+<blockquote>
+<p>You are the hero we deserve!</p>
+</blockquote>
+</aside>
+<p>Vitalsine for the win!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_51' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/1662'><span itemprop='name'>1662</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T08:22:07Z' class='post-time'>
+                    February 6, 2021,  8:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T08:22:07Z'>
+              <span itemprop='position'>51</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>baoman you’ve been working so hard and an active anon dev. we all bought into the original plan and now it’s listed too. don’t change a thing, if xdai is “mostly ready” at this point take some time off OR move on to the next step bro!! gl hf</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_52' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Gouby_Duran'><span itemprop='name'>Gouby_Duran</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T08:43:25Z' class='post-time'>
+                    February 6, 2021,  8:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T08:43:25Z'>
+              <span itemprop='position'>52</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am eager to see the migration done to start farming. But the reliability of BAO itself can be put into question if there are bugs and bad surprises. Therefore, I think sticking to your planning, and move step by step in a secure way is the right move.<br>
+Keep on keeping on, and thank you for your work.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_53' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jsr677'><span itemprop='name'>Jsr677</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T09:52:03Z' class='post-time'>
+                    February 6, 2021,  9:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T09:52:03Z'>
+              <span itemprop='position'>53</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Bad news travels fast baoman… So if theres a bug… that news will spread like wild fire and bad for bao… Saying that myself im all in for the acclerated deployment and testing in production. If you are confident… Lets go ahead!!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_54' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/othello16'><span itemprop='name'>othello16</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T12:51:58Z' class='post-time'>
+                    February 6, 2021, 12:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T12:51:58Z'>
+              <span itemprop='position'>54</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Don’t rush it. Not at the risk of some less informed community members losing 100% of their tokens. What is the rush anyway? I thought we were in this for the long haul?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_55' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/tony-cosmic.global'><span itemprop='name'>tony-cosmic.global</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T14:57:56Z' class='post-time'>
+                    February 6, 2021,  2:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T14:57:56Z'>
+              <span itemprop='position'>55</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I do not believe the migration will be beneficial for the project in terms of attracting new interest/smaller wallets until this aspect is resolved:</p>
+<blockquote>
+<p>No 1:1 swap for the $BAO.cx to $BAO being ready.</p>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_56' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/BlueCollarCryptos'><span itemprop='name'>BlueCollarCryptos</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T16:23:30Z' class='post-time'>
+                    February 6, 2021,  4:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T16:23:30Z'>
+              <span itemprop='position'>56</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I vote no rush. Stick to the roadmap. The BAO team has been crystal clear about associated GAS fees and what it takes to harvest BAO. They’ve also been transparent about the risks involved with speculative crypto investing. With new projects like this, as investors we need to have the stomach for the ups and downs - today the downs are GAS prices, tomorrow it will be something else. Gotta think long-term folks. Do you believe in this project or not? If you believe pay the fees to harvest. If you don’t, why are you investing in speculation? Your money is a lot safer in BTC, ETH, etc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_57' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T16:23:38Z' class='post-time'>
+                    February 6, 2021,  4:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T16:23:38Z'>
+              <span itemprop='position'>57</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Attracting new interest/smaller wallets isn’t a top priority either way.</p>
+<p>This is one part of the migration that I’m unsure will be ready for March 1st but would follow very closely, since its a new contract I’m trying to test that extensively.</p>
+<p>Since we’ll be able to have pools of $BAO.cx and $BAO on Uniswap/Sushiswap/Honeyswap there will be ways to exchange them right away it just may have some level of slippage but should be near 1:1.</p>
+<p>My hope is to have that part ready as soon as possible but it is not really part of the promised March 1st date like the rest of the system.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_58' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chuwak'><span itemprop='name'>Chuwak</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T16:58:46Z' class='post-time'>
+                    February 6, 2021,  4:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T16:58:46Z'>
+              <span itemprop='position'>58</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m for rolling out the xDAI Migration later when it’s ready rather than rush it</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_59' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/throbbingred'><span itemprop='name'>throbbingred</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T18:12:02Z' class='post-time'>
+                    February 6, 2021,  6:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T18:12:02Z'>
+              <span itemprop='position'>59</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I place actual security and <strong>perceived</strong> security of the protocol as the absolute top priority.</p>
+<p>I understand the desire to accelerate the xDAI transition for the benefit of all BAO users, but ultimately believe that the net benefit from a successful accelerated migration to be very small when compared to the risk of potential harm from a botched migration.</p>
+<p>No need to increase the risk of a destabilizing event, in my opinion.</p>
+<p>I think that we stick to the published schedule with rigorous testing.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_60' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Icedcool'><span itemprop='name'>Icedcool</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T19:06:36Z' class='post-time'>
+                    February 6, 2021,  7:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T19:06:36Z'>
+              <span itemprop='position'>60</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would love to help out with testing as well! I’m also willing to chip in some of my bao for the overall growth of the project and development.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_61' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/william_T'><span itemprop='name'>william_T</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T22:33:36Z' class='post-time'>
+                    February 6, 2021, 10:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T22:33:36Z'>
+              <span itemprop='position'>61</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think its better stick to the original plan ( march 1) the gas fees might be high, but its better to be safe  and tested on the back end.we are here for long term 👍</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_62' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/cnumber'><span itemprop='name'>cnumber</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-07T02:22:04Z' class='post-time'>
+                    February 7, 2021,  2:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-07T02:22:04Z'>
+              <span itemprop='position'>62</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ya stick with the orginal plan…acceleration by a few weeks does not make any meaningful difference but…a potential exploit causes issues!!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_63' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/EOTWC'><span itemprop='name'>EOTWC</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-07T04:43:45Z' class='post-time'>
+                    February 7, 2021,  4:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-07T04:43:45Z'>
+              <span itemprop='position'>63</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Even the hint of losing funds will scare away potential investors and possibly scatter the community goodwill, imo.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_64' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/HEEEEEEEEEEE'><span itemprop='name'>HEEEEEEEEEEE</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-08T01:04:37Z' class='post-time'>
+                    February 8, 2021,  1:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-08T01:04:37Z'>
+              <span itemprop='position'>64</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In my opinion, speed of progress toward longer term project goals trumps short term considerations about how appealing we are to investors. The objective here is to build something awesome, not pump token values in 3 weeks.</p>
+<p>That being said, if there is no medium to long term benefit in accelerating xDAI migration by doing it in chunks, then there’s not much benefit to worrying about it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_65' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/aFrogDeity'><span itemprop='name'>aFrogDeity</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-08T09:40:46Z' class='post-time'>
+                    February 8, 2021,  9:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-08T09:40:46Z'>
+              <span itemprop='position'>65</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Voicing an opinion that there should be no rush to migrate.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_66' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Lui'><span itemprop='name'>Lui</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-08T10:10:39Z' class='post-time'>
+                    February 8, 2021, 10:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-08T10:10:39Z'>
+              <span itemprop='position'>66</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would vote to not move up the timeline. In my opinion a week gained here or there doesn’t have a meaningful impact on long term project. We are in for a marathon not 100m.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_67' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/btc_thousand'><span itemprop='name'>btc_thousand</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-09T11:45:44Z' class='post-time'>
+                    February 9, 2021, 11:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-09T11:45:44Z'>
+              <span itemprop='position'>67</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey,</p>
+<p>I think we should mitigate the numerous statement about not rushing xdai mig.</p>
+<p>Taking perpetual as an exemple, leveraging xdai tech to lower fees is not something we shall overlook imho.</p>
+<p>This could have advantages :</p>
+<ul>
+<li>greater number of transactions (showing the network is used)</li>
+<li>tech innovation image (bao team is able to face fast changing environment and adapt to the challenges of the space)</li>
+<li>address different user base</li>
+</ul>
+<p>I don’t personally care about fees for harvest the point is that it could be a plus, the question being …</p>
+<p>Is it worth it ???</p>
+<p>Only the project man can tell we had some indication</p>
+<ul>
+<li>low probability of exploit</li>
+<li>the few above points I mention but likely more</li>
+</ul>
+<p>And the downside?</p>
+<ul>
+<li>bao man sleep(for sure)</li>
+<li>quality of immediate future dev ?</li>
+<li>additional ressource to be allocated to the projects ?</li>
+</ul>
+<p>Not enough input to answer the question just some brain dump that could help taking decision.</p>
+<p>Peace<br>
+<span class="hashtag">#1000</span><br>
+<span class="hashtag">#Decentralization</span></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_68' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/adjusted-xdai-migration/20">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-18T14:39:26Z' class='post-time'>
+                    September 18, 2021,  2:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-18T14:39:26Z'>
+              <span itemprop='position'>68</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

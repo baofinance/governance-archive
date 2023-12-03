@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Understanding vote escrow and resources to learn from (nothing gov related just education) - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="Curve Resources (docs for detailed info and code we will be using) 
+https://curve.readthedocs.io/dao-overview.html 
+
+Curve Tokenomics from start until now (more details on how they premined some tokens and left some othe&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/understanding-vote-escrow-and-resources-to-learn-from-nothing-gov-related-just-education/1126/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Understanding vote escrow and resources to learn from (nothing gov related just education)&#39;" href="https://gov.bao.finance/t/understanding-vote-escrow-and-resources-to-learn-from-nothing-gov-related-just-education/1126.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/b2bffb0181713a4e176da8c8c85852cd1b6d7dd4_2_1024x537.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/b2bffb0181713a4e176da8c8c85852cd1b6d7dd4_2_1024x537.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/understanding-vote-escrow-and-resources-to-learn-from-nothing-gov-related-just-education/1126/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/understanding-vote-escrow-and-resources-to-learn-from-nothing-gov-related-just-education/1126/print" />
+<meta property="og:title" content="Understanding vote escrow and resources to learn from (nothing gov related just education)" />
+<meta name="twitter:title" content="Understanding vote escrow and resources to learn from (nothing gov related just education)" />
+<meta property="og:description" content="Curve Resources (docs for detailed info and code we will be using)  https://curve.readthedocs.io/dao-overview.html   Curve Tokenomics from start until now (more details on how they premined some tokens and left some others for the mining epochs that sustain the current curve wars in veCRV context   Convex docs below…this protocol gives a good understanding of how governance power and incentives are collected in curve vote escrow system as that is convex’s design (be the best at the curve wars st..." />
+<meta name="twitter:description" content="Curve Resources (docs for detailed info and code we will be using)  https://curve.readthedocs.io/dao-overview.html   Curve Tokenomics from start until now (more details on how they premined some tokens and left some others for the mining epochs that sustain the current curve wars in veCRV context   Convex docs below…this protocol gives a good understanding of how governance power and incentives are collected in curve vote escrow system as that is convex’s design (be the best at the curve wars st..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2022-05-11T20:17:49+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/understanding-vote-escrow-and-resources-to-learn-from-nothing-gov-related-just-education/1126">Understanding vote escrow and resources to learn from (nothing gov related just education)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Understanding vote escrow and resources to learn from (nothing gov related just education)'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/understanding-vote-escrow-and-resources-to-learn-from-nothing-gov-related-just-education/1126">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/b2bffb0181713a4e176da8c8c85852cd1b6d7dd4.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-11T20:17:49Z' class='post-time'>
+                    May 11, 2022,  8:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-11T20:17:49Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p><strong>Curve Resources</strong> (docs for detailed info and code we will be using)<br>
+<a href="https://curve.readthedocs.io/dao-overview.html" class="onebox" target="_blank" rel="noopener nofollow ugc">https://curve.readthedocs.io/dao-overview.html</a></p><aside class="onebox allowlistedgeneric" data-onebox-src="https://resources.curve.fi/">
+  <header class="source">
+      
+
+      <a href="https://resources.curve.fi/" target="_blank" rel="noopener nofollow ugc">resources.curve.fi</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/b2bffb0181713a4e176da8c8c85852cd1b6d7dd4_2_690x362.png" class="thumbnail" width="690" height="362" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/b2bffb0181713a4e176da8c8c85852cd1b6d7dd4_2_690x362.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/b2bffb0181713a4e176da8c8c85852cd1b6d7dd4_2_1035x543.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/b2bffb0181713a4e176da8c8c85852cd1b6d7dd4.png 2x" data-dominant-color="F9FAFB"></div>
+
+<h3><a href="https://resources.curve.fi/" target="_blank" rel="noopener nofollow ugc">Welcome to Curve Finance</a></h3>
+
+  <p>Resources and guides to get started with Curve and the Curve DAO</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/curvefi/curve-dao-contracts">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/curvefi/curve-dao-contracts" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/32f8faf3e54b43d99754a0779a87a56b1f982340_2_690x345.png" class="thumbnail" width="690" height="345" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/32f8faf3e54b43d99754a0779a87a56b1f982340_2_690x345.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/32f8faf3e54b43d99754a0779a87a56b1f982340_2_1035x517.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/32f8faf3e54b43d99754a0779a87a56b1f982340.png 2x" data-dominant-color="4A74A1"></div>
+
+<h3><a href="https://github.com/curvefi/curve-dao-contracts" target="_blank" rel="noopener nofollow ugc">GitHub - curvefi/curve-dao-contracts: Vyper contracts to be used by Curve DAO</a></h3>
+
+  <p>Vyper contracts to be used by Curve DAO. Contribute to curvefi/curve-dao-contracts development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p><strong>Curve Tokenomics</strong> from start until now (more details on how they <strong>premined</strong> some tokens and left some others for the mining epochs that sustain the current curve wars in veCRV context</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://resources.curve.fi/crv-token/understanding-tokenomics">
+  <header class="source">
+      
+
+      <a href="https://resources.curve.fi/crv-token/understanding-tokenomics" target="_blank" rel="noopener nofollow ugc">resources.curve.fi</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c7a2e2d882f17c5023d550706f240bab8e128d04_2_690x362.png" class="thumbnail" width="690" height="362" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c7a2e2d882f17c5023d550706f240bab8e128d04_2_690x362.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c7a2e2d882f17c5023d550706f240bab8e128d04_2_1035x543.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/c7a2e2d882f17c5023d550706f240bab8e128d04.png 2x" data-dominant-color="F8F9FB"></div>
+
+<h3><a href="https://resources.curve.fi/crv-token/understanding-tokenomics" target="_blank" rel="noopener nofollow ugc">$CRV Tokenomics</a></h3>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p><strong>Convex docs below</strong>…this protocol gives a good understanding of how governance power and incentives are collected in curve vote escrow system as that is convex’s design (be the best at the curve wars strategies basically)</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.convexfinance.com/convexfinance/">
+  <header class="source">
+      
+
+      <a href="https://docs.convexfinance.com/convexfinance/" target="_blank" rel="noopener nofollow ugc">docs.convexfinance.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c4237c1167c74f3ba245c421ba46e3a6da5d5bea_2_690x362.png" class="thumbnail" width="690" height="362" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c4237c1167c74f3ba245c421ba46e3a6da5d5bea_2_690x362.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c4237c1167c74f3ba245c421ba46e3a6da5d5bea_2_1035x543.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/c4237c1167c74f3ba245c421ba46e3a6da5d5bea.png 2x" data-dominant-color="F8FAFC"></div>
+
+<h3><a href="https://docs.convexfinance.com/convexfinance/" target="_blank" rel="noopener nofollow ugc">Welcome to Convex Finance</a></h3>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p><strong>Yearn finance</strong> is also a good resource to understand in the context of yearn vaults that are designed to optimize yield on curve pools as well, using y/yv tokens…different than convex but also very much so in the similar business of curve liquidity aggregation</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.yearn.finance/">
+  <header class="source">
+      <img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/65a8c966c87feb78f2dd28045cc86873121f029b.png" class="site-icon" width="48" height="48">
+
+      <a href="https://docs.yearn.finance/" target="_blank" rel="noopener nofollow ugc">docs.yearn.finance</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/4961cbb637e556b910458984ae426f7c659ea093.png" class="thumbnail onebox-avatar" width="100" height="100">
+
+<h3><a href="https://docs.yearn.finance/" target="_blank" rel="noopener nofollow ugc">Yearn.finance Docs | Yearn.finance</a></h3>
+
+  <p>Yearn Finance is a suite of products in Decentralized Finance (DeFi) that provides lending aggregation, yield generation, and insurance on the Ethereum blockchain.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The idea with BAO using the same vote escrow system that curve has implemented would be that only those actively participating in the vote escrow system laid out above will benefit beyond trading fees on their LPs or any arbitrary amount of demand put onto the BAOv2 token that results in deflationary/upward price movement regardless of the fact that BAOv2 emissions continue to inflate the token supply (similar to the scenario of the curve token increasing in price)… the parties determined to benefit from being active will be (Liquidity providers who stake into BAO liquidity gauges) and those that lock BAO into veBAO)</p>
+<p>Here is a quick and simple graphic in curve’s resources that gives an idea of what will be possible with our new governance model the smart contract galaxy is proposing<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/c958d1f00dc391c1738c069aa0cfb334180bc57c.jpeg" data-download-href="/uploads/short-url/sJcgAXQ2VGTtPmbhjJuSaxDV0a8.jpeg?dl=1" title="veToken" rel="noopener nofollow ugc"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c958d1f00dc391c1738c069aa0cfb334180bc57c_2_690x151.jpeg" alt="veToken" data-base62-sha1="sJcgAXQ2VGTtPmbhjJuSaxDV0a8" width="690" height="151" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c958d1f00dc391c1738c069aa0cfb334180bc57c_2_690x151.jpeg, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c958d1f00dc391c1738c069aa0cfb334180bc57c_2_1035x226.jpeg 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/c958d1f00dc391c1738c069aa0cfb334180bc57c_2_1380x302.jpeg 2x" data-dominant-color="D1D1CA"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">veToken</span><span class="informations">2402×528 121 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>-Basically replace veCRV with veBAO in the graphic<br>
+-lending and trading fees can come from the respective AMM the LP was created at (Uni, Sushi, balancer, and/or curve. not just curve in this case)<br>
+-gov fees refers to the fees we generate with our products and liquidity instead of exclusively with CRV pools</p>
+<p>granted this design we have in process is not finalized so things will be subject to change but this is the main idea…</p>
+<p>I’ll get to any questions below if you have any :)</p>
+<p>With Love,<br>
+nox</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

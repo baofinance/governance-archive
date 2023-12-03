@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Voting Power Modifier - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="I originally posted this in the Discord, thought it would be appropriate to move here. 
+Problem: 
+When you look at several projects, exchanges and speculating whales almost always lead the pack in voting power. This does&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/voting-power-modifier/79/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Voting Power Modifier&#39;" href="https://gov.bao.finance/t/voting-power-modifier/79.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/voting-power-modifier/79/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/voting-power-modifier/79/print" />
+<meta property="og:title" content="Voting Power Modifier" />
+<meta name="twitter:title" content="Voting Power Modifier" />
+<meta property="og:description" content="I originally posted this in the Discord, thought it would be appropriate to move here.  Problem:  When you look at several projects, exchanges and speculating whales almost always lead the pack in voting power. This doesn’t make sense for DAOs and community ran projects. Smaller holders, no matter how long they’ve been supporting the project, are at a disadvantage and are drown out by these massive accounts. This leads to the project being driven by speculators and exchanges, who then vote on pr..." />
+<meta name="twitter:description" content="I originally posted this in the Discord, thought it would be appropriate to move here.  Problem:  When you look at several projects, exchanges and speculating whales almost always lead the pack in voting power. This doesn’t make sense for DAOs and community ran projects. Smaller holders, no matter how long they’ve been supporting the project, are at a disadvantage and are drown out by these massive accounts. This leads to the project being driven by speculators and exchanges, who then vote on pr..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="29 ❤" />
+<meta property="article:published_time" content="2021-02-06T00:43:19+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/voting-power-modifier/79">Voting Power Modifier</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Voting Power Modifier'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Vitalsine'><span itemprop='name'>Vitalsine</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:43:19Z' class='post-time'>
+                    February 6, 2021, 12:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:43:19Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p>I originally posted this in the Discord, thought it would be appropriate to move here.</p>
+<p><strong>Problem:</strong><br>
+When you look at several projects, exchanges and speculating whales almost always lead the pack in voting power. This doesn’t make sense for DAOs and community ran projects. Smaller holders, no matter how long they’ve been supporting the project, are at a disadvantage and are drown out by these massive accounts. This leads to the project being driven by speculators and exchanges, who then vote on proposals to control the narrative to fit their wants and needs, rather than the community at large.</p>
+<p><strong>Solution:</strong><br>
+Introduce a multiplier to voting power that incentivizes long-term participation from users, as well as prevents exchanges and speculators from having too much power.</p>
+<p><strong>Proposal:</strong><br>
+When I was first introduced to Dragonchain in 2017, I was very intrigued by the idea of TIME. TIME works like this: User deposits token into their wallet. From that moment, they begin accumulating TIME. Every block the wallet gains more TIME. For the sake of this example, let’s say that every block a user generates .001 TIME for each token in their wallet. If the user holds 1000 tokens, they generate 1 TIME per block. TIME accumulates until the user withdraws any of the tokens, at which time it would be reset to zero. Deposits do not affect TIME. Now that you have a basic understanding of how TIME works, let’s apply it to voting power. In this case, we would use TIME as a multiplier to increase voting power for long-term participation. Let’s look at an example.</p>
+<p>User 1 has 1,000,000 BAO. They are a speculator and have been trading BAO. Because of this, they accumulated very little TIME, let’s just assume they made a trade just now, so their TIME has been reset to zero. This would make User 1s voting power 1,000,000.</p>
+<p>User 2 has 100,000 BAO. They are a long-term hodler. They’ve been holding for 1 year and have not withdrawn any BAO from their wallet. Ethereum processes roughly ~6500 blocks a day. For each block, User 2s multiplier increases by .001. At 6500 blocks a day, there would be 2,372,500 blocks in a year. To get our multiplier we do the math: 2,372,500 * .001 = 2,372.5. You then take this number and multiply it by their total holdings: 100,000 * 2,372.5 = 237,250,000</p>
+<p>User 1 voting power: 1,000,000<br>
+User 2 voting power: 237,250,000</p>
+<p>As you can see, although User 2 holds far less BAO than User 1, their voting power is exponentially larger because of their long-term participation.</p>
+<p>In the previous example, we did not apply the current method of calculating user voting power to make it as simple to understand as possible.</p>
+<p>For our final example, we have a user who is a long-term BAO holder, and has been providing liquidity for some time. Let’s calculate their voting power.</p>
+<p>This user has 3,000,000 BAO, 16,000,000 locked BAO, and is staking 1,500 LP BAO-ETH LP Tokens. They’ve not made any withdrawals in 1 year, and have been providing liquidity for 6 months.</p>
+<p>Based on the current formula for determining voting rewards we would take 33% of the users locked BAO (5,280,000), 25% of their unlocked BAO (750,000) and 3x their BAO in the BAO-ETH pool (~1,800,000 at time of writing).</p>
+<p>((Unlocked BAO + Locked Rewards) * Wallet TIME) * (BAO LP * LP TIME) = Total Voting Power ((750,000 + 5,280,000) * 2,372.5) * (1,800,000 * 1,186.25) = 16,441,425,000</p>
+<p>With a total voting power that high, it would be nearly impossible for any exchange to have more voting power than your “average” long-term user.</p>
+<p>To take this one step further, we can also include a modifier for Participation. If you’ve never voted, your voting power would be the value above. For every consecutive vote, your Participation would increase by 1, and for every vote you miss, it would decrease by 1. In that case, the formula would be the same, but with the addition of an IF statement:</p>
+<p>if Participation &gt;= 2 then<br>
+(((Total Holdings + Locked Rewards) * Wallet TIME) * (LP Tokens * LP TIME)) * Participation Multiplier = Total Voting Power<br>
+else<br>
+(((Total Holdings + Locked Rewards) * Wallet TIME) * (LP Tokens * LP TIME))  = Total Voting Power</p>
+<p><strong>Conclusion:</strong><br>
+By introducing a multiplier while determining user voting power, we can assure that the protocol is controlled by the users who are most active and committed to the project. Exchanges and speculators will constantly be withdrawing BAO from their wallets, which will keep their multiplier very low and prevent them from controlling governance.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/0xCool'><span itemprop='name'>0xCool</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:53:45Z' class='post-time'>
+                    February 6, 2021, 12:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:06:33Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What do you think about quadratic voting as an alternative?</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://vitalik.ca/general/2019/12/07/quadratic.html">
+  <header class="source">
+
+      <a href="https://vitalik.ca/general/2019/12/07/quadratic.html" target="_blank" rel="noopener nofollow ugc">vitalik.ca</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/55f79e51e9962d0e7749f1960301b30e12e81433.png" class="thumbnail onebox-avatar" width="150" height="150">
+
+<h3><a href="https://vitalik.ca/general/2019/12/07/quadratic.html" target="_blank" rel="noopener nofollow ugc">Quadratic Payments: A Primer</a></h3>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>TLDR: quadratic voting limits the vote of larger stakeholders. For example, someone with 10K tokens would get 100 votes. And someone with 10M tokens would get 3162 votes.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Vitalsine'><span itemprop='name'>Vitalsine</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:38:58Z' class='post-time'>
+                    February 6, 2021,  1:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:38:58Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think it would work great, but from what I understand, BaoMan says it isn’t possible at this time?</p>
+<blockquote>
+<p>Quadratic voting is a fantastic concept but only works if you can validate something is sybil resistant which a decentralized protocol has no real way of doing yet - BaoMan</p>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:46:30Z' class='post-time'>
+                    February 6, 2021,  1:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:46:30Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Correct impossible in a platform where people stay anonymous.</p>
+<p>To do quadratic voting you’d have to do some sort of KYC or verification which doesn’t make sense.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:48:56Z' class='post-time'>
+                    February 6, 2021,  1:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:48:56Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>A few points to consider:</p>
+<ol>
+<li>
+<p>The wallet times that tend to have the longest hold are actually exchanges, because the assets sit idle even if they rotate in the exchange. So this overly helps exchanges.</p>
+</li>
+<li>
+<p>Tracking time on a blockchain is really hard as it is done by block. We’ll also be on two chains (xDAI and ETH) which have different block times (5s and 15s respective)</p>
+</li>
+<li>
+<p>Since users need to migrate their xDAI ones back to the main net this would invalidate the wallets hold time.</p>
+</li>
+<li>
+<p>This is painful to code.</p>
+</li>
+<li>
+<p>“If statements” are the worst offenders for gas usage in Ethereum.</p>
+</li>
+</ol>
+<p>I like the concept and I think we need to continue to refine voting weight, so don’t give up on exploring this but these are just points to keep in mind as you do!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Vitalsine'><span itemprop='name'>Vitalsine</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:57:12Z' class='post-time'>
+                    February 6, 2021,  1:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:57:12Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Appreciate your feedback BaoMan! I will take these points into account and see if I can come up with some ideas.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/fabiaZ84'><span itemprop='name'>fabiaZ84</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T09:58:25Z' class='post-time'>
+                    February 6, 2021,  9:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T09:58:25Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Based on discord as well I suggested an alternative to the time part. Since exchanges most likely won’t go and stake.</p>
+<p>What about applying a ratio hold to stake</p>
+<p>If you stake more than you hold 25% applies<br>
+If your hold is 2:1 higher compared to your stake the 25% gets divided by the ratio difference</p>
+<p>And perhaps also apply something similar as the penalty fees on the stake</p>
+<p>10% of stake is taken into consideration if the original stake is older than 5 days old<br>
+25% of stake is taken into consideration if the original stake is older than 10 days old<br>
+50% of stake is taken into consideration if the original stake is older than 25 days old<br>
+100% of stake is taken into consideration if the original stake is older than 45 days</p>
+<p>Not sure on the feasibility of the time aspect if that is hard to track.</p>
+<p>*numbers are just examples</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/btc_thousand'><span itemprop='name'>btc_thousand</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-11T03:46:33Z' class='post-time'>
+                    February 11, 2021,  3:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-11T03:46:33Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>To me the problem analysis highlighted in the first post of this thread is misleading.</p>
+<p><strong>Problem:</strong><br>
+When you look at several projects, exchanges and speculating whales almost always lead the pack in voting power. This doesn’t make sense for DAOs and community ran projects. Smaller holders, no matter how long they’ve been supporting the project, are at a disadvantage and are drown out by these massive accounts. This leads to the project being driven by speculators and exchanges, who then vote on proposals to control the narrative to fit their wants and needs, rather than the community at large.</p>
+<p>The reason why exchange are leading the pack in voting power is because the community is depositing token here. Also Exchanges does not really care about governance topics (see Hive and steemit episode) unless they have $$$ incentive.</p>
+<p>Don’t forget you are the community you can decide to give your vote to exchanges, or not!</p>
+<p>if this is something you are kind to avoid I see 2 ways</p>
+<ul>
+<li>incentive community so that they won’t deposit token on exchange (not a solution to me)</li>
+<li>educate community (I bet 95% of people are don’t even understand what we are talking about just look the number of post here vs price discussion channel lol)</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/soulix'><span itemprop='name'>soulix</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-22T10:57:04Z' class='post-time'>
+                    March 22, 2021, 10:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-22T10:57:04Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>what about just: 1 wallet = 1 vote . regardless of how many bao that wallet have</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/voting-power-modifier/79">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-18T14:40:48Z' class='post-time'>
+                    September 18, 2021,  2:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-18T14:40:48Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

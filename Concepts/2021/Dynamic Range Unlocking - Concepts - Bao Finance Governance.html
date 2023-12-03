@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Range Unlocking - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="IMPORTANT NOTICE: This is a ‘concept’ under discussion. It is not yet a formal governance proposal. The ideas contained in here may not ever reach a formal proposal. This is for exploring new ideas 
+With the unlocking, w&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/dynamic-range-unlocking/21/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Dynamic Range Unlocking&#39;" href="https://gov.bao.finance/t/dynamic-range-unlocking/21.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/dynamic-range-unlocking/21/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/dynamic-range-unlocking/21/print" />
+<meta property="og:title" content="Dynamic Range Unlocking" />
+<meta name="twitter:title" content="Dynamic Range Unlocking" />
+<meta property="og:description" content="IMPORTANT NOTICE: This is a ‘concept’ under discussion. It is not yet a formal governance proposal. The ideas contained in here may not ever reach a formal proposal. This is for exploring new ideas  With the unlocking, we currently have a 3 year time in which tokens will unlock.  Some users have concerns that the Bao burnt in synthetics will not be at the scale needed for offsetting the unlock cycle.  One design in which we could create to change this would be a dynamic unlock.  Basically the wa..." />
+<meta name="twitter:description" content="IMPORTANT NOTICE: This is a ‘concept’ under discussion. It is not yet a formal governance proposal. The ideas contained in here may not ever reach a formal proposal. This is for exploring new ideas  With the unlocking, we currently have a 3 year time in which tokens will unlock.  Some users have concerns that the Bao burnt in synthetics will not be at the scale needed for offsetting the unlock cycle.  One design in which we could create to change this would be a dynamic unlock.  Basically the wa..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="8 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="91 ❤" />
+<meta property="article:published_time" content="2021-02-05T22:08:31+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/dynamic-range-unlocking/21">Dynamic Range Unlocking</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Dynamic Range Unlocking'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:08:31Z' class='post-time'>
+                    February 5, 2021, 10:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:08:31Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p><strong>IMPORTANT NOTICE: This is a ‘concept’ under discussion. It is not yet a formal governance proposal. The ideas contained in here may not ever reach a formal proposal. This is for exploring new ideas</strong></p>
+<p>With the unlocking, we currently have a 3 year time in which tokens will unlock.</p>
+<p>Some users have concerns that the Bao burnt in synthetics will not be at the scale needed for offsetting the unlock cycle.</p>
+<p>One design in which we could create to change this would be a dynamic unlock.</p>
+<p>Basically the way it would work is you would set the lock range to a much higher date (like 10 years), and an oracle that looks at the amount of Bao burnt each day.</p>
+<p>Every time there was less Bao burned that day than was unlocked, the oracle would increase the lock time.</p>
+<p>Every time there was more Bao burned that day than was unlocked, the oracle would decrease the lock time.</p>
+<p>You would then have some absolute cap date to prevent the extended lock happening forever. And you can have some dampening variable in either direction so that it can be over or under by a little and not adjust.</p>
+<p>That would be a large change in tokenomics but it is a possible way to dynamically address the inflation rate over the adoption curve of the product.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="13" />
+              <span class='post-likes'>13 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="http://gov.bao.finance/t/the-next-path-for-bao-annual-roadmap-bip/865/6">The Next Path for Bao (Annual Roadmap BIP)</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Optilon'><span itemprop='name'>Optilon</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/82f69f7e0f29902d99f41984b0e5bd09c51a895c.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T22:47:56Z' class='post-time'>
+                    February 5, 2021, 10:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T22:53:11Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This would stabilize in- and outflow of tokens. Do it!<br>
+But It should not be 1:1 but rather a little bit more for some inflation to hit the market. I propose the Golden ratio <a href="https://en.wikipedia.org/wiki/Golden_ratio" class="inline-onebox" rel="noopener nofollow ugc">Golden ratio - Wikipedia</a> as unlock target. For 1000 BAOs burned, max 1618 BAOs get unlocked. One could call them Golden BAOs :star_struck:<br>
+<img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/82f69f7e0f29902d99f41984b0e5bd09c51a895c.jpeg" alt="" data-base62-sha1="iGysqBXrTjDTREZSiKZN4p4tjdO" role="presentation" width="222" height="227"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/hulahoof'><span itemprop='name'>hulahoof</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:01:28Z' class='post-time'>
+                    February 5, 2021, 11:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:01:28Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So this would apply to the already locked BAO? I’m not against a change to the strategy but I would also like to get an idea what those numbers would look like in terms of bao burnt / unlocked / totals, which I guess is pretty difficult at this stage</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:11:21Z' class='post-time'>
+                    February 5, 2021, 11:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:11:21Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It would apply to currently locked Bao if we did it.</p>
+<p>Remember this is not a governance proposal this is just an early idea to explore. These concepts should not be viewed as something that will be implemented. Just ideas.</p>
+<p>The concept here is that the numbers would balance, so you would try and get the daily unlock to always roughly match the burn. There is no clear projection on what that would look like, just that it would vary between 0.75:1 to 1:0.75 or something like that and try and settle in that range.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/linksirsergeynazarov'><span itemprop='name'>linksirsergeynazarov</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:38:17Z' class='post-time'>
+                    February 5, 2021, 11:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:38:17Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I don’t like this idea as it would be changing a contract after everyone agreed. We staked our LP under certain assumptions with relating to locked tokens and to change that would not be right. We should look at other ways to increase the burn of tokens through buybacks and such.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="2" />
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-05T23:42:52Z' class='post-time'>
+                    February 5, 2021, 11:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-05T23:42:52Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The burn generated by the protocol essentially is a buy back.</p>
+<p>But you can’t buy it back at a rate that is more than the fees collected as there is no where for the money to come from.</p>
+<p>This idea would aim to address that by trying to keep the amount of dilution balanced with the amount of burn that is happening.</p>
+<p>It would mean tokens release over longer scales but are worth more if the protocol has a slow growth curve, but if the growth curve is fast then tokens could in theory unlock faster.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/linksirsergeynazarov'><span itemprop='name'>linksirsergeynazarov</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:00:12Z' class='post-time'>
+                    February 6, 2021, 12:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:00:12Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What about a portion of the fees earned from LP be set aside in escrow for purchase of tokens when they start unlocking and have it continue for three years?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Vitalsine'><span itemprop='name'>Vitalsine</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:07:54Z' class='post-time'>
+                    February 6, 2021, 12:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:07:54Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I like the idea, it makes sense to have more control over inflation, but as <a class="mention" href="/u/linksirsergeynazarov">@linksirsergeynazarov</a> mentioned, we all provided LP with the 3-year vested rewards in mind. This is why we have governance votes though, let the people decide. Also as <a class="mention" href="/u/hulahoof">@hulahoof</a> mentioned, I think this is something that we should hold off on until we get a better idea of how burning and synth production works. And referring to <a class="mention" href="/u/optilon">@Optilon</a>’s post, I am all about the golden ratio, good suggestion haha. All in all, I think this concept makes sense.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="6" />
+              <span class='post-likes'>6 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/voidberg'><span itemprop='name'>voidberg</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:28:35Z' class='post-time'>
+                    February 6, 2021, 12:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:28:35Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I agree with <a href="http://gov.bao.finance/u/linksirsergeynazarov">linksirsergeynazarov</a> , decisions of buy &amp; hold BAO vs staking it  have been already made by many people, and the consequences (farmers have less BAO on hand now due to IL) have occurred. The proposal would favor those who have bought &amp; hold BAO with a plan to sell soon while hurting those who farmed with a timeline of 3 years in mind</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T00:38:30Z' class='post-time'>
+                    February 6, 2021, 12:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T00:38:30Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Why would that make sense? It would be better to not charge a fee.</p>
+<p>The fees are also really small volumes on LP deposit/withdraw and wouldn’t make a dent in circulation.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Poolboy'><span itemprop='name'>Poolboy</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:17:51Z' class='post-time'>
+                    February 6, 2021,  1:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:17:51Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think it’s great that you’re trying to offset or even outright prevent the inevitable dump upon the December unlock. I don’t have enough of a grasp of economics to feel like I can give a reasoned and intelligent solution but I will say that it is better for all of us if on day 2 post-unlock our Bao is worth a similar amount to day 1, and so on, rather than much less due to supply shock. I think 10 years might be a little drastic and will put people off, after all most people think that a year is an age in crypto, so a decade seems too much. It’s certainly worth thinking about though and the concept proposed is the sort of clever I have come to expect from you.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jim123'><span itemprop='name'>Jim123</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:18:22Z' class='post-time'>
+                    February 6, 2021,  1:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:45:46Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think the idea is good , implement it but make it optional for the user in how  much further they can lock up 5 - 10 years etc also give the user the option in how much of there locked bao they can lockup a ratio of 50% 10% 20% and incentivize with bao of course the longer you lock up the more bao interest you receive,</p>
+<p>Advise everyone they are defaulted for 3 years unlock but you have the option to lockup further to earn more bao,  give them a offer they cant refuse lol,</p>
+<p>just one last thing, you are going to know how much bao is going to be released per day once the unlocking starts , the sooner you implement the option to lock bao further for 4,5,6 ,10 years etc, the easier it will be to offset the burning to try and get that balance right, if you need more bao locked up give a higher interest of bao,</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Poolboy'><span itemprop='name'>Poolboy</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:20:47Z' class='post-time'>
+                    February 6, 2021,  1:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:20:47Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am not sure you can have a user choose their own preference. It would immediately upset the balance which is why the system would exist in the first place.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:45:48Z' class='post-time'>
+                    February 6, 2021,  1:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:45:48Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>For what its worth, the 10 years was just an example. Whatever you set it to really doesn’t matter because the idea here is that it would adjust to match the inflation rate.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:51:26Z' class='post-time'>
+                    February 6, 2021,  1:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:51:26Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is something really interesting. But as the rules will change, and that early birds could feel that there is some form of injustice, could we (if voted…) propose a “redeem all locked bao” now with penalty fees.</p>
+<p>When redeemed, all locked bao would be redeemed, but to a certain ratio (ex : 15%). The rest could be burned or transfered to treasury.</p>
+<p>The ratio could change over the same algorithm as the locking period.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T01:57:07Z' class='post-time'>
+                    February 6, 2021,  1:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T01:57:07Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sadly that is something we don’t have the ability to do with the current lock contract.</p>
+<p>All we can do is adjust the start and end date of the lock but we can’t change who it goes to or where it goes.</p>
+<p>I also think the economics of it would change if you let too much redemption happen.</p>
+<p>Part of the point here is though that early birds would also have to vote for this (they have the most voting power) but its actually an idea that would defend the value of their Bao long term.</p>
+<p>One of the challenges I knew I would come across in designing the economics is that most people are very short sighted and impatience :P</p>
+<p>If you people just want their tokens dumped for liquidity on day X it would devalue them.</p>
+<p>What we are saying here is let the market decide.</p>
+<p>If the tokens are worth a lot because the fees being used are significant then unlock would happen faster than 3 years.</p>
+<p>If the tokens weren’t worth a lot and unlock would dilute and hurt everyone holding Bao, then drag it out so it matches the fees and therefore is worth more over time.</p>
+<p>Really, no matter how much you hold, the dilution event is significant and we should all want it steady.</p>
+<p>I think some people are looking at the Bao value estimate and going “GREAT I get $XX,XXX/year when it unlocks and I don’t want to delay that” but if the burn volume is too low and dilution is too high then that will rapidly drop.</p>
+<p>I am not suggesting we have to do this, but, I think there could be some very strong economic value in it, and I would recommend that anyone who is thinking “no! I just want my Bao ASAP!” think carefully about dilution impact and scaling :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="6" />
+              <span class='post-likes'>6 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T04:01:23Z' class='post-time'>
+                    February 6, 2021,  4:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T04:01:23Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I really understand your point. I sometimes do the devil advocate. You mark a point in saying that early birds has more voting power and this is something i didn’t account in my thinking. If i add this in the equation, i trully admit that a governance vote that pass on that subject will be with the blessing of those early birds.</p>
+<p>The other thing that got my attention is when you say “GREAT I get $XX,XXX/year when it unlocks and I don’t want to delay that”. I am wondering if the fact that we put current valuem and daily value of bao token when it will be unlocking favorise this kind of thinking ? I feel like we incite everyone to think of locked bao in term of pure investment when we show “When this unlocks it will earn you xx per day for 3 years. The equivalent of $ZZZ per year!”</p>
+<p>Do you think that your proposal could be tied with Bao basket sBao ? Favorising burn mechanism by dynamic incentive ratio (Let’s say a range from 35-50%) ?</p>
+<p>Sorry if i throw a lot of ideas at the same time !</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T04:03:41Z' class='post-time'>
+                    February 6, 2021,  4:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T04:03:41Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hmm these are very interest points that I’ve not ever considered.</p>
+<p>I do think the future lockup estimate could be incentivizing the wrong behaviors and may want to think about replacing or modifying that.</p>
+<p>And on the proposal being more related to sBao, I’m not sure how we’d actually get the two to sync up, that’d be a bit of technical complexity, but it is possible maybe? Worth thinking more about.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/HEEEEEEEEEEE'><span itemprop='name'>HEEEEEEEEEEE</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T05:52:20Z' class='post-time'>
+                    February 6, 2021,  5:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T05:52:20Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If some utility beyond governance can be derived from the locked bao, I am open to any number of release schemes.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/linksirsergeynazarov'><span itemprop='name'>linksirsergeynazarov</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T06:15:12Z' class='post-time'>
+                    February 6, 2021,  6:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T06:15:12Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Could we change the rewards and reduce remaining bao to be distributed?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/fabiaZ84'><span itemprop='name'>fabiaZ84</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T08:15:38Z' class='post-time'>
+                    February 6, 2021,  8:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T17:35:44Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Having a dynamic unlocking range is very interesting.</p>
+<p>You can argue it’s upsetting to people who invested early, but let’s be realistic the project is still very young.<br>
+We are in farming week 9/102 and it’s still weeks away untill the weekly unlock which runs for 156 weeks.</p>
+<p>Putting the timelock at a later date should not upset early stakers as they were in it for the long run.<br>
+And it’s not like you won’t get any locked Bao, it will still be distributed but at a lower rate.<br>
+Besides it would still need to pass the governance vote.</p>
+<p>If this turns into a proposal it should be done as early as possible.</p>
+<p>In regards to the absolute cap date can you relate that to a certain certain burn? Say once this amount has been burned, the cap date will be in X weeks and no more extentions will be added.</p>
+<p>That would also give somewhat more clarity in my opinion.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Zulu99'><span itemprop='name'>Zulu99</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T21:27:57Z' class='post-time'>
+                    February 6, 2021,  9:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T21:31:12Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>While i understand the reasoning behind this discussion i think doing a retroactively change of the tokenomics is a non starter. People made buying/selling decisions based on that.</p>
+<p>I would be more inclined to seek out solutions based on rewarding people who choose to lock up their tokens longer than punishing those who wont.</p>
+<p>Additionally it would go against the core argument that Baoman have stated through the entire run sofar that Bao is not a token to hold but to farm.  Such a move would infact directly reward those who bought bao with a speculation purpose.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_23' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-06T21:37:06Z' class='post-time'>
+                    February 6, 2021,  9:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-06T21:37:06Z'>
+              <span itemprop='position'>23</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Zulu99" data-post="22" data-topic="21">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/z/3be4f8/48.png" class="avatar"> Zulu99:</div>
+<blockquote>
+<p>While i understand the reasoning behind this discussion i think doing a retroactively change of the tokenomics is a non starter.</p>
+</blockquote>
+</aside>
+<p>Communities change their tokenomics all the time via vote.</p>
+<p>The people it would impact here the most are early farmers, who also have the largest part of the vote.</p>
+<p>Defi protocols are constantly evolving as the goal is to find the tokenomic model that best meets the project goals, especially being in an Alpha project we should never marry ourselves to any specific feature just because that is currently the way it is.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="6" />
+              <span class='post-likes'>6 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_24' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jim123'><span itemprop='name'>Jim123</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-07T00:29:30Z' class='post-time'>
+                    February 7, 2021, 12:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-07T00:29:30Z'>
+              <span itemprop='position'>24</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Give the user the option to lock bao in for a longer period , provide an opt-in opt-out locking system now for 4 5, 6 year etc , with an interest rate ,</p>
+<p>So when the unlocking starts and a user opt-in to lock for an extra year the daily amount they receive will be moved auto to another locked account with interest added per day,</p>
+<p>I know you said the Bao contract is locked and you can only adjust the unlocking date, But it must be possible for you to build on top of this ??,  to move someone’s BAO they receive per day to another locked account for a longer period if they choose to opt-in, ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_25' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/cnumber'><span itemprop='name'>cnumber</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-07T00:50:08Z' class='post-time'>
+                    February 7, 2021, 12:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-07T01:14:17Z'>
+              <span itemprop='position'>25</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>agreed…we should explore other avenues to tackle this concern and not change already agreed upon release schedule under which people staked.</p>
+<p>Any kind of retroactive change to token economics would be a PR nightmare.</p>
+<p>If we can figure out other incentivization mechanisms that are addons to the current distribution schedule that would be the best approach imho.</p>
+<p>People wont sell if they feel they are missing out on future value…We need to think about how we can create that ‘Future Value’ once the unlock schedule starts… forcing them to stay locked without a clear ‘Future value’ proposition will only delay the inevitable…</p>
+<p>We could look at other projects with other highly inflationary token models to look for examples of what is working well there. Example: CRV.</p>
+<p>If we can boil this down to a list ideas to create ‘Future Value’ propositions that would be a great start…</p>
+<p>I know BaoMan has done a great job partnering with sushi so far…may be we can create additional untapped value through a list of future partnerships that provide additional value to Bao LPs?</p>
+<p>This is defi…I’m sure we can come up with lots of interesting ideas :)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_26' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Zulu99'><span itemprop='name'>Zulu99</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-07T01:55:27Z' class='post-time'>
+                    February 7, 2021,  1:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-07T01:56:51Z'>
+              <span itemprop='position'>26</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I agree with this approach. Another approach could be that the release of tokens start 1 year after the day you harvested.</p>
+<p>This could be implemented moving forward from all farming done on Xdai. Fees are less there and it would be a more personal decision how often you want to harvest and start the vesting period.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_27' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/rfw'><span itemprop='name'>rfw</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-07T07:46:53Z' class='post-time'>
+                    February 7, 2021,  7:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-07T07:46:53Z'>
+              <span itemprop='position'>27</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Were people negative on the Jan 30th Medium post?</p>
+<p>I thought it’s a really attractive proposal and incentivizes correctly to mitigate dumping.</p>
+<p>Early farming whales would probably opt-in for some percentage to pledge/sacrifice, given the linear ramping share price. That would do more than anything else to give a visible metric to the timelines of participants / how much of the supply is staked / pledged / sacrificed. Should inspire confidence and clearly show who’s here for what, but those commitments should be available prior to December as early as possible even if not actively returning.</p>
+<p>If there was a button I could click right now that would burn 50% of my supply, returning sBao shares, I’d do it. I’m here to take this journey, and I think a lot of us are.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_28' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/btc_thousand'><span itemprop='name'>btc_thousand</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/55bed6bfec401dc0b276b66014c574ca584fd33c.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-09T12:03:54Z' class='post-time'>
+                    February 9, 2021, 12:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-09T12:05:06Z'>
+              <span itemprop='position'>28</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="onebox allowlistedgeneric" data-onebox-src="https://www.placeholder.vc/blog/2020/9/17/stop-burning-tokens-buyback-and-make-instead">
+  <header class="source">
+      <img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/a5c75390527a09af3c3d14467864cad258eea3aa.png" class="site-icon" width="100" height="100">
+
+      <a href="https://www.placeholder.vc/blog/2020/9/17/stop-burning-tokens-buyback-and-make-instead" target="_blank" rel="noopener nofollow ugc">Placeholder</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:497/500;"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/55bed6bfec401dc0b276b66014c574ca584fd33c_2_497x500.jpeg" class="thumbnail" width="497" height="500" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/55bed6bfec401dc0b276b66014c574ca584fd33c_2_497x500.jpeg, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/55bed6bfec401dc0b276b66014c574ca584fd33c_2_745x750.jpeg 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/55bed6bfec401dc0b276b66014c574ca584fd33c_2_994x1000.jpeg 2x" data-dominant-color="F2EFEF"></div>
+
+<h3><a href="https://www.placeholder.vc/blog/2020/9/17/stop-burning-tokens-buyback-and-make-instead" target="_blank" rel="noopener nofollow ugc">Stop Burning Tokens – Buyback and Make Instead — Placeholder</a></h3>
+
+  <p>In most “buyback-and-burn” token models, a network generates income in one  currency token  and uses the proceeds to buy-back and “burn” its own native token. The intent is to grow token value by reducing its supply as income grows. Buybacks tend to...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I think this addresses the current question as well as exposing an alternative solution to burning token.</p>
+<p>What do you think ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_29' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/cnumber'><span itemprop='name'>cnumber</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-09T14:01:36Z' class='post-time'>
+                    February 9, 2021,  2:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-09T14:01:36Z'>
+              <span itemprop='position'>29</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Not sure if scarcity driven demand has shown to work properly in defi so far(example: Ampl,ESD etc). Wonder if it would be better for the treasury to collect the ‘burned’ bao and re-invest it in the ecosystem to hire more devs etc…</p>
+<p>We can always throw in an occasional token burn here and there to please the crowd ;)</p>
+<p>So far the evidence is that token burns seem to work well as short term marketing push…but not efffective as a long term mechanics to provide price support as sentiment always seem to overtake any  marginal effect it might have…</p>
+<p>Where as the perception of reinvestment in the ecosystem and a healthy treasury always seem to help the longterm perception of a project…example: badger.</p>
+<p>May be something to discuss here?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_30' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Vitalsine'><span itemprop='name'>Vitalsine</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-12T20:54:26Z' class='post-time'>
+                    February 12, 2021,  8:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-12T20:54:26Z'>
+              <span itemprop='position'>30</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Would there be a way to make it so users can use their locked BAO within the ecosystem? i.e. use their locked BAO to stake, pledge, or sacrifice? Not sure how much this would help, but with all the burning, fees and time locking happening, maybe it could help mitigate inflation. It could also give people who otherwise would have just sold at unlock to experiment with some of these features, which ultimately could lead to them holding after seeing the benefits. Maybe for pledged BAO you’d have to add 1 year after the unlock date? Just trying to think outside the box.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_31' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Ret'><span itemprop='name'>Ret</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-16T04:56:29Z' class='post-time'>
+                    February 16, 2021,  4:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-16T04:56:29Z'>
+              <span itemprop='position'>31</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you’re token takes three years to go to 1cent their is no incentive for anyone to buy and stake or buy to resell. It is a fine line to walk but price appreciation is the key to success for everyone.  I feel a one to ten year or longer locking period with interest tied to length of stake would be a better incentive for staking.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_32' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/rfw'><span itemprop='name'>rfw</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-16T17:52:40Z' class='post-time'>
+                    February 16, 2021,  5:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-16T17:52:40Z'>
+              <span itemprop='position'>32</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>To Vitalsine, check Baoman’s Medium post about this. pBao, sBao, etc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_33' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/joejoebiggums'><span itemprop='name'>joejoebiggums</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-19T18:58:34Z' class='post-time'>
+                    February 19, 2021,  6:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-19T18:58:34Z'>
+              <span itemprop='position'>33</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Extending the distribution of locked BAO could lead to a lot of problems. Three years is already a long time, but flipping the script of the contract is going to be met with anger and criticism from a lot of people that planned their investments and portfolios based on the tokenomics laid out in the docs, this isn’t a minor change. The term “contract” has some implications to many people. Bao is a governance token tho, so if it gets voted in then a few moon boys crying won’t matter all too much in the grand scheme of things.</p>
+<p>I liked Baoman’s proposal with the staking, pledging and sacrificing of Bao determining what percentage of the ecosystem fees one is entitled to. Perhaps that proposal could be tweeked some? For example lowing the xBao cut to 5% or 3% and shift those incentives toward pledging, sacrificing or burning…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_34' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/SpaDe'><span itemprop='name'>SpaDe</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-16T13:50:19Z' class='post-time'>
+                    March 16, 2021,  1:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-16T13:50:19Z'>
+              <span itemprop='position'>34</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just finding this and I’ll be honest, this would feel nothing less than a bait and switch. The only people who would benefit from this are whales who have loaded up and are waiting to sell at higher levels. The people who spent the time farming and losing money due to IL and hanging around the community all this time are the ones who would get the short end of the stick on this.<br>
+The entire promise of this was that any IL you had would be recouped in farmed tokens with a set lock and unlock date. Start messing with those time lines and you will have some very very unhappy people, and I would definitely be one of them.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_35' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/admoe'><span itemprop='name'>admoe</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-16T15:16:33Z' class='post-time'>
+                    March 16, 2021,  3:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-16T15:16:33Z'>
+              <span itemprop='position'>35</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have farmed BAO since the 1st week of rewards starting so I have a healthy amount of BAO and I generally support this idea.</p>
+<p>I understand some people would complain about changing the terms of token release but:</p>
+<ol>
+<li>
+<p>This would need to pass voting so therefore majority need to support this.</p>
+</li>
+<li>
+<p>Tokenomics do change with the changing landscape and market and generally projects that have put thought into how they can change their token structure/rewards for the better have benefitted the project and its holders.</p>
+</li>
+</ol>
+<p>Discussion around this might be more worthwhile once we’re further along the roadmap and the community has a better idea of token use / burning so we have a clearer picture of how tokens will circulate and what to incentivize.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_36' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TG1'><span itemprop='name'>TG1</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-16T16:42:00Z' class='post-time'>
+                    March 16, 2021,  4:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-16T16:42:00Z'>
+              <span itemprop='position'>36</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I totally agree with Baoman’s proposal. Definitely would increase the BAO value. The circulating supply would be only 5% of total farmed BAO. That’s 20 times less BAO in circulation, and as farmers this is a huge benefit, 5% will be easily burned and all BAOs would return to farmers in the end. Think about it, this is a great opportunity for us farmers of BAO!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_37' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/HeavyPantsuit'><span itemprop='name'>HeavyPantsuit</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-16T20:25:33Z' class='post-time'>
+                    March 16, 2021,  8:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-16T20:25:33Z'>
+              <span itemprop='position'>37</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Using the argument that the early farmers and whales will have supported this to get them to support it now is circular logic. Even though, yes, it would be put to vote, doesn’t mean it’s worth proposing. I haven’t seen a convincing argument for changing the token unlock date but I do share the concern over heavy supply.</p>
+<p>Other projects have used a 10 year timelock on their pool, such as KANGAL. However, KANGAL is a meme token. It’s ok for a meme token to use time delay to increase their token value, because the value of a meme increases over time.</p>
+<p>On the other hand BAO is a living breathing project. If you think that simply delaying the unlock will increase the token value without some other factor such as farming, staking, or new features being implemented I think you’re mistaken.</p>
+<p>Farming is what makes this token great. While I don’t fully understand the diminishing reward schedule and it’s purpose, simply keeping farming alive offers a solution to the problem of increasing token value.</p>
+<p>Keep farming active and funnel liquidity back into the mainnet token through expanded farming on sidechains, BSC, and whatever else you can build on top of. Stick to the roadmap because synthetics, baskets, and farming really make up a good token. But there has to be extreme value coming into the governance token or inflation is going to kill it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_38' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/cnumber'><span itemprop='name'>cnumber</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-21T14:33:22Z' class='post-time'>
+                    March 21, 2021,  2:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-21T14:33:22Z'>
+              <span itemprop='position'>38</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How about enabling lucrative farming options on yetiswap and pandaswap for bao tokens with lock ups smilar to the current setup? That would be a no brainer way to add more value to the bao tokens. I can imagine that as the bao franchise expands across chains. The bao tokens will start spreading across to the various chains to get locked up thus reducing the sell pressure. That would be a great way to add future value to bao tokens while also taking out a whole bunch for sell pressure for the bao tokens.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_39' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/soulix'><span itemprop='name'>soulix</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-22T10:29:12Z' class='post-time'>
+                    March 22, 2021, 10:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-22T11:01:51Z'>
+              <span itemprop='position'>39</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is a great idea . It would give us a bao equilibrium. Im in. I understand the concerns to the proposed change to the tokenomics, but this be a lot more beneficial for the farmers. at the end of the day its all about value . this idea would make create an equilibrium supply/demand therefore cementing bao value. the lockup time as is , considers that the bao protocol is gonna gain track in the 1st 3 years and that we gonna have snx demand to burn bao taken. And thats a possibility, but like everything in life everything is just a 50/50 probability. what would happen if bao doesnt gain track in the first 3 years? u would have a huge supply pressure with very little demand. Just Crashing the bao price therefore dimishing ur bag value. hypothetically :selling 1,000,000 bao at $1 = selling 1 bao at $1,000,000 so u would benefit more of the increased value of ur bag bcs u would get the same $$$$ by selling less bao. yeah its locked but its yours vs its unlocked but barely worth anything</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_40' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Stargazer'><span itemprop='name'>Stargazer</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-29T01:46:54Z' class='post-time'>
+                    March 29, 2021,  1:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-29T01:46:54Z'>
+              <span itemprop='position'>40</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Good ideas makes sense to me</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_41' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/QSix'><span itemprop='name'>QSix</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-06T08:54:31Z' class='post-time'>
+                    June 6, 2021,  8:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-06T08:54:31Z'>
+              <span itemprop='position'>41</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I farmed Bao since the pools launched and I support moving to a dynamic range token unlock.</p>
+<p>The current unlock poses a risk to future growth, which I think will only increase in bearish market conditions as speculators get tempted to ‘cash out’. I think it’s in everyone’s best interests that the supply and demand equilibrium is managed autonomously by an intelligent system.</p>
+<p>When the synths are released, people are going to care a lot more about properly managed supply/demand than they will that ‘the original tokenomics’ have changed.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_42' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/dynamic-range-unlocking/21">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-18T14:43:45Z' class='post-time'>
+                    September 18, 2021,  2:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-18T14:43:45Z'>
+              <span itemprop='position'>42</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

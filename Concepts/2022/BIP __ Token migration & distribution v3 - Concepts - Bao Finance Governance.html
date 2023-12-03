@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BIP || Token migration &amp; distribution v3 - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="BAO Token Migration and Distribution Proposal
+
+Abstract
+Following the passing of BIP-6, we know that we must revisit how the unlocking/governance system of BAO works in accordance with a vote escrow model. 
+This proposa&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/bip-token-migration-distribution-v3/1134/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;BIP || Token migration &amp; distribution v3&#39;" href="https://gov.bao.finance/t/bip-token-migration-distribution-v3/1134.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/402f5a1ce9e519723309833f43ba5f67dad79b8e_2_1024x353.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/402f5a1ce9e519723309833f43ba5f67dad79b8e_2_1024x353.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/bip-token-migration-distribution-v3/1134/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/bip-token-migration-distribution-v3/1134/print" />
+<meta property="og:title" content="BIP || Token migration &amp; distribution v3" />
+<meta name="twitter:title" content="BIP || Token migration &amp; distribution v3" />
+<meta property="og:description" content="BAO Token Migration and Distribution Proposal  Abstract Following the passing of BIP-6, we know that we must revisit how the unlocking/governance system of BAO works in accordance with a vote escrow model.  This proposal aims to implement a BAO token migration that would interact with the staking contract and veBAO emissions model proposed in the Annual roadmap concept as well as unlocking of the tokens. There is also a lot of explanation on the details of the change in governance as a whole an..." />
+<meta name="twitter:description" content="BAO Token Migration and Distribution Proposal  Abstract Following the passing of BIP-6, we know that we must revisit how the unlocking/governance system of BAO works in accordance with a vote escrow model.  This proposal aims to implement a BAO token migration that would interact with the staking contract and veBAO emissions model proposed in the Annual roadmap concept as well as unlocking of the tokens. There is also a lot of explanation on the details of the change in governance as a whole an..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="6 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="4 ❤" />
+<meta property="article:published_time" content="2022-05-29T15:51:01+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/bip-token-migration-distribution-v3/1134">BIP || Token migration &amp; distribution v3</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='BIP || Token migration &amp; distribution v3'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/N0x'><span itemprop='name'>N0x</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-token-migration-distribution-v3/1134">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/402f5a1ce9e519723309833f43ba5f67dad79b8e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-29T15:51:01Z' class='post-time'>
+                    May 29, 2022,  3:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-30T14:11:07Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <h1>
+<a name="bao-token-migration-and-distribution-proposal-1" class="anchor" href="#bao-token-migration-and-distribution-proposal-1"></a>BAO Token Migration and Distribution Proposal</h1>
+<h3>
+<a name="abstract-2" class="anchor" href="#abstract-2"></a>Abstract</h3>
+<p>Following the passing of BIP-6, we know that we must revisit how the unlocking/governance system of BAO works in accordance with a vote escrow model.</p>
+<p>This proposal aims to implement a BAO token migration that would interact with the staking contract and veBAO emissions model proposed in the Annual roadmap concept as well as unlocking of the tokens. There is also a lot of explanation on the details of the change in governance as a whole and some future decisions the community will need to decide for the vote escrow system.</p>
+<p>This proposal will define the distribution function for locked BAO tokens, the necessary supply reduction to implement voting escrow alongside the new BAOv2 token, as well as the operational changes that must accompany this proposal. A separate BIP will follow to define the technical details of the staking contract and the veBAO model.</p>
+<h3>
+<a name="h-____________________________________________________________________-3" class="anchor" href="#h-____________________________________________________________________-3"></a>____________________________________________________________________</h3>
+<h3>
+<a name="issues-and-hypothesis-4" class="anchor" href="#issues-and-hypothesis-4"></a>Issues and Hypothesis</h3>
+<p>The following paragraphs highlight problems with the current governance model and explain why changes must be made moving forward.</p>
+<p><em>(summary) The BAO Smart Contract Galaxy has been exploring options to safely and fairly move away from our original governance model using the Bao MasterFarmer contract and the accompanying Bao Token (both on main-net and xDAI/Gnosis chain). To briefly reiterate on previous discussion, this is because with the current state of how many locked tokens there are relative to circulating tokens as a result of the farming era that took place on both chains, the rate at which the original linear unlock was scheduled to happen would have caused too large of a dilution (inflation of the Bao token supply) for the protocol to safely handle. To explain further, this is given that we have not yet successfully scaled bao-markets (hard-synths on main-net), before the original unlock time was scheduled, which was/is necessary to help mitigate the dilution of our governance token. More details can be read in previous governance concepts and the proposal to delay the unlock (reference BIP-6 =&gt; present).</em></p>
+<p><strong>Token ownership locked in MasterFarmer contract</strong></p>
+<p>Due to the design of different contracts, the BAO token contract is permanently owned by the MasterFarmer contract, meaning that BAO minting and distribution always need to go through MasterFarmer.</p>
+<p>This also means that the current locked BAO and future minted BAO needs to follow the same rules (given we do not migrate to a new token/governance system).</p>
+<p><strong>Total BAO hard cap is too high for current veBAO contract implementation</strong></p>
+<p>As specified in the original annual roadmap concept, the veBAO contract, which would be based on the veCRV contracts, has difficulties handling the large hard cap of BAO (over 1T). A token migration with a redemption rate of 1000:1 could be implemented to remove this limitation allowing us to use a tried and tested vote escrow model for our governance.</p>
+<p><strong>Future incentives would be hard to distribute</strong></p>
+<p>It is difficult right now to give BAO incentives on other chains/layer 2’s and impossible to do staking rewards outside MasterFarmer. The DAO does not have the flexibility currently to reward or give incentives in different forms or modalities.</p>
+<p><strong>Bao coupons locking issues</strong></p>
+<p>Bao coupons were a bad idea from the start. It has been admitted by the galaxies for a few months that we need to look for an alternative, and that BAO.cx currently causes unnecessary complexity as to how to handle cross chain governance/voting power.</p>
+<p><strong>Founder share vesting for core members is not defined properly</strong></p>
+<p>There are some galaxy members who have vested BAO in part of their agreements to work for the DAO. The vested BAO comes from the founder wallet and follows the same distribution pattern as the rest of the MasterFarmer users (5% now, 95% locked).</p>
+<p>The vested BAO is still in the founder wallet and is not properly vested other than being locked with the rest of the BAO tokens. They aren’t also in the possession or directly assigned to those galaxy members.</p>
+<p>This proposal does not aim to discuss the distribution and allocation among galaxy members but to provide a solution to this particular issue.</p>
+<p><strong>Unlocking model has to be redefined alongside the veBAO model</strong></p>
+<p>The DAO can only play currently with the last block until the end of the unlock period to determine the amount of BAO that is released on each block and for how many years as the unlocking is linear. The annual roadmap concept of this September split the community about how to proceed with the dilution of the BAO that could happen continuously for 3 years. This distribution proposed gives a reasonable rate of dilution to all locked BAO holders that will not break the system while allowing for the DAO to effectively migrate to a vote escrow model.</p>
+<h3>
+<a name="h-____________________________________________________________________-5" class="anchor" href="#h-____________________________________________________________________-5"></a>____________________________________________________________________</h3>
+<h3>
+<a name="solution-6" class="anchor" href="#solution-6"></a>Solution</h3>
+<p>The solution consists of undertaking a token contract migration that would give more flexibility in the distribution and future use of the tokens by the DAO.</p>
+<p>By taking a snapshot of the locked Bao tokens on main net and also the bao coupons locked on xDai, we will be able to unify on a Bao V2 contract all the Bao holders migrate to in order for them to partake in BAO governance on ethereum main-net, but also be considered in the veBAO model for revenue sharing/governance by the protocol if they choose to lock.</p>
+<p>This concept also proposes a way to manage locked tokens over new contracts.</p>
+<p>It will consist of many components that would be described thoroughly in the next sections</p>
+<ul>
+<li>Snapshot of ETH / xDai
+<ul>
+<li>Locked BAO on ethereum main-net and xDAI</li>
+</ul>
+</li>
+<li>Distribution/Migration=&gt; for those with locked BAOv1 (on main-net and xDAI), an unlocking of 1000:1 BAOv2 tokens will be distributed to those addresses with locked bao in accordance with the distribution function and claiming options proposed below, on ethereum main-net.</li>
+<li>veBAO details relating to the token distribution</li>
+<li>Remove tBAO in order to move toward veBAO and convert bao coupons to BAOv2 (xDai =&gt; Ethereum)</li>
+<li>Notify CEXs of migration</li>
+<li>Protocol multi-sig plans</li>
+<li>Liquidity providers migration, <em>to be determined, still need more discussion to make a definitive plan here</em>
+</li>
+</ul>
+<h3>
+<a name="h-____________________________________________________________________-7" class="anchor" href="#h-____________________________________________________________________-7"></a>____________________________________________________________________</h3>
+<h3>
+<a name="snapshot-of-eth-xdai-locked-bao-8" class="anchor" href="#snapshot-of-eth-xdai-locked-bao-8"></a>Snapshot of ETH / xDai locked BAO</h3>
+<p>A snapshot will be taken for wallets that have locked BAO on main-net and Bao Coupons locked on xDai. The total per address across both chains will be recorded for the total supply number to be given on ethereum main-net, scaled down by 1000 as stated previously.</p>
+<h3>
+<a name="h-____________________________________________________________________-9" class="anchor" href="#h-____________________________________________________________________-9"></a>____________________________________________________________________</h3>
+<h3>
+<a name="locked-token-distribution-10" class="anchor" href="#locked-token-distribution-10"></a>Locked Token Distribution</h3>
+<p>The smart contract galaxy proposes to unlock the tokens that were promised to Bao liquidity farmers using the steps proposed below.</p>
+<p><strong>FIRST STEP</strong> is to define a migration to a new token (BAO v2) that reduces the supply by a factor of 1,000 relative to the original BAO token (~1.5 trillion → ~1.5 billion tokens). This is because the math used inside of the voting escrow contract implementation we will be using from curve finance’s contracts causes errors when using larger numbers for some operations.</p>
+<p><strong>SECOND STEP</strong><br>
+<strong>The 3 options for locked bao holders</strong></p>
+<p>As for veBAO with regards to the distribution, the smart contract galaxy proposes we allow for 3 possible outcomes for those with locked BAO.</p>
+<ol>
+<li>
+<p>Choose to lock your balance directly into voting escrow BAO (veBAO) for a minimum of 3 years. After you choose to lock into veBAO, you will no longer be able to participate in streaming of liquid BAOv2 tokens as all the tokens from your distribution will be converted to a locked veBAO balance. Locking into veBAO relinquishes access to your tokens as they will be locked, but you will get the benefits of having veBAO. veBAO benefits include;</p>
+<ul>
+<li>Ownership of a certain percentage of fees the protocols makes.</li>
+<li>Vote on governance proposals.</li>
+<li>After the lock has concluded you will have access to your tokens again.</li>
+</ul>
+</li>
+<li>
+<p>Choose to perform a liquid distribution over 3 years. Over the course of the 3 years, 100% of your locked tokens will be distributed to you along the distribution curve defined below. Users can claim (this costs gas) as many times as you would like throughout this distribution, as long as you have accrued more tokens since your last claim.</p>
+</li>
+<li>
+<p>Alternatively, users that perform a liquid distribution can choose to end their distribution early in exchange for the remainder of their tokens being unlocked immediately, minus a large slashing fee. The slash fee is based on the slash rate function defined below, and their distribution will be ended at that point. <strong>In order to choose this option the user has to manually choose to do so at some point after starting their liquid distribution. Users who do not elect to end their distribution early will not be subject to any slashing fees when they claim their tokens.</strong></p>
+</li>
+</ol>
+<p>All the slashed balances that come from users ending their distributions early will be collected by the protocol. The community has yet to decide where the slashed balances will go (separate BIP to decide after this one), but most practically they would go to the community for future incentives to people who are long term invested in BAO (veBAO holders, liquidity providers, products users, etc.).</p>
+<p><strong>Proposed Distribution Function:</strong></p>
+<p>-Here is the function the smart contract galaxy currently has proposed in the latest governance concept weighted more heavily to the end in order to make a larger slash for those that want to dilute the token faster and sell.</p>
+<p>-X in this piecewise function below is the number of days (the end being the 1095th day, AKA 3 years)</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/402f5a1ce9e519723309833f43ba5f67dad79b8e.png" data-download-href="/uploads/short-url/99O0zMxeUSp9Cl5X2DkPC09EnRc.png?dl=1" title="" rel="noopener nofollow ugc"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/402f5a1ce9e519723309833f43ba5f67dad79b8e_2_323x96.png" alt="" data-base62-sha1="99O0zMxeUSp9Cl5X2DkPC09EnRc" width="323" height="96" role="presentation" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/402f5a1ce9e519723309833f43ba5f67dad79b8e_2_323x96.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/402f5a1ce9e519723309833f43ba5f67dad79b8e_2_484x144.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/402f5a1ce9e519723309833f43ba5f67dad79b8e_2_646x192.png 2x" data-dominant-color="0F0F0F"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1250×431 20.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>-proposed 3 year distribution function</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/93d73ca1837092b357aba3d3fbb82a59dc1d19f8.png" data-download-href="/uploads/short-url/l5RkwcwHfnsywJgBkNJuih8LMbC.png?dl=1" title="" rel="noopener nofollow ugc"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/93d73ca1837092b357aba3d3fbb82a59dc1d19f8_2_624x243.png" alt="" data-base62-sha1="l5RkwcwHfnsywJgBkNJuih8LMbC" width="624" height="243" role="presentation" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/93d73ca1837092b357aba3d3fbb82a59dc1d19f8_2_624x243.png, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/93d73ca1837092b357aba3d3fbb82a59dc1d19f8_2_936x364.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/93d73ca1837092b357aba3d3fbb82a59dc1d19f8_2_1248x486.png 2x" data-dominant-color="050605"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1600×623 139 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>The function we’ve defined is designed to weight distribution towards the end, so those who wait longer are rewarded more. Any function that does not have a bias to the end of the 3 years will give more incentive for people to slash early and sell the tokens rather than continue to participate in the DAO/vote escrow system. The function is proposed as a realistic balance between people who choose one of the three distribution options and their respective interests.</p>
+<p><strong>Proposed Slash Function</strong></p>
+<p>X is days since start of distribution</p>
+<p>0 &lt;= X &lt;= 365 || (100 -.01369863013x) (starts at 100% slash and approaches 95% slash)</p>
+<p>365 &lt; X &lt;= 1095 || 95 constant (constant at 95% slash)</p>
+<p>The slash function proposed starts at the same date the address selects to start their BAO distribution. The slash function starts at 100% on day 0, and approaches a constant 95% slash on day 365 and thereafter. On the day that the user chooses to end their distribution early (3rd option), the slash function defines how much of their remaining distribution will be slashed. The user will receive the remainder of this percentage of their remaining distribution immediately.</p>
+<p><strong>Putting the distribution and the slash function together</strong></p>
+<p><img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/d0683e4c31a1d5cbfdf4a1a23f76325ca884ee43.gif" alt="" data-base62-sha1="tJEEyKpZzz2L9cyy3kGktltHJir" width="624" height="304" role="presentation" class="animated"></p>
+<p>In the graph above, the blue points are the state of both curves respectively. The orange point is the percentage of their total distribution that the user will be able to claim if they choose to end their distribution at that point.</p>
+<p>If you would like to experiment around with this model, there is a desmos simulation for both the distribution and slash function side by side to get an idea of how much BAO will be available at each timestamp within the 3 year long distribution.<br>
+HERE: <a href="https://www.desmos.com/calculator/sqf28ywc4i" class="inline-onebox" rel="noopener nofollow ugc">Distribution Model</a></p>
+<p>Vex has also created a distribution simulator you can experiment with to plug in different weightings for the three options defined above. HERE:  <a href="https://dist.baofinance.dev/" rel="noopener nofollow ugc">https://dist.baofinance.dev/</a></p>
+<h3>
+<a name="h-____________________________________________________________________-11" class="anchor" href="#h-____________________________________________________________________-11"></a>____________________________________________________________________</h3>
+<h3>
+<a name="circulating-token-migration-12" class="anchor" href="#circulating-token-migration-12"></a>Circulating Token Migration</h3>
+<p>For BAOv1 that is already circulating, we will make a simple swapping function that converts the BAOv1 balance to the resultant BAOv2 balance factoring in the supply reduction as mentioned previously. BAOv1 tokens that are migrated will be burned.</p>
+<p>To summarize, all tokens whether unlocked/circulating or locked will be converted and given at a supply reduction of 1/1,000 (.001) relative to the ~1.5 trillion BAOv1 tokens. The new initial supply will be ~1.5 billion BAOv2 and will increase dependent upon issuance from voting escrow emissions.</p>
+<h3>
+<a name="h-____________________________________________________________________-13" class="anchor" href="#h-____________________________________________________________________-13"></a>____________________________________________________________________</h3>
+<h3>
+<a name="vebao-details-relating-to-the-token-distribution-14" class="anchor" href="#vebao-details-relating-to-the-token-distribution-14"></a>veBAO details relating to the token distribution</h3>
+<p>With the distribution proposed above, we will now have an unlocking process taking place over the 3 year time period that gives everyone a proportional weighting of the tokens they were promised in the original unlock of locked BAO balances.</p>
+<p>In BAOv1, new token emissions were made using the MasterFarmer contract and they were distributed to liquidity pool providers who staked their LP Tokens into our farms. There was a soft cap of 1T and a hard cap of 1.5T. Our current total supply is slightly larger than our soft cap in terms of emission and we thought to hardly reach the hard cap.</p>
+<p>This supply cap is going to change in BaoV2 using the vote escrow model, because we will introduce veBAO alongside a token minter contract in the vote escrow system which mints new supply/emissions over time (as it is in Curve Finance). As the emissions curve diminishes rewards over time, and with a soft cap that will bootstrap the BAO emissions curve, we will go over the original hard cap (accounting for the 1000:1 reduction).</p>
+<p>The BAOv2 tokens from the distribution will be pre-minted according to the supply of the BAOv1 tokens and those who decide to lock in veBAO from the BAOv2 distribution will be the first to receive the benefits from veBAO (ownership over fees and voting power for proposals).</p>
+<p>In using the vote escrow governance model, the 2 groups that are incentivized will be BAO token lockers (veBAO holders) and/or liquidity providers (LP tokens) that deposit their LP into liquidity gauges for BAO emissions. In order to receive benefits from the vote escrow system the user must be actively locking tokens or depositing LP tokens in the gauges.</p>
+<p>This means passive token holders are diluted and do not receive benefits (no ownership over fees and no voting power) from the system in accordance with the vote escrow model, as the idea is to only incentivize people that support the DAO more actively.</p>
+<h3>
+<a name="a-separate-bip-proposalconcept-is-necessary-for-deciding-certain-parameters-of-the-emissions-function-and-the-voting-escrow-contracts-given-our-initial-supply-number-will-be-determined-by-the-distribution-15" class="anchor" href="#a-separate-bip-proposalconcept-is-necessary-for-deciding-certain-parameters-of-the-emissions-function-and-the-voting-escrow-contracts-given-our-initial-supply-number-will-be-determined-by-the-distribution-15"></a>A separate BIP proposal/concept is necessary for deciding certain parameters of the emissions function and the voting escrow contracts, given our initial supply number will be determined by the distribution.</h3>
+<p><strong>Curve Finance Governance Token Example (veCRV)</strong></p>
+<ul>
+<li>For reference, the initial Curve token supply started at ~1.273 billion tokens.</li>
+<li>The current supply of the Curve governance token on main-net, after several years of vote escrow mining, is now ~1.755 billion from the starting supply in August 2020 of ~1.273 billion.</li>
+<li>After the vote escrow model started for veCRV, Curve liquidity gauges received the future Curve token supply/emissions beyond the initial Curve supply (~1.273 billion)</li>
+</ul>
+<p>Here is Curve’s governance token inflation schedule below in the context of veCRV</p>
+<p><img src="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/fe714c6a9fce1f7d6570c01e568bf3d50e2716e9.png" alt="image" data-base62-sha1="AiU18MO7pmcNhT4GoDKnX1ZByvn" width="445" height="274"></p>
+<h3>
+<a name="h-____________________________________________________________________-16" class="anchor" href="#h-____________________________________________________________________-16"></a>____________________________________________________________________</h3>
+<h3>
+<a name="operational-changes-17" class="anchor" href="#operational-changes-17"></a>Operational changes</h3>
+<p><strong>tBAO + Bao Coupons migration</strong></p>
+<p>Incentives to tBAO (on xDAI) will be removed and those with staked bao coupons will unstake, swap BAO.cx to BAOv1 using the 1:1 contract on xDAI (the DAO multi-sig will fund these swaps), then bridge BAOv1 tokens back to main-net. After the BAOv1 tokens have been bridged to main-net the swap contract from BAOv1 to BAOv2 tokens can be used to migrate to the new token.</p>
+<p><strong>Exchange migrations</strong></p>
+<p>We will notify all centralized exchanges of the migration so that they do not continue support of the old token. We will not request they migrate to the new token; however, they can choose to do so on their own volition. The protocol is not going to request any centralized exchange listings but we do not oppose them doing so on their own.</p>
+<p><strong>Protocol multi-sig plans</strong></p>
+<p>All Dao wallets/multi-sigs will migrate BAOv1 to BAOv2 tokens, any locked BAO will follow the same distribution as all other locked BAO. Liquidity will be migrated over and then added to liquidity gauges under the new veBAO model.</p>
+<h3>
+<a name="h-____________________________________________________________________-18" class="anchor" href="#h-____________________________________________________________________-18"></a>____________________________________________________________________</h3>
+<h3>
+<a name="liquidity-provider-lp-migrations-highly-subject-to-change-more-so-than-any-other-section-19" class="anchor" href="#liquidity-provider-lp-migrations-highly-subject-to-change-more-so-than-any-other-section-19"></a>Liquidity provider (LP) migrations, <em>highly subject to change, more so than any other section</em>
+</h3>
+<p>Any current BAOv1 liquidity providers will have to move to new BAOv2 liquidity then stake those new LPs into its respective veBAO gauge for BAOv2 rewards when veBAO is deployed. This can be done through the respective AMM protocol the liquidity provider is on (Uniswap or Sushiswap). Users could also potentially migrate through a BAO liquidity migration contract that converts the LP with one transaction through our UI.</p>
+<p>The treasury could seed liquidity for incentivized LPs and stake them into the veBAO liquidity gauges along with the rest of those that chose to provide liquidity to liquidity gauges for veBAO emissions. Only EOAs (Ethereum wallet that is not a contract) will be able to vote on governance proposals; however, the community can vote to add whitelisted smart contracts that will be able to vote (similar to convex and curve). The protocol treasury will refrain from voting.</p>
+<p>(There will be a separate BIP after this one detailing all the BAO liquidity gauges we will add to incentivize a specific group of LP tokens for both Bao Baskets and Bao Markets)</p>
+<p><strong>Reference List of LPs we will need for governance, operations, and products (BAO token, baskets, markets in the very near future)</strong>:</p>
+<p>Token/operations:</p>
+<ul>
+<li>BAOv2/ETH LPs, BAOv2/USDC LPs</li>
+</ul>
+<p>Bao Markets:</p>
+<ul>
+<li>baoUSD-3CRV curve LP token</li>
+<li>others later?</li>
+</ul>
+<p>Bao Baskets:</p>
+<ul>
+<li>bSTBL-3CRV curve LP tokens</li>
+<li>others later?</li>
+</ul>
+<p>Bao Main-net Collateral strategies using baskets and markets simultaneously:</p>
+<ul>
+<li>bSTBL-baoUSD Curve LP token (baskets + markets)</li>
+</ul>
+<h3>
+<a name="h-____________________________________________________________________-20" class="anchor" href="#h-____________________________________________________________________-20"></a>____________________________________________________________________</h3>
+<h3>
+<a name="alignment-21" class="anchor" href="#alignment-21"></a>Alignment</h3>
+<p>For this proposal to be successful, it must be aligned/implemented around the same time as the staking contract and veBAO model get deployed/start in order to preserve incentives for token holders and liquidity providers during the change toward the new governance model.</p>
+<h3>
+<a name="h-____________________________________________________________________-22" class="anchor" href="#h-____________________________________________________________________-22"></a>____________________________________________________________________</h3>
+<h3>
+<a name="conclusion-23" class="anchor" href="#conclusion-23"></a>Conclusion</h3>
+<p>This solution will need work/testing for the galaxies to accomplish and verify the security/integrity of the process. It is also in our interest to get these contracts audited beyond simply testing them internally. The community will need to approve a BIP to verify payment to an auditing firm for each piece. This will benefit the DAO in the long term by resolving many of the issues stated at first. While the distribution model/parameters are still subject to change, this proposal is to get a definitive conclusion on whether the community accepts this distribution and token migration process. Upon approval of this proposal, we are one step closer to deploying/starting veBAO as a governance model, incentivizing liquidity, and distributing fees for all of our products (Bao Baskets, Bao Markets, and future products).</p>
+<h3>
+<a name="h-____________________________________________________________________-24" class="anchor" href="#h-____________________________________________________________________-24"></a>____________________________________________________________________</h3>
+<h3>
+<a name="proposals-that-proceed-this-one-25" class="anchor" href="#proposals-that-proceed-this-one-25"></a>Proposals that proceed this one</h3>
+<ol>
+<li>Voting on the supply parameters for voting escrow BAO and the respective liquidity gauges we will incentivize to start</li>
+<li>What will we do with the slashed balances that come from the distribution/unlocking</li>
+<li>Voting to Audit the BAOv1 to BAOv2 swapper contract, BAOv2 token contract, Distribution contract, and BAO voting escrow contracts</li>
+</ol>
+<h3>
+<a name="h-____________________________________________________________________-26" class="anchor" href="#h-____________________________________________________________________-26"></a>____________________________________________________________________</h3>
+<h3>
+<a name="references-27" class="anchor" href="#references-27"></a>References</h3>
+<p>Annual agenda concept <a href="http://gov.bao.finance/t/the-next-path-for-bao-annual-roadmap-bip/865">http://gov.bao.finance/t/the-next-path-for-bao-annual-roadmap-bip/865</a></p>
+<p>BIP-6 Annual agenda <a href="http://gov.bao.finance/t/bip-6-annual-agenda-changes-and-hard-synth-alpha/951">http://gov.bao.finance/t/bip-6-annual-agenda-changes-and-hard-synth-alpha/951</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Jester'><span itemprop='name'>Jester</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bip-token-migration-distribution-v3/1134">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-08T08:38:35Z' class='post-time'>
+                    December 8, 2022,  8:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-08T08:38:35Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

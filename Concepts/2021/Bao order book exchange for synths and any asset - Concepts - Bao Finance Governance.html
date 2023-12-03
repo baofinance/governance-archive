@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bao order book exchange for synths and any asset - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="Now that BaoSwap and YetiSwap are just around the corner, I’d like to make a suggestion: 
+For synths it is very important to have an exchange platform with high liquidity and low exchange fees. DEX’s concept of using liq&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/bao-order-book-exchange-for-synths-and-any-asset/197/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Bao order book exchange for synths and any asset&#39;" href="https://gov.bao.finance/t/bao-order-book-exchange-for-synths-and-any-asset/197.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/bao-order-book-exchange-for-synths-and-any-asset/197/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/bao-order-book-exchange-for-synths-and-any-asset/197/print" />
+<meta property="og:title" content="Bao order book exchange for synths and any asset" />
+<meta name="twitter:title" content="Bao order book exchange for synths and any asset" />
+<meta property="og:description" content="Now that BaoSwap and YetiSwap are just around the corner, I’d like to make a suggestion:  For synths it is very important to have an exchange platform with high liquidity and low exchange fees. DEX’s concept of using liquidity pools is not optimal for synths. Highly volatile synths in particular would have a lack of liquidity, as the IL can be very high.  My suggestion is a decentralized order book exchange. The current trading fees at DEX’s on Ethereum are 0.3% and on Binance Smart Chain (BSC) ..." />
+<meta name="twitter:description" content="Now that BaoSwap and YetiSwap are just around the corner, I’d like to make a suggestion:  For synths it is very important to have an exchange platform with high liquidity and low exchange fees. DEX’s concept of using liquidity pools is not optimal for synths. Highly volatile synths in particular would have a lack of liquidity, as the IL can be very high.  My suggestion is a decentralized order book exchange. The current trading fees at DEX’s on Ethereum are 0.3% and on Binance Smart Chain (BSC) ..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="5 ❤" />
+<meta property="article:published_time" content="2021-02-15T22:04:00+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/bao-order-book-exchange-for-synths-and-any-asset/197">Bao order book exchange for synths and any asset</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Bao order book exchange for synths and any asset'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Optilon'><span itemprop='name'>Optilon</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-order-book-exchange-for-synths-and-any-asset/197">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-15T22:04:00Z' class='post-time'>
+                    February 15, 2021, 10:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-15T22:04:00Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <p>Now that BaoSwap and YetiSwap are just around the corner, I’d like to make a suggestion:</p>
+<p>For synths it is very important to have an exchange platform with high liquidity and low exchange fees. DEX’s concept of using liquidity pools is not optimal for synths. Highly volatile synths in particular would have a lack of liquidity, as the IL can be very high.</p>
+<p>My suggestion is a decentralized order book exchange. The current trading fees at DEX’s on Ethereum are 0.3% and on Binance Smart Chain (BSC) 0.2%. An order book exchange should in comparison have fees of 0.1% or less. The fees should be paid in BAO, or if you fork the exchange to other platforms, then e.g. YETI.</p>
+<p>In order to reach a high liquidity, there have to be incentives for keeping orders active which are close to the market price. This can be reached by distributing a part of the transaction fees to the holders of orders. For example, you could distribute 70% of the transaction fees to the holders. The remaining 30% go to a community fund or are used for other purposes that have yet to be defined.</p>
+<p>The fees are only distributed to orders that exist for at least one whole block. Orders that are fulfilled in the same or the next block do not exist for an entire block. 50% of the rewards go to holders of buy orders, the other 50% to holders of sell orders. Buy orders with an offer of $ 0 do not receive a reward, nor do sell orders that asymptotically approach infinity. The closer an order is to the market price, the higher the share of the fees they receive. Income is calculated and paid out per block based on the transaction fees paid. So the longer an order remains active, the more fees can be generated. This would finally also lead to a more stable ecosystem.</p>
+<p>The order book exchange cannot run on Ethereum due to the block time. Suitable chains I know would be Polkadot, xDai and BSC. Programming this feature is certainly not easy and might require additional programmers. I think it could boost the BAO ecosystem to a whole new level and complement the synths.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/TheBaoMan'><span itemprop='name'>TheBaoMan</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-order-book-exchange-for-synths-and-any-asset/197">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-16T02:11:15Z' class='post-time'>
+                    February 16, 2021,  2:11am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-16T02:11:15Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m not sure what you are suggesting here?</p>
+<p>An order book is two things:</p>
+<ul>
+<li>Limit orders</li>
+<li>A visual side representation of the orders both limit orders and markets.</li>
+</ul>
+<p>Plenty of these exist onchain on Ethereum.</p>
+<blockquote>
+<p>An order book exchange should in comparison have fees of 0.1% or less.</p>
+</blockquote>
+<p>This creates ‘a race to the bottom’ on prices and doesn’t make much sense.</p>
+<blockquote>
+<p>Orders that are fulfilled in the same or the next block do not exist for an entire block.</p>
+</blockquote>
+<p>On every chain it is impossible for something to exist less than one block of time.</p>
+<blockquote>
+<p>The closer an order is to the market price, the higher the share of the fees they receive.</p>
+</blockquote>
+<p>If the pricing is dynamic to the market then its an AMM (which Baoswap is) and not an orderbook.</p>
+<blockquote>
+<p>So the longer an order remains active, the more fees can be generated.</p>
+</blockquote>
+<p>Why would people pay fees for longer listings?</p>
+<p>Overall this sounds like you are trying to reinvent an exchange, but worried about Ethereum’s time and gas fees. This is exactly what Baoswap on xDAI will provide.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="1" />
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Optilon'><span itemprop='name'>Optilon</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-order-book-exchange-for-synths-and-any-asset/197">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-16T07:30:10Z' class='post-time'>
+                    February 16, 2021,  7:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-16T07:41:55Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello BaoMan,</p>
+<p>I suggest an order book as you described. I expect that those order books will be the future for DeFi.</p>
+<blockquote>
+<p>Plenty of these exist onchain on Ethereum.</p>
+</blockquote>
+<p>I know dydx an some others, but on Ethereum an order book exchange is not feasible for normal people. The gas fees are too high. Maybe one can fork their code though.</p>
+<blockquote>
+<p>This creates ‘a race to the bottom’ on prices and doesn’t make much sense.</p>
+</blockquote>
+<p>In an open market a race to the bottom for the fees is what we have to expect. Even on centralized exchanges fees are lower than 0.1%. Without a centralized unit that needs profits from trades, fees might go even lower in the future on decentralized order book exchanges.</p>
+<blockquote>
+<p>On every chain it is impossible for something to exist less than one block of time.</p>
+</blockquote>
+<p>Oh of course you are right. I had a little mistake in my thinking.<br>
+Still, there might be market orders and orders that receive a match within the same block they are created (if this is technically possible). E.g. lowest sell order is currently 0.011ct, highest buy order is 0.009ct. I create a buy limit order for 1000 BAO’s at 0.01ct each. Someone else creates a sell limit order for 1000 BAO’s also at 0.01ct each in the same block. Wouldn’t this be carried out immediately or only with the following block? Otherwise, both of them would not have existed for a whole block as they were fulfilled immediately.</p>
+<blockquote>
+<p>If the pricing is dynamic to the market then its an AMM (which Baoswap is) and not an orderbook.</p>
+</blockquote>
+<p>I didn’t put that well. The prices are not dynamic. Part of the 0.1% transaction fees (e.g. 70%) are paid out as a reward to the holders of orders. Of this, 50% go to holders of buy orders, the other 50% to holders of sell orders. There is no IL here, as it is an order book. An incentive would be created so that as much liquidity as possible does not remain in the wallets, but is thrown onto the market. This makes the market more stable.</p>
+<blockquote>
+<p>Why would people pay fees for longer listings?</p>
+</blockquote>
+<p>The holder of orders pay the normal fee when their order is fulfilled. However, while the order remains unfulfilled, you will receive part of the fees of currently fulfilled orders. They don’t pay, they get paid, similar to the providers of liquidity on swap services.</p>
+<blockquote>
+<p>Overall this sounds like you are trying to reinvent an exchange, but worried about Ethereum’s time and gas fees. This is exactly what Baoswap on xDAI will provide.</p>
+</blockquote>
+<p>I think it will only be a matter of months before Swap DEX’s market share will shrink significantly in favor to order book based decentralized exchanges. I could be wrong though.</p>
+<p>In regard to ethereum gas fees, one could also include bridges as perpetual protocol does (but they only have perpetuals and limited trade pairs). A decentralized order book exchange should allow any trade pair to be traded.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/bao-order-book-exchange-for-synths-and-any-asset/197">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-18T14:39:50Z' class='post-time'>
+                    September 18, 2021,  2:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-18T14:39:50Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>

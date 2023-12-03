@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Approve bETH design and deployment - Concepts - Bao Finance Governance</title>
+    <meta name="description" content="Summary
+This proposal aims to agree the implementation of bETH, a basket of liquid staked ETH tokens. 
+
+Background
+Bao needs an interest-bearing Ethereum token to use as collateral for baoUSD, and in future baoETH. A ba&amp;hellip;">
+    <meta name="generator" content="Discourse 3.2.0.beta4-dev - https://github.com/discourse/discourse version 9fb4175008eb95bc2933560aba9c2d75bd258744">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/e5b41136e5065434af3e05e56ab564bc00407a29_2_180x180.png">
+<meta name="theme-color" media="all" content="#111111">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://gov.bao.finance/t/approve-beth-design-and-deployment/1208/print" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://gov.bao.finance/opensearch.xml" title="Bao Finance Governance Search">
+
+    <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/color_definitions_dark_1_1_efbf2b1878ac2e142e7d2298cca64dc432e3add7.css?__ws=gov.bao.finance" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/checklist_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-adplugin_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-akismet_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-cakeday_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-details_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-lazy-videos_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-local-dates_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-narrative-bot_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-presence_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-solved_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/footnote_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/hosted-site_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/spoiler-alert_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/discourse-ai_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/poll_desktop_01484db407fb755396fb66cf09c53501eca88d92.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sjc6.discourse-cdn.com/standard10/stylesheets/desktop_theme_1_05b880d48526526571e52b4d8421f36c7c6f3299.css?__ws=gov.bao.finance" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Approve bETH design and deployment&#39;" href="https://gov.bao.finance/t/approve-beth-design-and-deployment/1208.rss" />
+    <meta property="og:site_name" content="Bao Finance Governance" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/84d207c0d3bf4ebb98cd7462fa34e467415d0cc5.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/84d207c0d3bf4ebb98cd7462fa34e467415d0cc5.png" />
+<meta property="og:url" content="https://gov.bao.finance/t/approve-beth-design-and-deployment/1208/print" />
+<meta name="twitter:url" content="https://gov.bao.finance/t/approve-beth-design-and-deployment/1208/print" />
+<meta property="og:title" content="Approve bETH design and deployment" />
+<meta name="twitter:title" content="Approve bETH design and deployment" />
+<meta property="og:description" content="Summary This proposal aims to agree the implementation of bETH, a basket of liquid staked ETH tokens.   Background Bao needs an interest-bearing Ethereum token to use as collateral for baoUSD, and in future baoETH. A basket of liquid-staked ETH derivatives (LSDs) would encourage the adoption of a healthy balance of liquid-staking providers whilst minimizing risk to the solvency of our synthetics simultaneously. It can also be a good product on its own, allowing other communities to adopt it ins..." />
+<meta name="twitter:description" content="Summary This proposal aims to agree the implementation of bETH, a basket of liquid staked ETH tokens.   Background Bao needs an interest-bearing Ethereum token to use as collateral for baoUSD, and in future baoETH. A basket of liquid-staked ETH derivatives (LSDs) would encourage the adoption of a healthy balance of liquid-staking providers whilst minimizing risk to the solvency of our synthetics simultaneously. It can also be a good product on its own, allowing other communities to adopt it ins..." />
+<meta property="og:article:section" content="Concepts" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta property="article:published_time" content="2023-01-06T00:21:22+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">
+    Bao Finance Governance
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/approve-beth-design-and-deployment/1208">Approve bETH design and deployment</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/concepts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Concepts</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Approve bETH design and deployment'>
+        <meta itemprop='articleSection' content='Concepts'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Bao Finance Governance'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/e5b41136e5065434af3e05e56ab564bc00407a29.png'>
+          </div>
+      </div>
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Chickn'><span itemprop='name'>Chickn</span></a>
+                
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/approve-beth-design-and-deployment/1208">
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/84d207c0d3bf4ebb98cd7462fa34e467415d0cc5.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-06T00:21:22Z' class='post-time'>
+                    January 6, 2023, 12:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-06T00:21:22Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='articleBody'>
+              <h1>
+<a name="summary-1" class="anchor" href="#summary-1"></a>Summary</h1>
+<p>This proposal aims to agree the implementation of bETH, a basket of liquid staked ETH tokens.</p>
+<h1>
+<a name="background-2" class="anchor" href="#background-2"></a>Background</h1>
+<p>Bao needs an interest-bearing Ethereum token to use as collateral for baoUSD, and in future baoETH. A basket of liquid-staked ETH derivatives (LSDs) would encourage the adoption of a healthy balance of liquid-staking providers whilst minimizing risk to the solvency of our synthetics simultaneously. It can also be a good product on its own, allowing other communities to adopt it instead of a single LSD.</p>
+<h1>
+<a name="goals-3" class="anchor" href="#goals-3"></a>Goals</h1>
+<ul>
+<li>Create the best interest-bearing Ethereum collateral possible.</li>
+<li>Provide an easy way for the crypto community to diversify between liquid staking providers</li>
+</ul>
+<h1>
+<a name="proposed-solution-4" class="anchor" href="#proposed-solution-4"></a>Proposed Solution</h1>
+<p>bETH will be a dynamic basket of liquid-staked ETH tokens, meaning the tokens that back it can change. Market conditions will dictate how many providers to include, and their allocations.</p>
+<p>bETH underlying assets will be allocated based on the cube root of their market cap. This means tokens with more liquidity have a higher weighting, but a more even distribution of liquid staking providers is still promoted because smaller cap tokens have a higher allocation in relation to their market cap.</p>
+<p>Criteria for inclusion:</p>
+<ul>
+<li>Liquidity on ETH main net, with at least one supported pool allowing a $1m buy with less than 2% slippage</li>
+<li>Operating for 3+ months</li>
+<li>Chainlink price feed</li>
+<li>Have wrapped tokens that compound staking rewards to minimize gas costs</li>
+<li>Be non-custodial</li>
+</ul>
+<p>The bETH basket is proposed to start with two liquid-staked ETH tokens. More is better from a diversification standpoint, but each additional token will increase the mint and redemption cost for the basket as gas usage will increase. Additionally, many other LSDs fail to meet the criteria set out above, for example, cbETH is custodial and frxETH has been operating less than 3 months.</p>
+<p>The top two staked ETH tokens by market cap that meet the criteria are wstETH (Lido) and rETH</p>
+<p>The proposed starting composition based on market caps at the time or writing<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/84d207c0d3bf4ebb98cd7462fa34e467415d0cc5.png" data-download-href="/uploads/short-url/iWZ0RtzVVNoNAUniqU6456Rx9fT.png?dl=1" title="image"><img src="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/84d207c0d3bf4ebb98cd7462fa34e467415d0cc5_2_690x119.png" alt="image" data-base62-sha1="iWZ0RtzVVNoNAUniqU6456Rx9fT" width="690" height="119" srcset="https://global.discourse-cdn.com/standard10/uploads/bao/optimized/1X/84d207c0d3bf4ebb98cd7462fa34e467415d0cc5_2_690x119.png, https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/84d207c0d3bf4ebb98cd7462fa34e467415d0cc5.png 1.5x, https://global.discourse-cdn.com/standard10/uploads/bao/original/1X/84d207c0d3bf4ebb98cd7462fa34e467415d0cc5.png 2x" data-dominant-color="E7E7E7"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">887×153 59.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p><strong>Rebalancing</strong><br>
+Anyone can initiate rebalancing or altering of selection criteria at any time via governance proposal.</p>
+<p><strong>Fees</strong><br>
+There will be no minting or redeeming fee. A 0.5% streaming fee will be collected, which is expected to be around 10% of the yield generated from ETH staking. The fees can also be adjusted at any time via governance.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://gov.bao.finance/u/Baowolf'><span itemprop='name'>Baowolf</span></a>
+                
+                  Closed 
+              </span>
+
+              <link itemprop="mainEntityOfPage" href="https://gov.bao.finance/t/approve-beth-design-and-deployment/1208">
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-02-08T02:53:20Z' class='post-time'>
+                    February 8, 2023,  2:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-02-08T02:53:20Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+                <meta itemprop="userInteractionCount" content="0" />
+              </div>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+          
+
+
+</html>
